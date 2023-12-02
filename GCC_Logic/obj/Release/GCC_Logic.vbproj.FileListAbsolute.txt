@@ -1,0 +1,9 @@
+C:\SGL\Fase6.0\GCC_Logic\bin\Release\GCC_Logic.dll
+C:\SGL\Fase6.0\GCC_Logic\bin\Release\GCC_Logic.pdb
+C:\SGL\Fase6.0\GCC_Logic\bin\Release\GCC_Logic.xml
+C:\SGL\Fase6.0\GCC_Logic\obj\Release\ResolveAssemblyReference.cache
+C:\SGL\Fase6.0\GCC_Logic\obj\Release\GCC.Logic.Resources.resources
+C:\SGL\Fase6.0\GCC_Logic\obj\Release\GCC_Logic.vbproj.GenerateResource.Cache
+C:\SGL\Fase6.0\GCC_Logic\obj\Release\GCC_Logic.dll
+C:\SGL\Fase6.0\GCC_Logic\obj\Release\GCC_Logic.xml
+C:\SGL\Fase6.0\GCC_Logic\obj\Release\GCC_Logic.pdb

@@ -1,0 +1,696 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GCC_Entity
+</name>
+</assembly>
+<members>
+<member name="T:GCC.Entity.EGCC_Cesionario">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Siniestro
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/01/2013
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_Implicado">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad EGCC_Implicado
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_InsDesembolsoDoc">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_cotizaciondocumento
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_documentosleasing">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_documentosleasing
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_contacto">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_contacto
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_CesionContrato">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad CesionContrato
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EClienteRM">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad ECliente
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 15/05/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ESolicitudcreditoestructuradocdet">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Solicitudcreditoestructuradocdet
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_Bloqueo">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_contacto
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 18/07/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EPais">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Pais
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ETablagenerica">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Tablagenerica
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_contratootroconcepto">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_contratootroconcepto
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EUsuarioUltimus">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad EUsuarioUltimus
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ListEUsuarioUltimus">
+	<summary>
+ Clase que hereda de List(Of EUsuarioUltimus) para la implementación de la lista
+ </summary>
+	<remarks></remarks>
+</member><member name="T:GCC.Entity.EImpuestovehicular">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Impuestovehicular
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EOperacionactivacalendario">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Operacionactivacalendario
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ESiniestro">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Siniestro
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_carta">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_carta
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_GestionBienDoc">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad EGCC_GestionBienDoc
+ </summary>
+	<remarks>
+ Creado Por         : JRC - ADMIN
+ Fecha de Creación  : 04/12/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_OpcionCompra">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad GccOpcioncompra
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:38:56 p.m.
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_seguimientocotizacion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_seguimientocotizacion
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EMoneda">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Moneda
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EProveedor">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Proveedor
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ Modificado Por     : TSF - AEP
+ Fecha de Modificación: 02/08/2012
+ Descripción: Se agrego una propiedad CodUnico.
+ </remarks>
+</member><member name="T:GCC.Entity.ESeguro">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad ESeguro
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 27/02/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ESubprestatario">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Subprestatario
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_InsDesembolsoAgrupacion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad EGCC_InsDesembolsoAgrupacion
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ESolicitudcredito">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Solicitudcredito
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EExceptuadosigv">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Exceptuadosigv
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_contratorepresentante">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_contratorepresentante
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ListEGcc_contratorepresentante">
+	<summary>
+ Clase que hereda de List(Of EGcc_contratorepresentante) para la implementación de la lista
+ </summary>
+	<remarks></remarks>
+</member><member name="T:GCC.Entity.EGcc_Demanda">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_demanda
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EInfraccion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Infraccion
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EUbicaciongeografica">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Ubicaciongeografica
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_Alertas">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_carta
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_RepresentanteCes">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_representante
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_cotizacion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_cotizacion
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_documentoleasingdetalle">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_documentoleasingdetalle
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EValorgenerica">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Valorgenerica
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_Pipeline">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad EGCC_Pipeline
+ </summary>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 27/08/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_PagoCuotas">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad EGCC_PagoCuotas
+ </summary>
+	<remarks>
+ Creado Por         : IBK - RPR
+ Fecha de Creación  : 19/12/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EDiasferiados">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Diasferiados
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_representante">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_representante
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ListEGcc_representante">
+	<summary>
+ Clase que hereda de List(Of EGcc_representante) para la implementación de la lista
+ </summary>
+	<remarks></remarks>
+</member><member name="T:GCC.Entity.EMonedatipocambio">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Monedatipocambio
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_cotizaciondocumento">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_cotizaciondocumento
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_cotizacionversion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_cotizacionversion
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EInstituciondatosgenerales">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Instituciondatosgenerales
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ELsgconceptostarifas">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Lsgconceptostarifas
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_MultaVehicular">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Impuestovehicular
+ </summary>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 23/11/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ECuentadireccion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Cuentadireccion
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EImpuestomunicipal">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Impuestomunicipal
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EProductofinanciero">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Productofinanciero
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ESeguridad">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Seguridad
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 22/02/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ESolicitudcreditoestructura">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Solicitudcreditoestructura
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ListESolicitudcreditoestructura">
+	<summary>
+ Clase que hereda de List(Of ESolicitudcreditoestructura) para la implementación de la lista
+ </summary>
+	<remarks></remarks>
+</member><member name="T:GCC.Entity.EGcc_contratonotarial">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_contratonotarial
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ListEGcc_contratonotarial">
+	<summary>
+ Clase que hereda de List(Of EGcc_contratonotarial) para la implementación de la lista
+ </summary>
+	<remarks></remarks>
+</member><member name="T:GCC.Entity.ECreditoRecuperacionComision">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad CreditoRecuperacionComision
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 27/11/2012 03:02:49 p.m.
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_LogDesembolsoPagoEjecucion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad EGCC_LogDesembolsoPagoEjecucion
+ </summary>
+	<remarks>
+ Creado Por         : IBK - AAE
+ Fecha de Creación  : 06/11/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_cotizacioncronograma">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_cotizacioncronograma
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ListEGcc_cotizacioncronograma">
+	<summary>
+ Clase que hereda de List(Of EGcc_cotizacioncronograma) para la implementación de la lista
+ </summary>
+	<remarks></remarks>
+</member><member name="T:GCC.Entity.EGcc_documentoobservacion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_documentoobservacion
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EUbigeo">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Ubigeo
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_InsDesembolsoCargoAbono">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad EGCC_InsDesembolsoCargoAbono
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_InsDesembolsoPago">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad EGCC_InsDesembolsoPago
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ELinea">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad ELinea
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/05/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ListELinea">
+	<summary>
+ Clase que hereda de List(Of ELinea) para la implementación de la lista
+ </summary>
+	<remarks></remarks>
+</member><member name="T:GCC.Entity.ESolicitudcreditoestructuradoc">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Solicitudcreditoestructuradoc
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_FraccionarCobro">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad GCC_FraccionarCobro
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 13/12/2012 10:26:06 a.m.
+ </remarks>
+</member><member name="T:GCC.Entity.ListEGCC_FraccionarCobro">
+	<summary>
+ Clase que hereda de List(Of EGcc_representante) para la implementación de la lista
+ </summary>
+	<remarks></remarks>
+</member><member name="T:GCC.Entity.EGcc_otroconcepto">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_otroconcepto
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ESolicitudcreditoestructuratasacion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Solicitudcreditoestructuratasacion
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ETasainteresreuters">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Tasainteresreuters
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_InsDesembolsoActivacion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_cotizacion
+ </summary>
+	<remarks>
+ Creado Por         : IBK - AAE
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ECreditoRecuperacion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad CreditoRecuperacion
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 27/11/2012 03:02:49 p.m.
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_contratocuenta">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_contratocuenta
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ListEGcc_contratoCuenta">
+	<summary>
+ Clase que hereda de List(Of EGcc_contratonotarial) para la implementación de la lista
+ </summary>
+	<remarks></remarks>
+</member><member name="T:GCC.Entity.ESubproductofinanciero">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Subproductofinanciero
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="P:GCC.Entity.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:GCC.Entity.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:GCC.Entity.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:GCC.Entity.EGCC_InsDesembolso">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad EGCC_InsDesembolso
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_seguimientocontrato">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_seguimientocontrato
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ETemporal">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Temporal
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EInmatriculacion">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Inmatriculacion
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGCC_Ejecutivo">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad EGCC_Ejecutivo
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 19/03/2013
+ </remarks>
+</member><member name="T:GCC.Entity.EOperacionactiva">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Operacionactiva
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.ESolicitudcreditoestructuracarac">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Solicitudcreditoestructuracarac
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_contratodocumento">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_contratodocumento
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member><member name="T:GCC.Entity.EGcc_contratoproveedor">
+	<summary>
+ Clase que permite definir los atributos y propiedades de la entidad Gcc_contratoproveedor
+ </summary>
+	<remarks>
+ Creado Por         : TSF - ADMIN
+ Fecha de Creación  : 30/04/2012
+ </remarks>
+</member>
+</members>
+</doc>

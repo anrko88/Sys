@@ -1,0 +1,3357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetAssociates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="0" maxOccurs="1" name="objUser" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TasklistFilter">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="m_dStartDate" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="m_dEndDate" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="m_nStartingDaysOfDueDateRelativeFromToday" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="m_nEndingDaysOfDueDateRelativeFromToday" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="m_nDateType" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="nFiltersMask" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="strProcessNameFilter" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="strSummaryFilter" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="strStepLabelFilter" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="nPriorityStart" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="nPriorityEnd" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="nIncidentNo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="strArrUserName" type="tns:ArrayOfString" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="MarshalByRefObject" abstract="true" />
+      <s:complexType name="User">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAssociatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAssociatesResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objUser" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentJobFunctionGroups">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDeptJobFnGpsArr" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentJobFunctionGroupsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDepartmentJobFunctionGroupsResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDeptJobFnGpsArr" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentMembers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objUser" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentMembersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDepartmentMembersResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objUser" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubDepartments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objSubDepts" type="tns:ArrayOfDepartment" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDepartment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Department" nillable="true" type="tns:Department" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Department">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="strDepartmentID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetSubDepartmentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSubDepartmentsResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objSubDepts" type="tns:ArrayOfDepartment" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupIsMemberOfGroup2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nJobId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGroupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGroupProfile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupIsMemberOfGroup2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GroupIsMemberOfGroup2Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupIsMemberOfGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nJobId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGroupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGroupProfile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupIsMemberOfGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GroupIsMemberOfGroupResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindDepartment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDeptName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objDept" type="tns:Department" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindDepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FindDepartmentResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objDept" type="tns:Department" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strShortName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFullName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intUserId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="objUser" type="tns:User" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FindUserResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objUser" type="tns:User" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllOCMembers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objUserList" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllOCMembersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAllOCMembersResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objUserList" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objDeptList" type="tns:ArrayOfDepartment" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDepartmentsResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objDeptList" type="tns:ArrayOfDepartment" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strGroupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objGroup" type="tns:Group" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Group">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="strGroupName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="strGroupProfile" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="nJobId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="GroupMembers" type="tns:ArrayOfGroupMember" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfGroupMember">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GroupMember" nillable="true" type="tns:GroupMember" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GroupMember">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="strMemberName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="strGroupName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="strFullName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="nWeight" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="nSequence" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetGroupResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objGroup" type="tns:Group" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strGroupArr" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetGroupNamesResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGroupArr" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJobFunctionGroupMembers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunctionGroup" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserList" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJobFunctionGroupMembersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetJobFunctionGroupMembersResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserList" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTopLevelDepartments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objDepList" type="tns:ArrayOfDepartment" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTopLevelDepartmentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTopLevelDepartmentsResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objDepList" type="tns:ArrayOfDepartment" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerifyUserResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignAllCurrentTasks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAssignedTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignAllCurrentTasksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssignAllCurrentTasksResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignAllFutureTasks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAssignedTo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dateAssignedUntil" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignAllFutureTasksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssignAllFutureTasksResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDepartmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDepartmentResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExactCaseUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExactUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExactCaseUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetExactCaseUserResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strExactUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strManager" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManagerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetManagerResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strManager" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOCSubOrdinates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstSubOrdinates" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetOCSubOrdinatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOCSubOrdinatesResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstSubOrdinates" type="tns:ArrayOfAnyType" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubOrdinates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objSubOrdinatesArr" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubOrdinatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSubOrdinatesResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objSubOrdinatesArr" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubOrdinatesBySupervisor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objSubOrdinatesArr" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSubOrdinatesBySupervisorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSubOrdinatesBySupervisorResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objSubOrdinatesArr" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupervisor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSupervisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupervisorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSupervisorResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSupervisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupervisorFunction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCodeSupervisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNameSupervisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupervisorFunctionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSupervisorFunctionResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCodeSupervisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNameSupervisor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskListView">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strViewName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tasklistViewObj" type="tns:TasklistView" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TasklistView">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="strViewName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="strHelpText" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="bDataBoundView" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="nSortColID" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="nSortDirection" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="ListAssociates" type="tns:ArrayOfUser" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetTaskListViewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTaskListViewResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="tasklistViewObj" type="tns:TasklistView" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserPrefs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objUserPrefs" type="tns:UserPreferences" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserPreferences">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="strRefreshRate" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="nTasksPerPage" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssociatesList" type="tns:ArrayOfUser" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetUserPrefsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserPrefsResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objUserPrefs" type="tns:UserPreferences" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserRights">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intlRights" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserRightsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intlRights" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetViewList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="listOfViews" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetViewListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetViewListResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="listOfViews" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserIsMemberOfGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strGroupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserIsMemberOfGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserIsMemberOfGroupResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserPrefs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nUserID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDepartmentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strJobFunction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objUserPref" type="tns:UserPreferences" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserPrefsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetUserPrefsResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbortIncident">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strReason" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbortIncidentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AbortIncidentResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbortStep">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStepLabel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbortStepResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AbortStepResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteIncident">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteIncidentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteIncidentResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DirectActivateStep">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStepLabel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DirectActivateStepResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DirectActivateStepResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DirectActivateStepEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="objPrevTask" type="tns:Task" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStepLabel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Task">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="m_listDataboundColumns" type="tns:ArrayOfDataboundInfo" />
+              <s:element minOccurs="0" maxOccurs="1" name="strSummary" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="nPriority" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="DataBoundColumns" type="tns:ArrayOfDataboundInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfDataboundInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DataboundInfo" nillable="true" type="tns:DataboundInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DataboundInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DirectActivateStepExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DirectActivateStepExResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objPrevTask" type="tns:Task" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncidentStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="oarrListStepStatus" type="tns:ArrayOfStructStepStatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStructStepStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="structStepStatus" type="tns:structStepStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="structStepStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strStepName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="nStepStatus" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nStepSubStatus" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nStepType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="strStepRecipient" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="dtEndTime" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="dtStartTime" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetIncidentStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetIncidentStatusResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="oarrListStepStatus" type="tns:ArrayOfStructStepStatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGraphicalStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIncidente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intVersion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="bytesGif" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGraphicalStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetGraphicalStatusResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="bytesGif" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbortTaskId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbortTaskIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AbortTaskIdResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Abort">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFilterStatusIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbortResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AbortResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReturnTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFilterStatusIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMemo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objVariableList" type="tns:ArrayOfVariable" />
+            <s:element minOccurs="1" maxOccurs="1" name="GetTasksCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfVariable">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Variable" nillable="true" type="tns:Variable" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Variable">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="strVariableName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="objVariableValue" type="tns:ArrayOfAnyType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ReturnTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReturnTaskResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objVariableList" type="tns:ArrayOfVariable" />
+            <s:element minOccurs="1" maxOccurs="1" name="GetTasksCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignQueueTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFilterStatusIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAssignedTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAssignToUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAssignedUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignQueueTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssignQueueTaskResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAssignedUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFilterStatusIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAssignedTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNameProcess" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssignTaskResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignTaskAssignedToUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFilterStatusIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAssignedToUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignTaskAssignedToUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssignTaskAssignedToUserResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAssignedToUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFilterStatusIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteTaskResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExtractFormURL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFilterStatusIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExtractFormURLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExtractFormURLResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllTaskVariables">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListVars" type="tns:ArrayOfVariable" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllTaskVariablesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAllTaskVariablesResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListVars" type="tns:ArrayOfVariable" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFilterStatusIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStructListTask">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="structListTask" type="tns:structListTask" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="structListTask">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="dCost" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="dDelayTime" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="dEndTime" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="dOverDueTime" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="dQueueEndTime" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="dQueueStartTime" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="dStartTime" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="dUrgentTime" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="nIncidentNo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nPriority" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nProcessVersion" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nRecipientType" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nStepProperties" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nStepType" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nTaskRate" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nTaskStatus" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nTaskSubStatus" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nTaskTime" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="strAssignedToUser" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strAssignedToUserFullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strFormUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strGroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strHelpUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strProcessName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strRecipient" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strRecipientFullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strStepId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strTaskNotes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strUserFullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strTaskId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strStepName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAtResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirstTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFilterStatusIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirstTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFirstTaskResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNextTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFilterStatusIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNextTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetNextTaskResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrevTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFilterStatusIncident" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrevTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPrevTaskResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTasksCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCountTask" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTasksCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTasksCountResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCountTask" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedTasks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAssignedTasksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoadAssignedTasksResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFilteredTasks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objFilter" type="tns:TasklistFilter" />
+            <s:element minOccurs="0" maxOccurs="1" name="objTaskListRef" type="tns:Tasklist" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Tasklist">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="LoadFilteredTasksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoadFilteredTasksResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="objTaskListRef" type="tns:Tasklist" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadQueueTasks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadQueueTasksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoadQueueTasksResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadViewTasks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strViewName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadViewTasksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoadViewTasksResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="oListTasks" type="tns:ArrayOfStructListTask" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignAllFutureTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserOriginal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserReasignado" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dfecha" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignAllFutureTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssignAllFutureTaskResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignallCurrtask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserOriginal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserReasignado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignallCurrtaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssignallCurrtaskResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReassignedTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserLog" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEstacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserOld" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReassignedTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetReassignedTaskResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserOld" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReassignedTask2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProceso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserLog" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEstacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserOld" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReassignedTask2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetReassignedTask2Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserOld" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosUltimusIrResolucion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="v_iNumeroIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="V_sIrResolucion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosUltimusIrResolucionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDatosUltimusIrResolucionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosUltimusNivActualAprob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="v_iNumeroIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="V_sNivelActualAprobacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosUltimusNivActualAprobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDatosUltimusNivActualAprobResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosUltimusComite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="v_iNumeroIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="V_sNombreComite" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosUltimusComiteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDatosUltimusComiteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosSupervisor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="v_iNumeroIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="V_sSupervisor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosSupervisorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDatosSupervisorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupMembers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pstrGroupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstructGroupMembers" type="tns:ArrayOfStructGroupMembers" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStructGroupMembers">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="structGroupMembers" type="tns:structGroupMembers" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="structGroupMembers">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strFullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strGroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strMemberName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGroupMembersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetGroupMembersResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pstructGroupMembers" type="tns:ArrayOfStructGroupMembers" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosUltimusActual">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="v_iNumeroIncidente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatosUltimusActualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatosUltimusActualResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAssociatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssociates" />
+  </wsdl:message>
+  <wsdl:message name="GetAssociatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssociatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentJobFunctionGroupsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartmentJobFunctionGroups" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentJobFunctionGroupsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentJobFunctionGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentMembersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartmentMembers" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentMembersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSubDepartmentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSubDepartments" />
+  </wsdl:message>
+  <wsdl:message name="GetSubDepartmentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSubDepartmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GroupIsMemberOfGroup2SoapIn">
+    <wsdl:part name="parameters" element="tns:GroupIsMemberOfGroup2" />
+  </wsdl:message>
+  <wsdl:message name="GroupIsMemberOfGroup2SoapOut">
+    <wsdl:part name="parameters" element="tns:GroupIsMemberOfGroup2Response" />
+  </wsdl:message>
+  <wsdl:message name="GroupIsMemberOfGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GroupIsMemberOfGroup" />
+  </wsdl:message>
+  <wsdl:message name="GroupIsMemberOfGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GroupIsMemberOfGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:FindDepartment" />
+  </wsdl:message>
+  <wsdl:message name="FindDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:FindDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindUserSoapIn">
+    <wsdl:part name="parameters" element="tns:FindUser" />
+  </wsdl:message>
+  <wsdl:message name="FindUserSoapOut">
+    <wsdl:part name="parameters" element="tns:FindUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllOCMembersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllOCMembers" />
+  </wsdl:message>
+  <wsdl:message name="GetAllOCMembersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllOCMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartments" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupNames" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJobFunctionGroupMembersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJobFunctionGroupMembers" />
+  </wsdl:message>
+  <wsdl:message name="GetJobFunctionGroupMembersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJobFunctionGroupMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTopLevelDepartmentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTopLevelDepartments" />
+  </wsdl:message>
+  <wsdl:message name="GetTopLevelDepartmentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTopLevelDepartmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyUser" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignAllCurrentTasksSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignAllCurrentTasks" />
+  </wsdl:message>
+  <wsdl:message name="AssignAllCurrentTasksSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignAllCurrentTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignAllFutureTasksSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignAllFutureTasks" />
+  </wsdl:message>
+  <wsdl:message name="AssignAllFutureTasksSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignAllFutureTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDepartment" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartmentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExactCaseUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExactCaseUser" />
+  </wsdl:message>
+  <wsdl:message name="GetExactCaseUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExactCaseUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManager" />
+  </wsdl:message>
+  <wsdl:message name="GetManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOCSubOrdinatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOCSubOrdinates" />
+  </wsdl:message>
+  <wsdl:message name="GetOCSubOrdinatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOCSubOrdinatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSubOrdinatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSubOrdinates" />
+  </wsdl:message>
+  <wsdl:message name="GetSubOrdinatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSubOrdinatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSubOrdinatesBySupervisorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSubOrdinatesBySupervisor" />
+  </wsdl:message>
+  <wsdl:message name="GetSubOrdinatesBySupervisorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSubOrdinatesBySupervisorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSupervisorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupervisor" />
+  </wsdl:message>
+  <wsdl:message name="GetSupervisorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupervisorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSupervisorFunctionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupervisorFunction" />
+  </wsdl:message>
+  <wsdl:message name="GetSupervisorFunctionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupervisorFunctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskListViewSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaskListView" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskListViewSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaskListViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPrefsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserPrefs" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPrefsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserPrefsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserRightsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserRights" />
+  </wsdl:message>
+  <wsdl:message name="GetUserRightsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserRightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetViewListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetViewList" />
+  </wsdl:message>
+  <wsdl:message name="GetViewListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetViewListResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserIsMemberOfGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:UserIsMemberOfGroup" />
+  </wsdl:message>
+  <wsdl:message name="UserIsMemberOfGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:UserIsMemberOfGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPrefsSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserPrefs" />
+  </wsdl:message>
+  <wsdl:message name="SetUserPrefsSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserPrefsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbortIncidentSoapIn">
+    <wsdl:part name="parameters" element="tns:AbortIncident" />
+  </wsdl:message>
+  <wsdl:message name="AbortIncidentSoapOut">
+    <wsdl:part name="parameters" element="tns:AbortIncidentResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbortStepSoapIn">
+    <wsdl:part name="parameters" element="tns:AbortStep" />
+  </wsdl:message>
+  <wsdl:message name="AbortStepSoapOut">
+    <wsdl:part name="parameters" element="tns:AbortStepResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteIncidentSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteIncident" />
+  </wsdl:message>
+  <wsdl:message name="DeleteIncidentSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteIncidentResponse" />
+  </wsdl:message>
+  <wsdl:message name="DirectActivateStepSoapIn">
+    <wsdl:part name="parameters" element="tns:DirectActivateStep" />
+  </wsdl:message>
+  <wsdl:message name="DirectActivateStepSoapOut">
+    <wsdl:part name="parameters" element="tns:DirectActivateStepResponse" />
+  </wsdl:message>
+  <wsdl:message name="DirectActivateStepExSoapIn">
+    <wsdl:part name="parameters" element="tns:DirectActivateStepEx" />
+  </wsdl:message>
+  <wsdl:message name="DirectActivateStepExSoapOut">
+    <wsdl:part name="parameters" element="tns:DirectActivateStepExResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIncidentStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIncidentStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetIncidentStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIncidentStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGraphicalStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGraphicalStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetGraphicalStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGraphicalStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbortTaskIdSoapIn">
+    <wsdl:part name="parameters" element="tns:AbortTaskId" />
+  </wsdl:message>
+  <wsdl:message name="AbortTaskIdSoapOut">
+    <wsdl:part name="parameters" element="tns:AbortTaskIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbortSoapIn">
+    <wsdl:part name="parameters" element="tns:Abort" />
+  </wsdl:message>
+  <wsdl:message name="AbortSoapOut">
+    <wsdl:part name="parameters" element="tns:AbortResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReturnTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:ReturnTask" />
+  </wsdl:message>
+  <wsdl:message name="ReturnTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:ReturnTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignQueueTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignQueueTask" />
+  </wsdl:message>
+  <wsdl:message name="AssignQueueTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignQueueTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignTask" />
+  </wsdl:message>
+  <wsdl:message name="AssignTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignTaskAssignedToUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignTaskAssignedToUser" />
+  </wsdl:message>
+  <wsdl:message name="AssignTaskAssignedToUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignTaskAssignedToUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteTask" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExtractFormURLSoapIn">
+    <wsdl:part name="parameters" element="tns:ExtractFormURL" />
+  </wsdl:message>
+  <wsdl:message name="ExtractFormURLSoapOut">
+    <wsdl:part name="parameters" element="tns:ExtractFormURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllTaskVariablesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllTaskVariables" />
+  </wsdl:message>
+  <wsdl:message name="GetAllTaskVariablesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllTaskVariablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAtSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAt" />
+  </wsdl:message>
+  <wsdl:message name="GetAtSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFirstTask" />
+  </wsdl:message>
+  <wsdl:message name="GetFirstTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFirstTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNextTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNextTask" />
+  </wsdl:message>
+  <wsdl:message name="GetNextTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNextTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrevTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrevTask" />
+  </wsdl:message>
+  <wsdl:message name="GetPrevTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrevTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTasksCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTasksCount" />
+  </wsdl:message>
+  <wsdl:message name="GetTasksCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTasksCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedTasksSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAssignedTasks" />
+  </wsdl:message>
+  <wsdl:message name="LoadAssignedTasksSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAssignedTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFilteredTasksSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFilteredTasks" />
+  </wsdl:message>
+  <wsdl:message name="LoadFilteredTasksSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFilteredTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadQueueTasksSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadQueueTasks" />
+  </wsdl:message>
+  <wsdl:message name="LoadQueueTasksSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadQueueTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadViewTasksSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadViewTasks" />
+  </wsdl:message>
+  <wsdl:message name="LoadViewTasksSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadViewTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignAllFutureTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignAllFutureTask" />
+  </wsdl:message>
+  <wsdl:message name="AssignAllFutureTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignAllFutureTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignallCurrtaskSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignallCurrtask" />
+  </wsdl:message>
+  <wsdl:message name="AssignallCurrtaskSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignallCurrtaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReassignedTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReassignedTask" />
+  </wsdl:message>
+  <wsdl:message name="GetReassignedTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReassignedTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReassignedTask2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetReassignedTask2" />
+  </wsdl:message>
+  <wsdl:message name="GetReassignedTask2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetReassignedTask2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosUltimusIrResolucionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosUltimusIrResolucion" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosUltimusIrResolucionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosUltimusIrResolucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosUltimusNivActualAprobSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosUltimusNivActualAprob" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosUltimusNivActualAprobSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosUltimusNivActualAprobResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosUltimusComiteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosUltimusComite" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosUltimusComiteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosUltimusComiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosSupervisorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosSupervisor" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosSupervisorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosSupervisorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupMembersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupMembers" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupMembersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosUltimusActualSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatosUltimusActual" />
+  </wsdl:message>
+  <wsdl:message name="GetDatosUltimusActualSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatosUltimusActualResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsUltimosSoap">
+    <wsdl:operation name="GetAssociates">
+      <wsdl:input message="tns:GetAssociatesSoapIn" />
+      <wsdl:output message="tns:GetAssociatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentJobFunctionGroups">
+      <wsdl:input message="tns:GetDepartmentJobFunctionGroupsSoapIn" />
+      <wsdl:output message="tns:GetDepartmentJobFunctionGroupsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentMembers">
+      <wsdl:input message="tns:GetDepartmentMembersSoapIn" />
+      <wsdl:output message="tns:GetDepartmentMembersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubDepartments">
+      <wsdl:input message="tns:GetSubDepartmentsSoapIn" />
+      <wsdl:output message="tns:GetSubDepartmentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupIsMemberOfGroup2">
+      <wsdl:input message="tns:GroupIsMemberOfGroup2SoapIn" />
+      <wsdl:output message="tns:GroupIsMemberOfGroup2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupIsMemberOfGroup">
+      <wsdl:input message="tns:GroupIsMemberOfGroupSoapIn" />
+      <wsdl:output message="tns:GroupIsMemberOfGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindDepartment">
+      <wsdl:input message="tns:FindDepartmentSoapIn" />
+      <wsdl:output message="tns:FindDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <wsdl:input message="tns:FindUserSoapIn" />
+      <wsdl:output message="tns:FindUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOCMembers">
+      <wsdl:input message="tns:GetAllOCMembersSoapIn" />
+      <wsdl:output message="tns:GetAllOCMembersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartments">
+      <wsdl:input message="tns:GetDepartmentsSoapIn" />
+      <wsdl:output message="tns:GetDepartmentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroup">
+      <wsdl:input message="tns:GetGroupSoapIn" />
+      <wsdl:output message="tns:GetGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupNames">
+      <wsdl:input message="tns:GetGroupNamesSoapIn" />
+      <wsdl:output message="tns:GetGroupNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobFunctionGroupMembers">
+      <wsdl:input message="tns:GetJobFunctionGroupMembersSoapIn" />
+      <wsdl:output message="tns:GetJobFunctionGroupMembersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopLevelDepartments">
+      <wsdl:input message="tns:GetTopLevelDepartmentsSoapIn" />
+      <wsdl:output message="tns:GetTopLevelDepartmentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <wsdl:input message="tns:VerifyUserSoapIn" />
+      <wsdl:output message="tns:VerifyUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignAllCurrentTasks">
+      <wsdl:input message="tns:AssignAllCurrentTasksSoapIn" />
+      <wsdl:output message="tns:AssignAllCurrentTasksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignAllFutureTasks">
+      <wsdl:input message="tns:AssignAllFutureTasksSoapIn" />
+      <wsdl:output message="tns:AssignAllFutureTasksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <wsdl:input message="tns:GetDepartmentSoapIn" />
+      <wsdl:output message="tns:GetDepartmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExactCaseUser">
+      <wsdl:input message="tns:GetExactCaseUserSoapIn" />
+      <wsdl:output message="tns:GetExactCaseUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManager">
+      <wsdl:input message="tns:GetManagerSoapIn" />
+      <wsdl:output message="tns:GetManagerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOCSubOrdinates">
+      <wsdl:input message="tns:GetOCSubOrdinatesSoapIn" />
+      <wsdl:output message="tns:GetOCSubOrdinatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubOrdinates">
+      <wsdl:input message="tns:GetSubOrdinatesSoapIn" />
+      <wsdl:output message="tns:GetSubOrdinatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubOrdinatesBySupervisor">
+      <wsdl:input message="tns:GetSubOrdinatesBySupervisorSoapIn" />
+      <wsdl:output message="tns:GetSubOrdinatesBySupervisorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupervisor">
+      <wsdl:input message="tns:GetSupervisorSoapIn" />
+      <wsdl:output message="tns:GetSupervisorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupervisorFunction">
+      <wsdl:input message="tns:GetSupervisorFunctionSoapIn" />
+      <wsdl:output message="tns:GetSupervisorFunctionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskListView">
+      <wsdl:input message="tns:GetTaskListViewSoapIn" />
+      <wsdl:output message="tns:GetTaskListViewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPrefs">
+      <wsdl:input message="tns:GetUserPrefsSoapIn" />
+      <wsdl:output message="tns:GetUserPrefsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRights">
+      <wsdl:input message="tns:GetUserRightsSoapIn" />
+      <wsdl:output message="tns:GetUserRightsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetViewList">
+      <wsdl:input message="tns:GetViewListSoapIn" />
+      <wsdl:output message="tns:GetViewListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserIsMemberOfGroup">
+      <wsdl:input message="tns:UserIsMemberOfGroupSoapIn" />
+      <wsdl:output message="tns:UserIsMemberOfGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPrefs">
+      <wsdl:input message="tns:SetUserPrefsSoapIn" />
+      <wsdl:output message="tns:SetUserPrefsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AbortIncident">
+      <wsdl:input message="tns:AbortIncidentSoapIn" />
+      <wsdl:output message="tns:AbortIncidentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AbortStep">
+      <wsdl:input message="tns:AbortStepSoapIn" />
+      <wsdl:output message="tns:AbortStepSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIncident">
+      <wsdl:input message="tns:DeleteIncidentSoapIn" />
+      <wsdl:output message="tns:DeleteIncidentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DirectActivateStep">
+      <wsdl:input message="tns:DirectActivateStepSoapIn" />
+      <wsdl:output message="tns:DirectActivateStepSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DirectActivateStepEx">
+      <wsdl:input message="tns:DirectActivateStepExSoapIn" />
+      <wsdl:output message="tns:DirectActivateStepExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidentStatus">
+      <wsdl:input message="tns:GetIncidentStatusSoapIn" />
+      <wsdl:output message="tns:GetIncidentStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGraphicalStatus">
+      <wsdl:input message="tns:GetGraphicalStatusSoapIn" />
+      <wsdl:output message="tns:GetGraphicalStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AbortTaskId">
+      <wsdl:input message="tns:AbortTaskIdSoapIn" />
+      <wsdl:output message="tns:AbortTaskIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Abort">
+      <wsdl:input message="tns:AbortSoapIn" />
+      <wsdl:output message="tns:AbortSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnTask">
+      <wsdl:input message="tns:ReturnTaskSoapIn" />
+      <wsdl:output message="tns:ReturnTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignQueueTask">
+      <wsdl:input message="tns:AssignQueueTaskSoapIn" />
+      <wsdl:output message="tns:AssignQueueTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignTask">
+      <wsdl:input message="tns:AssignTaskSoapIn" />
+      <wsdl:output message="tns:AssignTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignTaskAssignedToUser">
+      <wsdl:input message="tns:AssignTaskAssignedToUserSoapIn" />
+      <wsdl:output message="tns:AssignTaskAssignedToUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTask">
+      <wsdl:input message="tns:DeleteTaskSoapIn" />
+      <wsdl:output message="tns:DeleteTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExtractFormURL">
+      <wsdl:input message="tns:ExtractFormURLSoapIn" />
+      <wsdl:output message="tns:ExtractFormURLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTaskVariables">
+      <wsdl:input message="tns:GetAllTaskVariablesSoapIn" />
+      <wsdl:output message="tns:GetAllTaskVariablesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAt">
+      <wsdl:input message="tns:GetAtSoapIn" />
+      <wsdl:output message="tns:GetAtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstTask">
+      <wsdl:input message="tns:GetFirstTaskSoapIn" />
+      <wsdl:output message="tns:GetFirstTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextTask">
+      <wsdl:input message="tns:GetNextTaskSoapIn" />
+      <wsdl:output message="tns:GetNextTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrevTask">
+      <wsdl:input message="tns:GetPrevTaskSoapIn" />
+      <wsdl:output message="tns:GetPrevTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTasksCount">
+      <wsdl:input message="tns:GetTasksCountSoapIn" />
+      <wsdl:output message="tns:GetTasksCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedTasks">
+      <wsdl:input message="tns:LoadAssignedTasksSoapIn" />
+      <wsdl:output message="tns:LoadAssignedTasksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFilteredTasks">
+      <wsdl:input message="tns:LoadFilteredTasksSoapIn" />
+      <wsdl:output message="tns:LoadFilteredTasksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadQueueTasks">
+      <wsdl:input message="tns:LoadQueueTasksSoapIn" />
+      <wsdl:output message="tns:LoadQueueTasksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadViewTasks">
+      <wsdl:input message="tns:LoadViewTasksSoapIn" />
+      <wsdl:output message="tns:LoadViewTasksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignAllFutureTask">
+      <wsdl:input message="tns:AssignAllFutureTaskSoapIn" />
+      <wsdl:output message="tns:AssignAllFutureTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignallCurrtask">
+      <wsdl:input message="tns:AssignallCurrtaskSoapIn" />
+      <wsdl:output message="tns:AssignallCurrtaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReassignedTask">
+      <wsdl:input message="tns:GetReassignedTaskSoapIn" />
+      <wsdl:output message="tns:GetReassignedTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReassignedTask2">
+      <wsdl:input message="tns:GetReassignedTask2SoapIn" />
+      <wsdl:output message="tns:GetReassignedTask2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusIrResolucion">
+      <wsdl:input message="tns:GetDatosUltimusIrResolucionSoapIn" />
+      <wsdl:output message="tns:GetDatosUltimusIrResolucionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusNivActualAprob">
+      <wsdl:input message="tns:GetDatosUltimusNivActualAprobSoapIn" />
+      <wsdl:output message="tns:GetDatosUltimusNivActualAprobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusComite">
+      <wsdl:input message="tns:GetDatosUltimusComiteSoapIn" />
+      <wsdl:output message="tns:GetDatosUltimusComiteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosSupervisor">
+      <wsdl:input message="tns:GetDatosSupervisorSoapIn" />
+      <wsdl:output message="tns:GetDatosSupervisorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupMembers">
+      <wsdl:input message="tns:GetGroupMembersSoapIn" />
+      <wsdl:output message="tns:GetGroupMembersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusActual">
+      <wsdl:input message="tns:GetDatosUltimusActualSoapIn" />
+      <wsdl:output message="tns:GetDatosUltimusActualSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsUltimosSoap" type="tns:wsUltimosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAssociates">
+      <soap:operation soapAction="http://tempuri.org/GetAssociates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentJobFunctionGroups">
+      <soap:operation soapAction="http://tempuri.org/GetDepartmentJobFunctionGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentMembers">
+      <soap:operation soapAction="http://tempuri.org/GetDepartmentMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubDepartments">
+      <soap:operation soapAction="http://tempuri.org/GetSubDepartments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupIsMemberOfGroup2">
+      <soap:operation soapAction="http://tempuri.org/GroupIsMemberOfGroup2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupIsMemberOfGroup">
+      <soap:operation soapAction="http://tempuri.org/GroupIsMemberOfGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindDepartment">
+      <soap:operation soapAction="http://tempuri.org/FindDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <soap:operation soapAction="http://tempuri.org/FindUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOCMembers">
+      <soap:operation soapAction="http://tempuri.org/GetAllOCMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartments">
+      <soap:operation soapAction="http://tempuri.org/GetDepartments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroup">
+      <soap:operation soapAction="http://tempuri.org/GetGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupNames">
+      <soap:operation soapAction="http://tempuri.org/GetGroupNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobFunctionGroupMembers">
+      <soap:operation soapAction="http://tempuri.org/GetJobFunctionGroupMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopLevelDepartments">
+      <soap:operation soapAction="http://tempuri.org/GetTopLevelDepartments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <soap:operation soapAction="http://tempuri.org/VerifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignAllCurrentTasks">
+      <soap:operation soapAction="http://tempuri.org/AssignAllCurrentTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignAllFutureTasks">
+      <soap:operation soapAction="http://tempuri.org/AssignAllFutureTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <soap:operation soapAction="http://tempuri.org/GetDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExactCaseUser">
+      <soap:operation soapAction="http://tempuri.org/GetExactCaseUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManager">
+      <soap:operation soapAction="http://tempuri.org/GetManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOCSubOrdinates">
+      <soap:operation soapAction="http://tempuri.org/GetOCSubOrdinates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubOrdinates">
+      <soap:operation soapAction="http://tempuri.org/GetSubOrdinates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubOrdinatesBySupervisor">
+      <soap:operation soapAction="http://tempuri.org/GetSubOrdinatesBySupervisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupervisor">
+      <soap:operation soapAction="http://tempuri.org/GetSupervisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupervisorFunction">
+      <soap:operation soapAction="http://tempuri.org/GetSupervisorFunction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskListView">
+      <soap:operation soapAction="http://tempuri.org/GetTaskListView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPrefs">
+      <soap:operation soapAction="http://tempuri.org/GetUserPrefs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRights">
+      <soap:operation soapAction="http://tempuri.org/GetUserRights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetViewList">
+      <soap:operation soapAction="http://tempuri.org/GetViewList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserIsMemberOfGroup">
+      <soap:operation soapAction="http://tempuri.org/UserIsMemberOfGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPrefs">
+      <soap:operation soapAction="http://tempuri.org/SetUserPrefs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbortIncident">
+      <soap:operation soapAction="http://tempuri.org/AbortIncident" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbortStep">
+      <soap:operation soapAction="http://tempuri.org/AbortStep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIncident">
+      <soap:operation soapAction="http://tempuri.org/DeleteIncident" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectActivateStep">
+      <soap:operation soapAction="http://tempuri.org/DirectActivateStep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectActivateStepEx">
+      <soap:operation soapAction="http://tempuri.org/DirectActivateStepEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidentStatus">
+      <soap:operation soapAction="http://tempuri.org/GetIncidentStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGraphicalStatus">
+      <soap:operation soapAction="http://tempuri.org/GetGraphicalStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbortTaskId">
+      <soap:operation soapAction="http://tempuri.org/AbortTaskId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Abort">
+      <soap:operation soapAction="http://tempuri.org/Abort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnTask">
+      <soap:operation soapAction="http://tempuri.org/ReturnTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignQueueTask">
+      <soap:operation soapAction="http://tempuri.org/AssignQueueTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignTask">
+      <soap:operation soapAction="http://tempuri.org/AssignTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignTaskAssignedToUser">
+      <soap:operation soapAction="http://tempuri.org/AssignTaskAssignedToUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTask">
+      <soap:operation soapAction="http://tempuri.org/DeleteTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExtractFormURL">
+      <soap:operation soapAction="http://tempuri.org/ExtractFormURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTaskVariables">
+      <soap:operation soapAction="http://tempuri.org/GetAllTaskVariables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAt">
+      <soap:operation soapAction="http://tempuri.org/GetAt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstTask">
+      <soap:operation soapAction="http://tempuri.org/GetFirstTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextTask">
+      <soap:operation soapAction="http://tempuri.org/GetNextTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrevTask">
+      <soap:operation soapAction="http://tempuri.org/GetPrevTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTasksCount">
+      <soap:operation soapAction="http://tempuri.org/GetTasksCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedTasks">
+      <soap:operation soapAction="http://tempuri.org/LoadAssignedTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFilteredTasks">
+      <soap:operation soapAction="http://tempuri.org/LoadFilteredTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadQueueTasks">
+      <soap:operation soapAction="http://tempuri.org/LoadQueueTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadViewTasks">
+      <soap:operation soapAction="http://tempuri.org/LoadViewTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignAllFutureTask">
+      <soap:operation soapAction="http://tempuri.org/AssignAllFutureTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignallCurrtask">
+      <soap:operation soapAction="http://tempuri.org/AssignallCurrtask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReassignedTask">
+      <soap:operation soapAction="http://tempuri.org/GetReassignedTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReassignedTask2">
+      <soap:operation soapAction="http://tempuri.org/GetReassignedTask2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusIrResolucion">
+      <soap:operation soapAction="http://tempuri.org/GetDatosUltimusIrResolucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusNivActualAprob">
+      <soap:operation soapAction="http://tempuri.org/GetDatosUltimusNivActualAprob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusComite">
+      <soap:operation soapAction="http://tempuri.org/GetDatosUltimusComite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosSupervisor">
+      <soap:operation soapAction="http://tempuri.org/GetDatosSupervisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupMembers">
+      <soap:operation soapAction="http://tempuri.org/GetGroupMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusActual">
+      <soap:operation soapAction="http://tempuri.org/GetDatosUltimusActual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsUltimosSoap12" type="tns:wsUltimosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAssociates">
+      <soap12:operation soapAction="http://tempuri.org/GetAssociates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentJobFunctionGroups">
+      <soap12:operation soapAction="http://tempuri.org/GetDepartmentJobFunctionGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentMembers">
+      <soap12:operation soapAction="http://tempuri.org/GetDepartmentMembers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubDepartments">
+      <soap12:operation soapAction="http://tempuri.org/GetSubDepartments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupIsMemberOfGroup2">
+      <soap12:operation soapAction="http://tempuri.org/GroupIsMemberOfGroup2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupIsMemberOfGroup">
+      <soap12:operation soapAction="http://tempuri.org/GroupIsMemberOfGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindDepartment">
+      <soap12:operation soapAction="http://tempuri.org/FindDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <soap12:operation soapAction="http://tempuri.org/FindUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOCMembers">
+      <soap12:operation soapAction="http://tempuri.org/GetAllOCMembers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartments">
+      <soap12:operation soapAction="http://tempuri.org/GetDepartments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroup">
+      <soap12:operation soapAction="http://tempuri.org/GetGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupNames">
+      <soap12:operation soapAction="http://tempuri.org/GetGroupNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobFunctionGroupMembers">
+      <soap12:operation soapAction="http://tempuri.org/GetJobFunctionGroupMembers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopLevelDepartments">
+      <soap12:operation soapAction="http://tempuri.org/GetTopLevelDepartments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <soap12:operation soapAction="http://tempuri.org/VerifyUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignAllCurrentTasks">
+      <soap12:operation soapAction="http://tempuri.org/AssignAllCurrentTasks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignAllFutureTasks">
+      <soap12:operation soapAction="http://tempuri.org/AssignAllFutureTasks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <soap12:operation soapAction="http://tempuri.org/GetDepartment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExactCaseUser">
+      <soap12:operation soapAction="http://tempuri.org/GetExactCaseUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManager">
+      <soap12:operation soapAction="http://tempuri.org/GetManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOCSubOrdinates">
+      <soap12:operation soapAction="http://tempuri.org/GetOCSubOrdinates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubOrdinates">
+      <soap12:operation soapAction="http://tempuri.org/GetSubOrdinates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubOrdinatesBySupervisor">
+      <soap12:operation soapAction="http://tempuri.org/GetSubOrdinatesBySupervisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupervisor">
+      <soap12:operation soapAction="http://tempuri.org/GetSupervisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupervisorFunction">
+      <soap12:operation soapAction="http://tempuri.org/GetSupervisorFunction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskListView">
+      <soap12:operation soapAction="http://tempuri.org/GetTaskListView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPrefs">
+      <soap12:operation soapAction="http://tempuri.org/GetUserPrefs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRights">
+      <soap12:operation soapAction="http://tempuri.org/GetUserRights" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetViewList">
+      <soap12:operation soapAction="http://tempuri.org/GetViewList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserIsMemberOfGroup">
+      <soap12:operation soapAction="http://tempuri.org/UserIsMemberOfGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPrefs">
+      <soap12:operation soapAction="http://tempuri.org/SetUserPrefs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbortIncident">
+      <soap12:operation soapAction="http://tempuri.org/AbortIncident" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbortStep">
+      <soap12:operation soapAction="http://tempuri.org/AbortStep" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIncident">
+      <soap12:operation soapAction="http://tempuri.org/DeleteIncident" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectActivateStep">
+      <soap12:operation soapAction="http://tempuri.org/DirectActivateStep" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectActivateStepEx">
+      <soap12:operation soapAction="http://tempuri.org/DirectActivateStepEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncidentStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetIncidentStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGraphicalStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetGraphicalStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbortTaskId">
+      <soap12:operation soapAction="http://tempuri.org/AbortTaskId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Abort">
+      <soap12:operation soapAction="http://tempuri.org/Abort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnTask">
+      <soap12:operation soapAction="http://tempuri.org/ReturnTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignQueueTask">
+      <soap12:operation soapAction="http://tempuri.org/AssignQueueTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignTask">
+      <soap12:operation soapAction="http://tempuri.org/AssignTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignTaskAssignedToUser">
+      <soap12:operation soapAction="http://tempuri.org/AssignTaskAssignedToUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTask">
+      <soap12:operation soapAction="http://tempuri.org/DeleteTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExtractFormURL">
+      <soap12:operation soapAction="http://tempuri.org/ExtractFormURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTaskVariables">
+      <soap12:operation soapAction="http://tempuri.org/GetAllTaskVariables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAt">
+      <soap12:operation soapAction="http://tempuri.org/GetAt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstTask">
+      <soap12:operation soapAction="http://tempuri.org/GetFirstTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextTask">
+      <soap12:operation soapAction="http://tempuri.org/GetNextTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrevTask">
+      <soap12:operation soapAction="http://tempuri.org/GetPrevTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTasksCount">
+      <soap12:operation soapAction="http://tempuri.org/GetTasksCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAssignedTasks">
+      <soap12:operation soapAction="http://tempuri.org/LoadAssignedTasks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFilteredTasks">
+      <soap12:operation soapAction="http://tempuri.org/LoadFilteredTasks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadQueueTasks">
+      <soap12:operation soapAction="http://tempuri.org/LoadQueueTasks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadViewTasks">
+      <soap12:operation soapAction="http://tempuri.org/LoadViewTasks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignAllFutureTask">
+      <soap12:operation soapAction="http://tempuri.org/AssignAllFutureTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignallCurrtask">
+      <soap12:operation soapAction="http://tempuri.org/AssignallCurrtask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReassignedTask">
+      <soap12:operation soapAction="http://tempuri.org/GetReassignedTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReassignedTask2">
+      <soap12:operation soapAction="http://tempuri.org/GetReassignedTask2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusIrResolucion">
+      <soap12:operation soapAction="http://tempuri.org/GetDatosUltimusIrResolucion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusNivActualAprob">
+      <soap12:operation soapAction="http://tempuri.org/GetDatosUltimusNivActualAprob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusComite">
+      <soap12:operation soapAction="http://tempuri.org/GetDatosUltimusComite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosSupervisor">
+      <soap12:operation soapAction="http://tempuri.org/GetDatosSupervisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupMembers">
+      <soap12:operation soapAction="http://tempuri.org/GetGroupMembers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosUltimusActual">
+      <soap12:operation soapAction="http://tempuri.org/GetDatosUltimusActual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsUltimos">
+    <wsdl:port name="wsUltimosSoap" binding="tns:wsUltimosSoap">
+      <soap:address location="http://s129va/wbcultws/wsUltimus.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsUltimosSoap12" binding="tns:wsUltimosSoap12">
+      <soap12:address location="http://s129va/wbcultws/wsUltimus.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

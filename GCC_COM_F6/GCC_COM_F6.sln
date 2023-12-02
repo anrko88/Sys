@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GCC_Data", "..\GCC_Data\GCC_Data.vbproj", "{0B7E8819-D850-450B-BD7E-B6739BFE47C9}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GCC_Entity", "..\GCC_Entity\GCC_Entity.vbproj", "{D1EB0147-3370-45D3-944A-9807A91D17D0}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GCC_Logic", "..\GCC_Logic\GCC_Logic.vbproj", "{4AE7B878-D80C-47AE-9528-38F557C6728A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GCC_Common", "..\GCC_Common\GCC_Common.vbproj", "{594672A5-444F-4836-A501-0F307D52FFCE}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccProjectUniqueName0 = ..\\GCC_Data\\GCC_Data.vbproj
+		SccProjectName0 = \u0022$/SGL/APP_6.0/GCC_Data\u0022,\u0020PLCAAAAA
+		SccLocalPath0 = ..\\GCC_Data
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName1 = ..\\GCC_Entity\\GCC_Entity.vbproj
+		SccProjectName1 = \u0022$/SGL/APP_6.0/GCC_Entity\u0022,\u0020QLCAAAAA
+		SccLocalPath1 = ..\\GCC_Entity
+		SccProvider1 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName2 = ..\\GCC_Logic\\GCC_Logic.vbproj
+		SccProjectName2 = \u0022$/SGL/APP_6.0/GCC_Logic\u0022,\u0020RLCAAAAA
+		SccLocalPath2 = ..\\GCC_Logic
+		SccProvider2 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName3 = ..\\GCC_Common\\GCC_Common.vbproj
+		SccProjectName3 = \u0022$/SGL/APP_6.0/GCC_Common\u0022,\u0020OLCAAAAA
+		SccLocalPath3 = ..\\GCC_Common
+		SccProvider3 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B7E8819-D850-450B-BD7E-B6739BFE47C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B7E8819-D850-450B-BD7E-B6739BFE47C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B7E8819-D850-450B-BD7E-B6739BFE47C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B7E8819-D850-450B-BD7E-B6739BFE47C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1EB0147-3370-45D3-944A-9807A91D17D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1EB0147-3370-45D3-944A-9807A91D17D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1EB0147-3370-45D3-944A-9807A91D17D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1EB0147-3370-45D3-944A-9807A91D17D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AE7B878-D80C-47AE-9528-38F557C6728A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AE7B878-D80C-47AE-9528-38F557C6728A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AE7B878-D80C-47AE-9528-38F557C6728A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AE7B878-D80C-47AE-9528-38F557C6728A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{594672A5-444F-4836-A501-0F307D52FFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{594672A5-444F-4836-A501-0F307D52FFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{594672A5-444F-4836-A501-0F307D52FFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{594672A5-444F-4836-A501-0F307D52FFCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

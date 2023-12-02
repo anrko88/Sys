@@ -1,0 +1,10 @@
+C:\SGL\Fase6.0\GCC_LogicWS\bin\Debug\GCC_LogicWS.dll.config
+C:\SGL\Fase6.0\GCC_LogicWS\bin\Debug\GCC_LogicWS.dll
+C:\SGL\Fase6.0\GCC_LogicWS\bin\Debug\GCC_LogicWS.pdb
+C:\SGL\Fase6.0\GCC_LogicWS\bin\Debug\GCC_LogicWS.xml
+C:\SGL\Fase6.0\GCC_LogicWS\obj\Debug\ResolveAssemblyReference.cache
+C:\SGL\Fase6.0\GCC_LogicWS\obj\Debug\GCC.LogicWS.Resources.resources
+C:\SGL\Fase6.0\GCC_LogicWS\obj\Debug\GCC_LogicWS.vbproj.GenerateResource.Cache
+C:\SGL\Fase6.0\GCC_LogicWS\obj\Debug\GCC_LogicWS.dll
+C:\SGL\Fase6.0\GCC_LogicWS\obj\Debug\GCC_LogicWS.xml
+C:\SGL\Fase6.0\GCC_LogicWS\obj\Debug\GCC_LogicWS.pdb

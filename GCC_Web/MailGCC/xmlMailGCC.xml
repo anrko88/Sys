@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MailGCC>
+  <MailGenerarCartaCotizacion>
+    <Subject>Leasing Interbank - Cotizacion @NombreCliente@ Nro. @CodigoCotizacion@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt']
+      Se ha generado una cotización de Leasing para @NombreCliente@. Para finalizar este proceso, favor de reenviar este
+      correo con carta adjunta a la casilla de correo del cliente: [font style='font-family:Arial;font-size:10pt'][b]@CorreoCliente@[/b][/font]
+      [/font]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailGenerarCartaCotizacion>
+  <MailSolicitudCliente>
+    <Subject>Leasing Interbank - Aprobación @NombreCliente@ Nro. @NumContrato@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+
+      [font style='font-family:Arial;font-size:10pt']
+      Se ha aprobado una operación de Leasing para @NombreCliente@. Para finalizar este proceso, favor de reenviar este correo a la casilla de correo del cliente: [b]@CorreoCliente@[/b][/font]
+      [br/]
+      [br/]
+      [font style='font-family:Arial;font-size:10pt']
+      Estimado,[/font]
+      [p]
+      [font style='font-family:Arial;font-size:10pt']
+      Su operación de leasing ha sido aprobada, le pedimos se sirva enviar los siguientes documentos para la formalización y desembolso:
+      [br/]
+      Documentos para Formalización (firma de contrato)
+      [br/][br/]
+      @Documentos@
+      [br/]
+      Requerimientos para Desembolso:
+      [br/]
+      -	Contrato de leasing firmado. La notaria se comunicará con ustedes para la toma de firmas respectivas.
+      [br/]
+      -	Factura del bien, la cual será solicitada al concesionario.
+      [br/]
+      -	Número de cuenta corriente relacionada al leasing.
+      [br/]
+      -	Depósito de cuota inicial y comisión de activación. De haber realizado un adelanto al proveedor, indicarlo para solicitar la carta de adelanto correspondiente.
+      [br/]
+      -	En caso de haber requerido póliza externa, brindarnos el nombre y dirección de correo electrónico de su bróker para la solicitud de documentación correspondiente.
+      [br/][br/]
+      El desembolso se realizará, siempre que usted haya cumplido con enviar lo solicitado; y si su póliza es externa, que haya enviado los documentos del seguro y éstos se encuentren conformes.
+      [br/][br/]
+      Saludos cordiales,
+      [/font]
+      [/p]
+      [/BODY]
+      [/HTML]
+    </Body>    
+  </MailSolicitudCliente>
+  <MailSolicitudProveedor>
+    <Subject>Leasing Interbank - Aprobación @NombreCliente@ Nro. @NumContrato@ - Proveedor: @bien@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt']
+      Se ha aprobado una operación de Leasing para @NombreCliente@. Para finalizar este proceso, favor de
+      reenviar este correo a la casilla de correo del proveedor: [b]@CorreoCliente@[/b][/font]
+      [br/]
+      [br/]
+      [font style='font-family:Arial;font-size:10pt']
+      Estimados:
+      [br/]
+      Buenos días, adjunto carta de aprobación por el leasing planteado según la referencia.
+      [br/]
+      Por favor, enviar facturas originales a mi atención, en el piso 15 de la Torre Interbank (Carlos Villarán 140 - La Victoria), adjuntando la carta de aprobación recepcionada dentro de las siguientes 48 horas.
+      [br/]
+      De existir algún adelanto de la cuota inicial del cliente, por favor enviar carta confirmando el importe recibido (Modelo de carta adjunta)
+      [br/]
+      Tener en cuenta que si no se da respuesta, dentro de los plazos establecidos en el presente email y en la carta de aprobación adjunta, la aprobación quedará sin efecto.
+      [br/]
+      Cualquier consulta adicional agradeceré se comunique a este mismo email.
+      [br/][br/]
+      Saludos cordiales,
+      [/font]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailSolicitudProveedor>
+  <MailGenerarCartaContrato>
+    <Subject>Leasing Interbank - Contrato elaborado @CodigoCotizacion@ @NombreCliente@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt']
+      Se ha elaborado el contrato de Leasing de la referencia para @NombreCliente@. Para finalizar este proceso, favor de reenviar este correo a la casilla de correo del cliente: [b]@CorreoCliente@[/b][/font]
+      [br/]
+      [br/]
+      [p]
+      [font style='font-family:Arial;font-size:10pt']
+      Estimado(a) : [b]@NombreCliente@[/b]
+      [br/][br/]
+      [/font]
+      En adjunto envío el contrato de leasing, para tu revisión y conformidad.
+      [br/]
+      @bien@
+      [br/][br/]
+      Muchas Gracias
+
+      [/p]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailGenerarCartaContrato>
+  <MailChecklistComercial>
+    <Subject>Leasing Interbank - Solicitud elaboración contrato Nº @NumContrato@ - @NombreCliente@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt']
+      Se ha enviado la operación de @TipoContrato@ de la referencia a su bandeja según el siguiente detalle:[/font]
+      [br/]
+      [p]
+      [font style='font-family:Arial;font-size:10pt']
+      Nro. Contrato: @NumContrato@
+      [br/][br/]
+      Cliente: @NombreCliente@
+      [br/][br/]
+      Clasificación y tipo: @ClasificacionBien@ - @TipoBien@
+      [br/][br/]
+      Importe: @Importe@
+      [br/][br/]
+      [/font]
+      [/p]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailChecklistComercial>
+  <MailChecklistLegal>
+    <Subject>Leasing Interbank - Devolución contrato Nº @NumContrato@ @NombreCliente@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt']
+      Se ha devuelto la operación de @TipoContrato@ de la referencia a su bandeja según el siguiente detalle:[/font]
+      [br/]
+      [p]
+      [font style='font-family:Arial;font-size:10pt']
+      Nro. Contrato: @NumContrato@
+      [br/][br/]
+      Clinete: @NombreCliente@
+      [br/][br/]
+      Clasificación y tipo: @ClasificacionBien@ - @TipoBien@
+      [br/][br/]
+      Importe: @Importe@
+      [br/][br/]
+      Motivo: @Motivo@ 
+      [br/][br/]
+      Comentario: @Observacion@
+      [br/][br/]
+      [/font]
+      [/p]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailChecklistLegal>
+  <MailContratoNotaria>
+    <Subject>Leasing Interbank - Contrato a notaria @NombreCliente@ Nro. @NumContrato@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt']
+      Estimados,
+      [br/]
+      Por favor tramitar el contrato adjunto.[/font]
+      [br/][br/]
+      Saludos,
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailContratoNotaria>
+  <MailContratoFirmado>
+    <Subject>Leasing Interbank - Contrato firmado @NombreCliente@ Nro. @NumContrato@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt']
+      Se ha firmado el contrato de @TipoContrato@ de la referencia, segun el siguiente detalle:
+      [br/]
+      [p]
+      [font style='font-family:Arial;font-size:10pt']
+      Nro. Contrato: @NumContrato@
+      [br/][br/]
+      Cliente: @NombreCliente@
+      [br/][br/]
+      Clasificación y tipo: @ClasificacionBien@ - @TipoBien@
+      [br/][br/]
+      Importe: @Importe@
+      [br/][br/]
+      [b]Se puede proceder a desembolsar el contrato.[/b]
+      [/font]
+      [/p]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailContratoFirmado>
+  <MailCotizacionSupervisor>
+    <Subject>Leasing Interbank - Cotizacion @NombreCliente@ Nro. @CodigoCotizacion@ requiere aprobación de supervisor</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt']
+      Se ha generado una cotización de Leasing para @NombreCliente@. La misma requiere aprobación de supervisor para poder continuar con el proceso.
+      [br/]
+      [p]
+      [br/]
+      Para proceder a trabajarla, ingresar al sistema, buscar la cotización en Cotización y Negociación - Registrar Cotización y acceder a la misma.
+      [/p]
+      [/font]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailCotizacionSupervisor>
+  <MailCotizacionSupervisorAprobada>
+    <Subject>Leasing Interbank - Cotizacion @NombreCliente@ Nro. @CodigoCotizacion@ Aprobada por supervisor</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt']
+      La cotización ha sido aprobada.      
+      [/font]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailCotizacionSupervisorAprobada>
+    <MailCotizacionSupervisorCreada>
+        <Subject>Leasing Interbank - Cotizacion @NombreCliente@ Nro. @CodigoCotizacion@ Creada por supervisor</Subject>
+        <Body>
+            [HTML][HEAD][/HEAD][BODY]
+            [font style='font-family:Arial;font-size:10pt']
+            La cotización ha sido creada.
+            [/font]
+            [/BODY]
+            [/HTML]
+        </Body>
+    </MailCotizacionSupervisorCreada>
+  <MailCotizacionSupervisorDevuelta>
+    <Subject>Leasing Interbank - Cotizacion @NombreCliente@ Nro. @CodigoCotizacion@ Devuelta por supervisor</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt']
+      La cotización NO ha sido aprobada. Favor corregir.
+      [/font]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailCotizacionSupervisorDevuelta>
+  <MailF10Aprobado>
+    <Subject>Leasing Interbank - Se ha aprobado el flujo WBC para la cotización Nro. @CodigoCotizacion@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt']
+      Estimados,
+      [br/]
+      Se ha aprobado el F10 para la cotización Nro. @CodigoCotizacion@. Se puede proceder con la solicitud de documentos y verificación.[/font]
+      [br/][br/]
+      Saludos,
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailF10Aprobado>
+  
+  <MailImpuestoVehicular>
+    <Subject>IBK :: Sistema Leasing :: Impuesto Vehicular @GCC_Periodo@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt;padding-bottom: 1']
+      Estimados:[br/]
+      Buenos días, adjunto carta de impuesto vehicular @GCC_Periodo@.[/font]
+      [br/]
+      [/BODY]
+      [/HTML]
+    </Body>
+    <BodyPdf>
+      [img src='@GCC_RutaWeb@\Util\images\Interbank.jpg' width='95%' height='30'/]
+      [div]
+      Lima, @GCC_Fecha@
+      [br/]
+      [br/]
+      [table class='tabela']
+      [tr][td]Señores[td/][tr/]
+      [tr][td][b]@GCC_RazonSocial@[/b][td/][tr/]
+      [tr][td]@GCC_Direccion@[td/][tr/]
+      [tr][td]@GCC_Departamento@ / @GCC_Provincia@ / @GCC_Distrito@[td/][tr/]
+      [/table]
+      [br/]
+      Referencia[span]........[/span]:
+      [font style='text-decoration: underline; font-weight: bold']Impuesto Vehicular Año @GCC_Periodo@
+      [br/][span]...........................[/span]Contrato de Arrendamiento Financiero Nro.   @GCC_NumContrato@[/font]
+      [br/][br/]
+      Estimados señores:
+      [br/][br/]
+      [p]Por medio de la presente les comunicamos que con fecha @GCC_FechaPago@, hemos procedido a efectuar ante el Servicio de
+      Administración Tributaria (SAT), el pago del Impuesto al Patrimonio Vehicular (IPV) correspondiente al período @GCC_FechaPago@
+      respecto del (los) vehículo(s) otorgado(s) en arrendamiento financiero según contrato en referencia, el mismo que asciende al
+      importe de: @GCC_SimMoneda@ @GCC_Importe@[/p]
+      [p]En virtud de lo establecido en referido contrato, corresponde a ustedes reembolsar dicho gasto según el siguiente detalle[/p]
+      [br/]
+      [center]
+      [table class='tabDetalle']
+      [tr][td]Tipo de cambio[/td]                  [td style='text-align:center;']S/.[/td][td style='text-align:right;']@GCC_TipoCambio@[/td][/tr]
+      [tr][td]Reembolso de gastos[/td]             [td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_Monto@[/td][/tr]
+      [tr][td]Comisión por reembolso de gastos[/td][td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_Comision@[/td][/tr]
+      [tr][td]Impuesto General a las Ventas[/td]   [td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_IGV@[/td][/tr]
+      [tr][td]Total cargo a cuenta[/td]            [td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_Importe@[/td][/tr]
+      [tr][td][span]..[/span][/td][td][span]..[/span][/td][td][span]..[/span][/td][/tr]
+      [tr][td]Fecha de vencimiento[/td][td style='text-align:center;width:100']@GCC_FechaCobro@[/td][td] [/td][/tr]
+      [/table]
+      [/center]
+      [br/]
+      [p]A la fecha del vencimiento el cobro se efectuará vía cargo automático en su cuenta corriente, de lo contrario podrán  acercarse a cualquiera de nuestras Tiendas a Nivel Nacional para efectuar el pago directamente en ventanilla a fin de evitar incurrir en intereses y comisiones moratorias por pago fuera del vencimiento establecido.[/p]
+      [br/]
+      [p]Para cualquier consulta con respecto al concepto de la referencia, contactarse con el señor Jorge Donaire al 219-2000: 23929 y/o a la dirección de su correo electrónico: [font style='text-decoration: underline; color:#0000FF']jdonaire@intercorp.com.pe[/font].[/p]
+      [br/]
+      Atentamente,
+      [br/]
+      [br/]
+      [br/]
+      [br/]
+      [br/]
+      [span]...........[/span][img src='@GCC_RutaWeb@\Util\Firmas\Firmas.jpg' width='90%' height='90%'/]
+      [span]........[/span]Farina Pando Robles
+      [br/]
+      Sub-Gerente División. Leasing
+      [/div]
+    </BodyPdf>
+  </MailImpuestoVehicular>
+  <MailMultasVehicular>
+    <Subject>IBK :: Sistema Leasing :: Multa Vehicular @GCC_Periodo@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt;padding-bottom: 1']
+      Estimados:[br/]
+      Buenos días, adjunto carta de multa vehicular  @GCC_Periodo@.[/font]
+      [br/]
+      [/BODY]
+      [/HTML]
+    </Body>
+    <BodyPdf>
+      [img src='@GCC_RutaWeb@\Util\images\Interbank.jpg' width='95%' height='30'/]
+      [div]
+      Lima, @GCC_Fecha@
+      [br/]
+      [br/]
+      [table class='tabela']
+      [tr][td]Señores[td/][tr/]
+      [tr][td][b]@GCC_RazonSocial@[/b][td/][tr/]
+      [tr][td]@GCC_Direccion@[td/][tr/]
+      [tr][td]@GCC_Departamento@ / @GCC_Provincia@ / @GCC_Distrito@[td/][tr/]
+      [/table]
+      [br/]
+      Referencia[span]........[/span]:
+      [font style='text-decoration: underline; font-weight: bold']Infracciones de Tránsito
+      [br/][span]...........................[/span]Contrato de Arrendamiento Financiero Nro.  @GCC_NumContrato@[/font]
+      [br/][br/]
+      Estimados señores:
+      [br/][br/]
+      [p]Por medio de la presente les comunicamos que con fecha @GCC_FechaPago@, hemos procedido a efectuar ante la Municipalidad Metropolitana de Lima,
+      el pago de la(s) infraccion(es) de tránsito correspondiente al período @GCC_Periodo@ respecto del (los) vehículo(s) otorgado(s) en arrendamiento
+      financiero según contrato en referencia, el mismo que asciende al importe de: @GCC_SimMoneda@ @GCC_Importe@[/p]
+      [p]En virtud de lo establecido en referido contrato, [font style='font-style: oblique']corresponde[/font] a ustedes reembolsar dicho gasto según el siguiente detalle[/p]
+      @tablaDetalle@
+      (*) El Importe Total a Pagar Incluye la comisión administrativa.
+      [br/][br/]
+      [p]Fecha de vencimiento[span]...........[/span]@GCC_FechaCobro@[/p]
+      [br/]
+      [p]A la fecha del vencimiento el cobro se efectuará vía cargo automático en su cuenta corriente, de lo contrario podrán  acercarse a cualquiera de nuestras Tiendas a Nivel Nacional para efectuar el pago directamente en ventanilla a fin de evitar incurrir en intereses y comisiones moratorias por pago fuera del vencimiento establecido.[/p]
+      [br/]
+      [p]Para cualquier consulta con respecto al concepto de la referencia, contactarse con el señor Antonio Apari al 219-2000: 23930 y/o a la dirección de su correo electrónico: [font style='text-decoration: underline; color:#0000FF']aapari@intercorp.com.pe[/font].[/p]
+      [br/]
+      Atentamente,
+      [br/]
+      [br/]
+      [br/]
+      [br/]
+      [br/]
+      [span]...........[/span][img src='@GCC_RutaWeb@\Util\Firmas\Firmas.jpg' width='90%' height='90%'/]
+      [span]........[/span]Farina Pando Robles
+      [br/]
+      Sub-Gerente División. Leasing
+      [/div]
+    </BodyPdf>
+  </MailMultasVehicular>
+  <MailImpuestoMunicipal>
+    <Subject>IBK :: Sistema Leasing :: Impuesto Municipal</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt;padding-bottom: 1']
+      Estimados:[br/]
+      Buenos días, adjunto carta de impuesto municipal.[/font]
+      [br/]
+      [/BODY]
+      [/HTML]
+    </Body>
+    <BodyPdf>
+      [img src='@GCC_RutaWeb@\Util\images\Interbank.jpg' width='95%' height='30'/]
+      [div]
+      Lima, @GCC_Fecha@
+      [br/]
+      [br/]
+      [table class='tabela']
+      [tr][td]Señores[td/][tr/]
+      [tr][td][b]@GCC_RazonSocial@[/b][td/][tr/]
+      [tr][td]@GCC_Direccion@[td/][tr/]
+      [tr][td]@GCC_Departamento@ / @GCC_Provincia@ / @GCC_Distrito@[td/][tr/]
+      [/table]
+      [br/]
+      Referencia[span]........[/span]:
+      [font style='text-decoration: underline; font-weight: bold']Contrato de Arrendamiento Financiero Nro.  @GCC_NumContrato@
+      [br/][span]...........................[/span]Arbitrios y Predios Anuales.[/font]
+      [br/][br/]
+      Estimados señores:
+      [br/][br/]
+      [p]Por medio de la presente les comunicamos que con fecha @GCC_FechaPago@, hemos procedido
+      a efectuar ante la municipalidad de Lima, el pago de los Arbitrios y Predios Anuales, del
+      inmueble otorgado en arrendamiento financiero a ustedes, el mismo que asciende al importe de:
+      @GCC_SimMoneda@ @GCC_Importe@[/p]
+      [p]Por tanto, solicitamos a ustedes se  sirvan disponer los fondos necesarios en su cuenta corriente ME y/o  MN para el  reembolso dicho gasto, de acuerdo al siguiente  detalle:[/p]
+      [br/]
+      [center]
+      [table class='tabDetalle']
+      [tr][td]Tipo de cambio[/td]                  [td style='text-align:center;']S/.[/td][td style='text-align:right;']@GCC_TipoCambio@[/td][/tr]
+      [tr][td]Reembolso de gastos[/td]             [td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_Monto@[/td][/tr]
+      [tr][td]Comisión por reembolso de gastos[/td][td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_Comision@[/td][/tr]
+      [tr][td]Impuesto General a las Ventas[/td]   [td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_IGV@[/td][/tr]
+      [tr][td]Total cargo a cuenta[/td]            [td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_ImporteDetalle@[/td][/tr]
+      [tr][td][span]..[/span][/td][td][span]..[/span][/td][td][span]..[/span][/td][/tr]
+      [tr][td]Fecha de vencimiento[/td][td style='text-align:center;width:100']@GCC_FechaCobro@[/td][td] [/td][/tr]
+      [/table]
+      [/center]
+      [br/]
+      [p]A la fecha del vencimiento el cobro se efectuará vía cargo automático en su cuenta corriente, de lo contrario podrán  acercarse a cualquiera de nuestras Tiendas a Nivel Nacional para efectuar el pago directamente en ventanilla a fin de evitar incurrir en intereses y comisiones moratorias por pago fuera del vencimiento establecido.[/p]
+      [br/]
+      [p]Cualquier consulta comunicarse respecto al concepto de la referencia, contactarse con el Señor Farid Falen al 219-2000: 23925 o con el Señor José Luis Delgado al 219-2000: 23928 y/o a la dirección de sus correos electrónicos: [font style='text-decoration: underline; color:#0000FF']farid@intercorp.com.pe[/font] y/o [font style='text-decoration: underline; color:#0000FF']jdelgadom@intercorp.com.pe[/font][/p]
+      [br/]
+      Atentamente,
+      [br/]
+      [br/]
+      [br/]
+      [br/]
+      [br/]
+      [span]...........[/span][img src='@GCC_RutaWeb@\Util\Firmas\Firmas.jpg' width='90%' height='90%'/]
+      [span]........[/span]Farina Pando Robles
+      [br/]
+      Sub-Gerente División. Leasing
+      [/div]
+    </BodyPdf>
+  </MailImpuestoMunicipal>
+  <MailAsignacionTasador>
+    <Subject>IBK :: Sistema Leasing :: Tasación @Mes@ @Anio@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt;padding-bottom: 1']
+      Estimados:[br/]
+      Buenos días, adjunto las cartas de tasación @Mes@ @Anio@[/font]
+      [br/]
+      [/BODY]
+      [/HTML]
+    </Body>
+    <BodyPdf>
+      [img src='@GCC_RutaWeb@\Util\images\Interbank.jpg' width='95%' height='30'/]
+      [div]
+      Lima, @GCC_Fecha@
+      [br/]
+      [br/]
+      [table class='tabela']
+      [tr][td]Señores[td/][tr/]
+      [tr][td][b]@GCC_RazonSocial@[/b][td/][tr/]
+      [tr][td]@GCC_Direccion@, @GCC_Distrito@[td/][tr/]
+      [/table]
+      [br/]
+      Referencia:[span]........[/span]:
+      [font style='text-decoration: underline; font-weight: bold']Inspecciones y tasaciones de los bienes materia del
+      [br/][span]...........................[/span]Contrato de arrendamiento financiero Nro. @GCC_NumContrato@[/font]
+      [br/][br/]
+      Estimados señores:
+      [br/][br/]
+      [p]De acuerdo al contrato de arrendamiento financiero suscrito con ustedes y con la finalidad de cumplir con los requerimientos exigidos por la Superintendencia de Banca y Seguros (SBS),  hemos establecido un cronograma de inspecciones de los bienes otorgados objeto del contrato de la referencia.[/p]
+      [p]Para tales efectos, hemos encargado dicha inspección a los señores:[/p]
+      [br/]
+      Empresa[span].........[/span]:[span]......[/span]@GCC_EmpresaTasador@
+      [br/]
+      Representante:[span]......[/span]@GCC_Tasador@
+      [br/]
+      Teléfonos[span]........[/span]:[span]......[/span]@GCC_Telefono@
+      [br/]
+      Celular[span]............[/span]:[span]......[/span]@GCC_Celular@
+      [br/]
+      Correos[span]...........[/span]:[span]......[/span]@GCC_Correo@
+      [br/][br/]
+      [p]Por lo que solicitamos se sirvan brindar las facilidades del caso a efecto de que puedan efectuar las coordinaciones necesarias para la realización de dicha inspección.[/p]
+      [br/]
+      [p]Los servicios y gastos que se generen, de acuerdo a lo estipulado en su contrato, serán transferidos mediante el cargo automático en su cuenta corriente MN y/o ME dentro de los siete (07) días calendarios de efectuada la inspección a los bienes y priorizados al pago de las cuotas de arrendamiento financiero.[/p]
+      [br/]
+      [p]Cualquier consulta enviarla correo a  Juan Carlos Arredondo Beleván [font style='text-decoration: underline; color:#0000FF']jarredondo@intercorp.com.pe[/font][/p]
+      [br/]
+      Atentamente,
+      [br/]
+      [br/]
+      [br/]
+      [br/]
+      [br/]
+      [span]...........[/span][img src='@GCC_RutaWeb@\Util\Firmas\Firmas.jpg' width='90%' height='90%'/]
+      [span]........[/span]Farina Pando Robles
+      [br/]
+      Sub-Gerente División. Leasing
+      [/div]
+    </BodyPdf>
+  </MailAsignacionTasador>
+  <MailRegistroTasador>
+    <Subject>IBK :: Sistema Leasing :: Tasación @Mes@ @Anio@ - @GCC_Contrato@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt;padding-bottom: 1']
+      Estimados:[br/]
+      Buenos días, se le indica que el contrato Nº @GCC_Contrato@, obtuvo una diferencia en negativo de acuerdo a la tasación del @Mes@ @Anio@.[/font]
+      [br/]
+      [/BODY]
+      [/HTML]
+    </Body>
+    </MailRegistroTasador>
+  <MailConceptoCobros>
+    <Subject>IBK :: Sistema Leasing :: @GCC_Concepto@</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt;padding-bottom: 1']
+      Estimados:[br/]
+      Buenos días, adjunto carta de @GCC_Concepto@.[/font]
+      [br/]
+      [/BODY]
+      [/HTML]
+    </Body>
+    <BodyPdf>
+      [img src='@GCC_RutaWeb@\Util\images\Interbank.jpg' width='95%' height='30'/]
+      [div]
+      Lima, @GCC_Fecha@
+      [br/]
+      [br/]
+      [table class='tabela']
+      [tr][td]Señores[td/][tr/]
+      [tr][td][b]@GCC_RazonSocial@[/b][td/][tr/]
+      [tr][td]@GCC_Direccion@[td/][tr/]
+      [tr][td]@GCC_Departamento@ / @GCC_Provincia@ / @GCC_Distrito@[td/][tr/]
+      [/table]
+      [br/]
+      Referencia[span]........[/span]:
+      [font style='text-decoration: underline; font-weight: bold']Reembolso de Gastos por @GCC_Concepto@
+      [br/][span]...........................[/span]Contrato De Arrendamiento Financiero Nro. @GCC_NumContrato@[/font]
+      [br/][br/]
+      Estimados señores:
+      [br/][br/]
+      [p]Por medio de la presente les comunicamos que con fecha @GCC_FechaPago@, se ha efectuado
+      el/la @GCC_Concepto@ en el contrato en referencia, por lo que solicitamos disponer los fondos
+      necesarios en su cuenta corriente ME y/o MN  del importe de @GCC_SimMoneda@ @GCC_Importe@ por
+      el concepto de la referencia, según el siguiente detalle:[/p]
+      [br/]
+      [center]
+      [table class='tabDetalle']
+      [tr][td]Tipo de cambio[/td]                  [td style='text-align:center;']S/.[/td][td style='text-align:right;']@GCC_TipoCambio@[/td][/tr]
+      [tr][td]Reembolso de gastos[/td]             [td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_Monto@[/td][/tr]
+      [tr][td]Comisión por reembolso de gastos[/td][td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_Comision@[/td][/tr]
+      [tr][td]Impuesto General a las Ventas[/td]   [td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_IGV@[/td][/tr]
+      [tr][td]Total cargo a cuenta[/td]            [td style='text-align:center;']@GCC_SimMoneda@[/td][td style='text-align:right;']@GCC_Importe@[/td][/tr]
+      [tr][td][span]..[/span][/td][td][span]..[/span][/td][td][span]..[/span][/td][/tr]
+      [tr][td]Fecha de vencimiento[/td][td style='text-align:center;width:100']@GCC_FechaCobro@[/td][td] [/td][/tr]
+      [/table]
+      [/center]
+      [br/]
+      [p]A la fecha del vencimiento, el cobro se efectuará vía cargo automático en su cuenta corriente, de lo contrario podrán  acercarse a cualquiera de nuestras Tiendas a Nivel Nacional para efectuar el pago directamente en ventanilla a fin de evitar incurrir en intereses y comisiones moratorias por pago fuera del vencimiento establecido.[/p]
+      [br/]
+      [p]Sin otro particular, quedamos de ustedes.[/p]
+      [br/]
+      Atentamente,
+      [br/]
+      [br/]
+      [br/]
+      [br/]
+      [br/]
+      [span]...........[/span][img src='@GCC_RutaWeb@\Util\Firmas\Firmas.jpg' width='90%' height='90%'/]
+      [span]........[/span]Farina Pando Robles
+      [br/]
+      Sub-Gerente División. Leasing
+      [/div]
+    </BodyPdf>
+  </MailConceptoCobros>
+  
+  <MailOpcionComprasxvencer>
+    <Subject>IBK :: Sistema Leasing :: Opción de Compra - @GCC_Dias@ días por vencer</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt;padding-bottom: 1']
+      Estimados:[br/]
+      Buenos días, adjunto carta de opción de compra[/font]
+      [br/]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailOpcionComprasxvencer>
+  <MailOpcionComprassoldocumentos>
+    <Subject>IBK :: Sistema Leasing :: Opción de Compra - Solicitud de Documentos</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt;padding-bottom: 1']
+      Estimados:[br/]
+      Buenos días, adjunto carta de opción de compra[/font]
+      [br/]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailOpcionComprassoldocumentos>
+  <MailOpcionComprasvencidos>
+    <Subject>IBK :: Sistema Leasing :: Opción de Compra - 30 días de vencido</Subject>
+    <Body>
+      [HTML][HEAD][/HEAD][BODY]
+      [font style='font-family:Arial;font-size:10pt;padding-bottom: 1']
+      Estimados:[br/]
+      Buenos días, adjunto carta de opción de compra[/font]
+      [br/]
+      [/BODY]
+      [/HTML]
+    </Body>
+  </MailOpcionComprasvencidos>
+
+
+
+</MailGCC>

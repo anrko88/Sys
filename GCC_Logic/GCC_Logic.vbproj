@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4AE7B878-D80C-47AE-9528-38F557C6728A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GCC.Logic</RootNamespace>
+    <AssemblyName>GCC_Logic</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>TS_GCC.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>GCC_Logic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>GCC_Logic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="F15_Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4a0b5d053647c9fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Util SP3\Librerias\F15_Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\LAlertas.vb" />
+    <Compile Include="Clases\LCesionario.vb" />
+    <Compile Include="Clases\LCesionContrato.vb" />
+    <Compile Include="Clases\LEjecutivo.vb" />
+    <Compile Include="Clases\LHost.vb" />
+    <Compile Include="Clases\LOpcionCompra.vb" />
+    <Compile Include="Clases\LCobro.vb" />
+    <Compile Include="Clases\LGestionBienDoc.vb" />
+    <Compile Include="Clases\LImpuestoVehicular.vb" />
+    <Compile Include="Clases\LBloqueo.vb" />
+    <Compile Include="Clases\LDemanda.vb" />
+    <Compile Include="Clases\LDocBien.vb" />
+    <Compile Include="Clases\LCheckList.vb" />
+    <Compile Include="Clases\LConfiguracion.vb" />
+    <Compile Include="Clases\LContrato.vb" />
+    <Compile Include="Clases\LCotizacion.vb" />
+    <Compile Include="Clases\LDesembolso.vb" />
+    <Compile Include="Clases\LDocCliente.vb" />
+    <Compile Include="Clases\LDocProveedor.vb" />
+    <Compile Include="Clases\LImpuestoMunicipal.vb" />
+    <Compile Include="Clases\LInstruccionDesembolso.vb" />
+    <Compile Include="Clases\LMantenimiento.vb" />
+    <Compile Include="Clases\LPagos.vb" />
+    <Compile Include="Clases\LPipeline.vb" />
+    <Compile Include="Clases\LSiniestro.vb" />
+    <Compile Include="Clases\LTasador.vb" />
+    <Compile Include="Clases\LTemporal.vb" />
+    <Compile Include="Clases\LTipoCambio.vb" />
+    <Compile Include="Clases\LUbigeo.vb" />
+    <Compile Include="Clases\LUtil.vb" />
+    <Compile Include="Interfaces\IAlertas.vb" />
+    <Compile Include="Interfaces\ICesionario.vb" />
+    <Compile Include="Interfaces\ICesionContrato.vb" />
+    <Compile Include="Interfaces\IEjecutivo.vb" />
+    <Compile Include="Interfaces\IHost.vb" />
+    <Compile Include="Interfaces\IOpcionCompra.vb" />
+    <Compile Include="Interfaces\ICobro.vb" />
+    <Compile Include="Interfaces\IGestionBienDoc.vb" />
+    <Compile Include="Interfaces\IImpuestoVehicular.vb" />
+    <Compile Include="Interfaces\IBloqueo.vb" />
+    <Compile Include="Interfaces\IDemanda.vb" />
+    <Compile Include="Interfaces\IDocBien.vb" />
+    <Compile Include="Interfaces\ICheckList.vb" />
+    <Compile Include="Interfaces\IConfiguracion.vb" />
+    <Compile Include="Interfaces\IContrato.vb" />
+    <Compile Include="Interfaces\ICotizacion.vb" />
+    <Compile Include="Interfaces\IDesembolso.vb" />
+    <Compile Include="Interfaces\IDocCliente.vb" />
+    <Compile Include="Interfaces\IDocProveedor.vb" />
+    <Compile Include="Interfaces\IImpuestroMunicipal.vb" />
+    <Compile Include="Interfaces\IInstruccionDesembolso.vb" />
+    <Compile Include="Interfaces\IMantenimiento.vb" />
+    <Compile Include="Interfaces\IPagos.vb" />
+    <Compile Include="Interfaces\IPipeline.vb" />
+    <Compile Include="Interfaces\ISiniestro.vb" />
+    <Compile Include="Interfaces\ITasador.vb" />
+    <Compile Include="Interfaces\ITemporal.vb" />
+    <Compile Include="Interfaces\ITipoCambio.vb" />
+    <Compile Include="Interfaces\IUbigeo.vb" />
+    <Compile Include="Interfaces\IUtil.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="TS_GCC.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GCC_Common\GCC_Common.vbproj">
+      <Project>{594672A5-444F-4836-A501-0F307D52FFCE}</Project>
+      <Name>GCC_Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCC_Data\GCC_Data.vbproj">
+      <Project>{0B7E8819-D850-450B-BD7E-B6739BFE47C9}</Project>
+      <Name>GCC_Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCC_Entity\GCC_Entity.vbproj">
+      <Project>{D1EB0147-3370-45D3-944A-9807A91D17D0}</Project>
+      <Name>GCC_Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

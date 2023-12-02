@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GCC_LogicWS", "..\GCC_LogicWS\GCC_LogicWS.vbproj", "{9B5AB031-43CB-45BD-AEF2-191AB3518AC6}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GCC_Web", "..\GCC_Web", "{9A86815E-AC99-4B65-A142-2761622295F0}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""$/SGL/APP_6.0/GCC_Web", TLCAAAAA"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:Microsoft Visual SourceSafe"
+		TargetFramework = "3.5"
+		ProjectReferences = "{D1EB0147-3370-45D3-944A-9807A91D17D0}|GCC_Entity.dll;{9B5AB031-43CB-45BD-AEF2-191AB3518AC6}|GCC_LogicWS.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/GCC_Web"
+		Debug.AspNetCompiler.PhysicalPath = "..\GCC_Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\GCC_Web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/GCC_Web"
+		Release.AspNetCompiler.PhysicalPath = "..\GCC_Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\GCC_Web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2226"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GCC_Entity", "..\GCC_Entity\GCC_Entity.vbproj", "{D1EB0147-3370-45D3-944A-9807A91D17D0}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccProjectUniqueName0 = ..\\GCC_LogicWS\\GCC_LogicWS.vbproj
+		SccProjectName0 = \u0022$/SGL/APP_6.0/GCC_LogicWS\u0022,\u0020SLCAAAAA
+		SccLocalPath0 = ..\\GCC_LogicWS
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccWebProject1 = true
+		SccProjectUniqueName1 = ..\\GCC_Web
+		SccProjectName1 = \u0022$/SGL/APP_6.0/GCC_Web\u0022,\u0020TLCAAAAA
+		SccLocalPath1 = C:\\SGL\\Fase6.0\\GCC_Web
+		SccProvider1 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectEnlistmentChoice1 = 2
+		SccProjectUniqueName2 = ..\\GCC_Entity\\GCC_Entity.vbproj
+		SccProjectName2 = \u0022$/SGL/APP_6.0/GCC_Entity\u0022,\u0020QLCAAAAA
+		SccLocalPath2 = ..\\GCC_Entity
+		SccProvider2 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B5AB031-43CB-45BD-AEF2-191AB3518AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5AB031-43CB-45BD-AEF2-191AB3518AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5AB031-43CB-45BD-AEF2-191AB3518AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5AB031-43CB-45BD-AEF2-191AB3518AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A86815E-AC99-4B65-A142-2761622295F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A86815E-AC99-4B65-A142-2761622295F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A86815E-AC99-4B65-A142-2761622295F0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A86815E-AC99-4B65-A142-2761622295F0}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D1EB0147-3370-45D3-944A-9807A91D17D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1EB0147-3370-45D3-944A-9807A91D17D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1EB0147-3370-45D3-944A-9807A91D17D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1EB0147-3370-45D3-944A-9807A91D17D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

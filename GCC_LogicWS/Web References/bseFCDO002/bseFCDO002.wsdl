@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="fConsultarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argFCDPARAMETRO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argFCDCODUNICO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argFCDTIPODOC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argFCDNUMDOC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argFCDCODPROD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fConsultarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fConsultarClienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="fConsultarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:fConsultarCliente" />
+  </wsdl:message>
+  <wsdl:message name="fConsultarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:fConsultarClienteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="bseFCDO002Soap">
+    <wsdl:operation name="fConsultarCliente">
+      <wsdl:input message="tns:fConsultarClienteSoapIn" />
+      <wsdl:output message="tns:fConsultarClienteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="bseFCDO002Soap" type="tns:bseFCDO002Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="fConsultarCliente">
+      <soap:operation soapAction="http://tempuri.org/fConsultarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="bseFCDO002Soap12" type="tns:bseFCDO002Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="fConsultarCliente">
+      <soap12:operation soapAction="http://tempuri.org/fConsultarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="bseFCDO002">
+    <wsdl:port name="bseFCDO002Soap" binding="tns:bseFCDO002Soap">
+      <soap:address location="http://172.22.142.91/FCDWS/bseFCDO002.asmx" />
+    </wsdl:port>
+    <wsdl:port name="bseFCDO002Soap12" binding="tns:bseFCDO002Soap12">
+      <soap12:address location="http://172.22.142.91/FCDWS/bseFCDO002.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

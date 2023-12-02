@@ -1,0 +1,4874 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GCC_Logic
+</name>
+</assembly>
+<members>
+<member name="M:GCC.Logic.LOpcionCompraTx.fblnInsertarOpcionCompra(System.String)">
+	<summary>
+ Inserta un nuevo registro en la tabla GCC_OpcionCompra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraTx.fblnInsertarOpcionCompraEnvio(System.String)">
+	<summary>
+ Inserta un nuevo registro en la tabla GCC_OpcionCompraEnvio
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 10/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraTx.fblnAprobacionBien(System.String)">
+	<summary>
+ Actualiza los registros de la tabla SolicitudCreditoEstructuraCarax
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 16/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraTx.fblnModificarOpcionCompra(System.String)">
+	<summary>
+ Modifica un registro existente de la tabla GCC_OpcionCompra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m.
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraTx.fblnModificarBienOpcionCompra(System.String)">
+	<summary>
+ Modifica un registro existente de la tabla SolicitudCreditoEstructuraCarac
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 09/01/2013 06:41:54 p.m.
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraTx.fblnEliminarOpcionCompra(System.String)">
+	<summary>
+ Eliminar un registro existente de la tabla GCC_OpcionCompra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se elimino correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m.
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraTx.fblnInsertarOpcionCompraDocumento(System.String)">
+	<summary>
+ Inserta un registro en la tabla GCC_OpcionCompraDocumento
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se registro correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 29/01/2013 06:41:54 p.m.
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraTx.fblnInsertarOpcionCompraDocumentoObservacion(System.String)">
+	<summary>
+ Inserta un registro en la tabla GCC_OpcionCompraDocumentoObservacion
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se registro correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 29/01/2013 06:41:54 p.m.
+ </remarks>
+</member><member name="T:GCC.Logic.LOpcionCompraTx">
+	<summary>
+ Implementación de la clase LOpcionCompraTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraNTx.fobjLeerOpcionCompra(System.String)">
+	<summary>
+ Obtiene los valores de un registro de la tabla GCC_OpcionCompra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un registro</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraNTx.fobjLeerBienOpcionCompra(System.String)">
+	<summary>
+ Obtiene los valores de un registro de la vista UV_GCC_BIENOPCIOMCOMPRA_SEL
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un registro</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 08/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraNTx.fobjListadoOpcionCompra(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<param name="pPageSize">Tamaño de página</param>
+	<param name="pCurrentPage">Página actual</param>
+	<param name="pSortColumn">Ordenar por columna</param>
+	<param name="pSortOrder">Dirección de ordenamiento</param>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraNTx.fobjListadoOpcionCompraTodo(System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraNTx.fobjListadoOpcionCompraEnvio(System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraNTx.fobjListadoBienOpcionCompra(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<param name="pPageSize">Tamaño de página</param>
+	<param name="pCurrentPage">Página actual</param>
+	<param name="pSortColumn">Ordenar por columna</param>
+	<param name="pSortOrder">Dirección de ordenamiento</param>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 08/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraNTx.fobjListadoBienOpcionCompraReporte(System.String,System.String)">
+	<summary>
+ Lista todos los bienes por contrato
+ </summary>
+	<param name="pFechaInicio">Fecha de inicio de la consulta</param>
+	<param name="pFechaTermino">Fecha de término de la consulta</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - VMA
+ Fecha de Creación  : 16/01/2013 03:11:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraNTx.ListadoReporteOpcionCompra(System.DateTime,System.DateTime)">
+	<summary>
+ Listado de Opción de Compra Reporte
+ </summary>
+	<param name="pdFechaActivacionIni">Fecha de Activación Inicial</param>
+	<param name="pdFechaActivacionFin">Fecha de Activación Final</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 28/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraNTx.ListadoOpcionCompraDocumento(System.String)">
+	<summary>
+ Listado de Documento de Opción de Compra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 29/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LOpcionCompraNTx.ListadoOpcionCompraDocumentoObservacion(System.String)">
+	<summary>
+ Listado de Observaciones de Documento de Opción de Compra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 29/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LOpcionCompraNTx">
+	<summary>
+ Implementación de la clase LOpcionCompraNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LTemporalTx.InsertarTemporal(System.String)">
+	<summary>
+ Ingresa nueva Temporal
+ </summary>
+	<param name="pETemporal">Listado de Objeto Temporal(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LTemporalTx.ModificarTemporal(System.String)">
+	<summary>
+ Modifica Temporal
+ </summary>
+	<param name="pETemporal">Listado de Objeto Temporal(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LTemporalTx.fblnEliminarTemporal(System.String)">
+	<summary>
+ Elimina Temporal
+ </summary>
+	<param name="pETemporal">Listado de Objeto Temporal(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LTemporalTx">
+	<summary>
+ Implementación de la clase LTemporalTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LTemporalNTx.LeerTemporal(System.String)">
+	<summary>
+ Obtiene un registro de Temporal
+ </summary>
+	<returns>String con la entidad ETemporal serializada.</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LTemporalNTx.ListadoTemporal(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de Temporal
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LTemporalNTx">
+	<summary>
+ Implementación de la clase LTemporalNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="T:GCC.Logic.IInstruccionDesembolsoTx">
+	<summary>
+ Interfaz de métodos para la clase IInstruccionDesembolsoTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="M:GCC.Logic.IInstruccionDesembolsoNTx.fobjListadoDesembolsoMensualReporte(System.String,System.String)">
+	<summary>
+ Lista todos los desembolsos mensuales
+ </summary>
+	<param name="pFechaInicio">Fecha de inicio de la consulta</param>
+	<param name="pFechaTermino">Fecha de término de la consulta</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - VMA
+ Fecha de Creación  : 22/01/2013 05:29:54 p.m. 
+ </remarks>
+</member><member name="T:GCC.Logic.IInstruccionDesembolsoNTx">
+	<summary>
+ Interfaz de métodos para la clase IInstruccionDesembolsoNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.LValorGenericaNTx">
+	<summary>
+ Implementación de la clase LTemporalNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LUbigeoNTx">
+	<summary>
+ Implementación de la clase LTemporalNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="T:GCC.Logic.IHostNTx">
+	<summary>
+ Interfaz de métodos para la clase IPagosNTx
+ </summary>
+	<remarks>IBK - RPR | 25/12/2012</remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraTx.fblnInsertarOpcionCompra(System.String)">
+	<summary>
+ Inserta un nuevo registro en la tabla GCC_OpcionCompra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraTx.fblnInsertarOpcionCompraEnvio(System.String)">
+	<summary>
+ Inserta un nuevo registro en la tabla GCC_OpcionCompraEnvio
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 10/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraTx.fblnAprobacionBien(System.String)">
+	<summary>
+ Actualiza los registros de la tabla SolicitudCreditoEstructuraCarax
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 16/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraTx.fblnModificarOpcionCompra(System.String)">
+	<summary>
+ Modifica un registro existente de la tabla GCC_OpcionCompra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m.
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraTx.fblnModificarBienOpcionCompra(System.String)">
+	<summary>
+ Modifica un registro existente de la tabla SolicitudCreditoEstructuraCarac
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 09/01/2013 06:41:54 p.m.
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraTx.fblnEliminarOpcionCompra(System.String)">
+	<summary>
+ Eliminar un registro existente de la tabla GCC_OpcionCompra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se elimino correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m.
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraTx.fblnInsertarOpcionCompraDocumento(System.String)">
+	<summary>
+ Inserta un registro en la tabla GCC_OpcionCompraDocumento
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se registro correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 29/01/2013 06:41:54 p.m.
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraTx.fblnInsertarOpcionCompraDocumentoObservacion(System.String)">
+	<summary>
+ Inserta un registro en la tabla GCC_OpcionCompraDocumentoObservacion
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>True si se registro correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 29/01/2013 06:41:54 p.m.
+ </remarks>
+</member><member name="T:GCC.Logic.IOpcionCompraTx">
+	<summary>
+ Interfaz de métodos para la clase IOpcionCompraTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:40:33 p.m.
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraNTx.fobjLeerOpcionCompra(System.String)">
+	<summary>
+ Obtiene los valores de un registro de la tabla GCC_OpcionCompra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un registro</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraNTx.fobjLeerBienOpcionCompra(System.String)">
+	<summary>
+ Obtiene los valores de un registro de la vista UV_GCC_BIENOPCIOMCOMPRA_SEL
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un registro</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 08/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraNTx.fobjListadoOpcionCompra(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<param name="pPageSize">Tamaño de página</param>
+	<param name="pCurrentPage">Página actual</param>
+	<param name="pSortColumn">Ordenar por columna</param>
+	<param name="pSortOrder">Dirección de ordenamiento</param>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraNTx.fobjListadoOpcionCompraTodo(System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 11/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraNTx.fobjListadoOpcionCompraEnvio(System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 11/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraNTx.fobjListadoBienOpcionCompra(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<param name="pPageSize">Tamaño de página</param>
+	<param name="pCurrentPage">Página actual</param>
+	<param name="pSortColumn">Ordenar por columna</param>
+	<param name="pSortOrder">Dirección de ordenamiento</param>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 08/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraNTx.fobjListadoBienOpcionCompraReporte(System.String,System.String)">
+	<summary>
+ Lista todos los bienes por contrato
+ </summary>
+	<param name="pFechaInicio">Fecha de inicio de la consulta</param>
+	<param name="pFechaTermino">Fecha de término de la consulta</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - VMA
+ Fecha de Creación  : 16/01/2013 03:04:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraNTx.ListadoReporteOpcionCompra(System.DateTime,System.DateTime)">
+	<summary>
+ Listado de Opción de Compra Reporte
+ </summary>
+	<param name="pdFechaActivacionIni">Fecha de Activación Inicial</param>
+	<param name="pdFechaActivacionFin">Fecha de Activación Final</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 28/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraNTx.ListadoOpcionCompraDocumento(System.String)">
+	<summary>
+ Listado de Documento de Opción de Compra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 29/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.IOpcionCompraNTx.ListadoOpcionCompraDocumentoObservacion(System.String)">
+	<summary>
+ Listado de Observaciones de Documento de Opción de Compra
+ </summary>
+	<param name="pEGCC_OpcionCompra">Entidad OpcionCompra serializada</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 29/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.IOpcionCompraNTx">
+	<summary>
+ Interfaz de métodos para la clase IOpcionCompraNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/01/2013 06:40:33 p.m.
+ </remarks>
+</member><member name="T:GCC.Logic.IGestionBienDocTx">
+	<summary>
+ Interfaz de métodos para la clase IGestionBienDocTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.IGestionBienDocNTx">
+	<summary>
+ Interfaz de métodos para la clase IGestionBienDocNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.IImpuestoVehicularTX">
+	<summary>
+ Interfaz de métodos para la clase IImpuestoVehicularNTX
+ </summary>
+	<remarks>TSF-AEP | 14/11/2012</remarks>
+</member><member name="M:GCC.Logic.IImpuestoVehicularNTX.ObtenerDatosMultaConsulta(System.String)">
+	<summary>
+ Obtiene un registro de la multa vehicular
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 21/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.IImpuestoVehicularNTX">
+	<summary>
+ Interfaz de métodos para la clase IImpuestoVehicularNTX
+ </summary>
+	<remarks>TSF-AEP | 12/11/2012</remarks>
+</member><member name="T:GCC.Logic.ISiniestroTx">
+	<summary>
+ Interfaz de métodos para la clase ISiniestroTx
+ </summary>
+	<remarks>TSF-JRC | 12/11/2012</remarks>
+</member><member name="M:GCC.Logic.ISiniestroNTx.ListadoReporteSiniestro(System.String)">
+	<summary>
+ Listado de Siniestro para exportar
+ </summary>
+	<param name="pESiniestro">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 21/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.ISiniestroNTx.GetSiniestroConsulta(System.String)">
+	<summary>
+ Obtiene el Siniestro
+ </summary>
+	<param name="pESiniestro">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 18/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.ISiniestroNTx">
+	<summary>
+ Interfaz de métodos para la clase ISiniestroNTx
+ </summary>
+	<remarks>TSF-JRC | 12/11/2012</remarks>
+</member><member name="T:GCC.Logic.IEjecutivoTx">
+	<summary>
+ Interfaz de métodos para la clase IEjecutivoTx
+ </summary>
+	<remarks>TSF-SCA | 19/03/2013</remarks>
+</member><member name="T:GCC.Logic.IEjecutivoNTx">
+	<summary>
+ Interfaz de métodos para la clase IEjecutivoNTx
+ </summary>
+	<remarks>TSF-SCA | 19/03/2013</remarks>
+</member><member name="M:GCC.Logic.LCobroTx.fblnInsertarCobro(System.String)">
+	<summary>
+ Inserta un nuevo cobro en las tablas CreditoRecuperacion y CreditoRecuperacionComision
+ </summary>
+	<param name="pECreditoRecuperacionComision">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 30/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroTx.fblnModificarCobro(System.String)">
+	<summary>
+ Actualiza un nuevo cobro en las tablas CreditoRecuperacion y CreditoRecuperacionComision
+ </summary>
+	<param name="pECreditoRecuperacionComision">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 30/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroTx.fblnEliminarCobro(System.String)">
+	<summary>
+ Eliminar un nuevo cobro en las tablas CreditoRecuperacion y CreditoRecuperacionComision
+ </summary>
+	<param name="pECreditoRecuperacionComision">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 30/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroTx.fblnInsertarFraccionarCobro(System.String)">
+	<summary>
+ Inserta un registro en la tabla GCC_FraccionarCobro
+ </summary>
+	<param name="pstrEListFraccionarCobro">Lista generica de la entidad EGCC_Fraccionar serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 13/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroTx.fblnModificarFraccionarCobro(System.String)">
+	<summary>
+ Actualiza un nuevo cobro en las tablas GCC_FraccionarCobro
+ </summary>
+	<param name="pstrEListFraccionarCobro">Lista generica de la entidad EGCC_Fraccionar serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 13/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroTx.fblnEliminarFraccionarCobro(System.String)">
+	<summary>
+ Elimina un cobro en las tablas GCC_FraccionarCobro
+ </summary>
+	<param name="pstrEFraccionarCobro">Entidad EGCC_FraccionarCobro serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 17/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroTx.fblnEliminarInsertarFraccionarCobro(System.String)">
+	<summary>
+ Eliminar un conjunto de registros de la tabla GCC_FraccionarCobro y registra fraccionamiento de cobro en las tabla GCC_FraccionarCobro
+ </summary>
+	<param name="pstrEListFraccionarCobro">Lista generica de la entidad EGCC_Fraccionar serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 13/12/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LCobroTx">
+	<summary>
+ Implementación de la clase LCobroTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 27/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroNTx.ObtenerCobro(System.String)">
+	<summary>
+ Obtener dato del cobro   
+ </summary>
+	<param name="pECreditoRecuperacionComision">Código concepto</param>
+	<returns>Objeto Datatable(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 30/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroNTx.ListadoCobro(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Devuelve el conjunto de cobros asociados a contratos hasta un máximo especificado (PageSize), agrupados en páginas
+ (CurrentPage). Permite especificar el orden (SortOrder).
+ </summary>
+	<param name="pPageSize">Tamaño de página</param>
+	<param name="pCurrentPage">Página actual</param>
+	<param name="pSortColumn">Ordenar por columna</param>
+	<param name="pSortOrder">Dirección de ordenamiento</param>
+	<param name="pECreditoRecuperacionComision">Entidad serializada del objeto CreditoRecuperacionComision</param>
+	<returns>Listado de Cobro(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 27/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroNTx.ListadoCobroPaginar(System.String,System.String,System.String)">
+	<summary>
+ Devuelve el conjunto de cobros asociados a contratos anterior, actual y siguiente 
+ (CurrentPage). Permite especificar el orden (SortOrder).
+ </summary>
+	<param name="pSortColumn">Ordenar por columna</param>
+	<param name="pSortOrder">Dirección de ordenamiento</param>
+	<param name="pECreditoRecuperacionComision">Entidad serializada del objeto CreditoRecuperacionComision</param>
+	<returns>Listado de Cobro(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 03/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroNTx.ListadoConcepto(System.String)">
+	<summary>
+ Devuelve el conjunto de conceptos    
+ </summary>
+	<param name="pstrIDTabla">ID Tabla valor generica</param>
+	<returns>Listado de Concepto(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 27/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroNTx.ObtenerContratoCobro(System.String)">
+	<summary>
+ Devuelve los datos de un contrato    
+ </summary>
+	<param name="pstrNumeroContrato">Número de contrato</param>
+	<returns>Objeto Datatable(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 28/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroNTx.CalculoComision(System.String,System.Decimal,System.String)">
+	<summary>
+ Realiza el calculo de la comisión del cobro   
+ </summary>
+	<param name="pstrCodigoConcepto">Código concepto</param>
+	<param name="pdecImporte">Importe</param>
+	<param name="pstrCodMoneda">Código moneda</param>
+	<returns>Objeto Datatable(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 29/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroNTx.ValidarFeriado(System.String)">
+	<summary>
+ Realiza validación de la fecha ingresado no sea feriado 
+ </summary>
+	<param name="pstrFecha">Fecha</param>
+	<returns>Objeto Datatable(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 29/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroNTx.InstanciaRegistro(System.String)">
+	<summary>
+ Devuelve instancia para el registro
+ </summary>
+	<param name="pstrUsuario">Registro de usuario</param>
+	<returns>String</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCobroNTx.ListadoFraccionamiento(System.String)">
+	<summary>
+ Devuelve el conjunto de datos de fraccionamiento    
+ </summary>
+	<param name="pstrEFraccionarCobro">Entidad serializada del objeto GCC_FraccionarCobro</param>
+	<returns>Listado de Fraccionamiento(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 13/12/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LCobroNTx">
+	<summary>
+ Implementación de la clase LCobroNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 27/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LGestionBienDocTx.InsertarGestionBienDoc(System.String)">
+	<summary>
+ Inserta el Documento para una cotizacion y contrato especifico
+ </summary>
+	<param name="pEGestionBienDoc">Entidad Serializado de GestionBienDoc formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 05/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LGestionBienDocTx.ModificarGestionBienDoc(System.String)">
+	<summary>
+ Modificar el Documento de una cotizacion y contrato especifico
+ </summary>
+	<param name="pEGestionBienDoc">Entidad Serializada de GestionBienDoc formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 05/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LGestionBienDocTx.EliminarGestionBienDoc(System.String)">
+	<summary>
+ Eliminar el Documento de una cotizacion y contrato especifico
+ </summary>
+	<param name="pEGestionBienDoc">Entidad Serializada de GestionBienDoc formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 05/12/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LGestionBienDocTx">
+	<summary>
+ Implementación de la clase LGestionBienDocTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 05/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LGestionBienDocNTx.ListadoGestionBienDoc(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos los Documento de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 05/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LGestionBienDocNTx.ObtenerGestionBienDoc(System.String)">
+	<summary>
+ Obtiene el GestionBienDoc de una cotizacion y Contrato especifico
+ </summary>
+	<param name="pEGestionBienDoc">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 05/12/2012 
+ </remarks>
+</member><member name="T:GCC.Logic.LGestionBienDocNTx">
+	<summary>
+ Implementación de la clase LGestionBienDocNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LConfiguracionNTx.ValidarAccesoUsuario(System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Permite Validar Acceso de Perfil desde el SDA
+ </summary>
+	<param name="strUsuario">Usuario</param>
+	<param name="strPin">Pin</param>
+	<param name="strDBServer">Servidor</param>
+	<param name="strDBName">Base de Datos</param>
+	<param name="strPerfil">Perfil de SDA</param>
+	<returns>Una entidad serializada</returns>
+	<remarks>
+ Creado Por         : TSF - KCC 
+ Fecha de Creación  : 22/05/2012
+</remarks>
+</member><member name="M:GCC.Logic.LConfiguracionNTx.ObtenerRolSDA(System.Int32)">
+	<summary>
+ Obtiene los datos del perfil ingresado desde SDA
+ </summary>
+	<param name="pintCodRolSDA">Codigo del Perfil ingresada</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - KCC
+ Fecha de Creación  : 23/05/2012
+</remarks>
+</member><member name="M:GCC.Logic.LConfiguracionNTx.ListarRolActivo">
+	<summary>
+ Obtiene el listado de todos los roles activos
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - KCC
+ Fecha de Creación  : 23/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocClienteTx.fblnGuardarVerificacionCliente(System.String,System.String,System.String)">
+	<summary>
+ Guardar de Verificacion Documento Cliente 
+ </summary>
+	<param name="pEContrato">Entidad de Contrato para valores del Flag y Fecha de Termino Recep Cliente</param>
+	<param name="pEContacto">Entidad Serializada de Contacto para la cotizacion y contrato especifico</param>
+	<param name="pstrOpcion">Opcion de Contacto Si es N : Nuevo; M : Modificar</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 15/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocClienteTx.AgregarDocCondCliente(System.String)">
+	<summary>
+ Agregar un Documento/Condicion en Verificacion de Cliente 
+ </summary>
+	<param name="pstrContratoDoc">Entidad Serializada</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocClienteTx.EliminarDocCondCliente(System.String)">
+	<summary>
+ Eliminar un Documento/Condicion en Verificacion de Cliente de manera Logica
+ </summary>
+	<param name="pstrContratoDoc">Entidad Serializada</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocClienteTx.EnviarCartaDocumentoCliente(System.String)">
+	<summary>
+ Evniar Carta Cliente
+ </summary>
+	<param name="pEGcc_contratodocumento">Entidad Serializada</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 24/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LDocClienteTx">
+	<summary>
+ Implementación de la clase LDocClienteTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocClienteNTx.ObtenerContacto(System.String,System.String)">
+	<summary>
+ Obtiene el Contacto de una cotizacion y Contrato especifico
+ </summary>
+	<param name="pstrCodCotizacion">Numero de Cotizacion</param>
+	<param name="pstrCodContrato">Numero de Contrato</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 15/05/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LDocClienteNTx.ListadoContratoCotizacion(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado General de Contrato y Cotizacion 
+ </summary>
+	<param name="pPageSize">Tamaño de la pagina</param>
+	<param name="pCurrentPage">Pagina Actual</param>
+	<param name="pSortColumn">Columna a Ordenar</param>
+	<param name="pSortOrder">Tipo de Ordenamiento</param>
+	<param name="pECotizacion">Entidad Serializado de la cotizacion para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocClienteNTx.ObtenerContratoCotizacion(System.String)">
+	<summary>
+ Obtiene Datos de Contrato y Cotizacion por Numero de Contrato
+ </summary>
+	<param name="pNumeroContrato">Numero de Contrato para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 17/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LDocClienteNTx">
+	<summary>
+ Implementación de la clase LDocClienteNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.IValorGenericaNTx">
+	<summary>
+ Interfaz de métodos para la clase IValorGenericaNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="M:GCC.Logic.LCesionarioTx.InsertarCesionario(System.String)">
+	<summary>
+ Inserta el Cesionario
+ </summary>
+	<param name="pECesionario">Entidad Serializado formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 08/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionarioTx.ModificarCesionario(System.String)">
+	<summary>
+ Modificar el Cesionario
+ </summary>
+	<param name="pECesionario">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 08/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionarioTx.EliminarCesionario(System.String)">
+	<summary>
+ Eliminar el Cesionario
+ </summary>
+	<param name="pECesionario">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 08/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionarioTx.InsertarRepresentante(System.String)">
+	<summary>
+ Inserta el Representante
+ </summary>
+	<param name="pERepresentante">Entidad Serializado formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 08/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionarioTx.ModificarRepresentante(System.String)">
+	<summary>
+ Modificar el Representante
+ </summary>
+	<param name="pERepresentante">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 08/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionarioTx.EliminarRepresentante(System.String)">
+	<summary>
+ Eliminar el Representante
+ </summary>
+	<param name="pERepresentante">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 08/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LCesionarioTx">
+	<summary>
+ Implementación de la clase LCesionarioTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionarioNTx.ListadoCesionario(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos los Cesionarios
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionarioNTx.ObtenerCesionario(System.String)">
+	<summary>
+ Obtiene el Cesionario
+ </summary>
+	<param name="pECesionario">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 08/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionarioNTx.ListadoRepresentante(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos los Representantes
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionarioNTx.ObtenerRepresentante(System.String)">
+	<summary>
+ Obtiene el Representante
+ </summary>
+	<param name="pERepresentante">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 08/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LCesionarioNTx">
+	<summary>
+ Implementación de la clase LCesionarioNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.fblnModificarContrato(System.String,System.String)">
+	<summary>
+ Actualiza los datos del contrato durante la etapa de formalización.
+ Si el contrato se encuentra en estado [04], lo regresa a estado [03].
+ </summary>
+	<param name="pESolicitudCredito">Entidad ESolicitudCredito serializada</param>
+	<param name="pEGcc_contratootroconcepto">Entidad contratootroconcepto serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.EnviarCarta(System.String,System.String)">
+	<summary>
+ Envía la carta y actuliza el estado del contrato a pendiente de firma
+ </summary>
+	<param name="pSolicitudCredito">Entidad ESolicitudCredito serializada</param>
+	<param name="pEGCC_Carta">Entidad EGCC_Carta serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.ContratoGuardarYEnviar(System.String,System.String)">
+	<summary>
+ Envía la carta y actualiza el estado del contrato a pendiente de firma
+ </summary>
+	<param name="pSolicitudCredito">Entidad ESolicitudCredito serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.ActualizaDocumentoSeparacion(System.String)">
+	<summary>
+ Actualiza el nombre del documento de separación del conyugue en la tabla Contrato (SolicitudCredito)
+ </summary>
+	<param name="pESolicitudCredito">Entidad ESolicitudCredito serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.ActualizaArchivoContratoAdjunto(System.String)">
+	<summary>
+ Actualiza el nombre del documento de contrato en la tabla Contrato (SolicitudCredito)
+ </summary>
+	<param name="pSolicitudCredito">Entidad ESolicitudCredito serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.ModificaActivacionContrato(System.String)">
+	<summary>
+ Modifica Activacion de Contrato
+ </summary>
+	<param name="pESolicitudCredito">Entidad ESolicitudCredito serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 15/10/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.InsertarContratoNotarial(System.String,System.String)">
+	<summary>
+ Ingresa nuevo objeto EGcc_contratonotarial
+ </summary>
+	<param name="pEGcc_contratonotarial">Objeto EGcc_contratonotarial(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.ModificarContratoNotarial(System.String,System.String)">
+	<summary>
+ Modifica EGCC_ContratoNotarial
+ </summary>
+	<param name="pEGCC_ContratoNotarial">Objeto EGCC_ContratoNotarial (Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.EliminarContratoNotarial(System.String,System.String)">
+	<summary>
+ Elimina una lista de objetos EGCC_ContratoNotarial, identificándolo por su
+ CodigoNotarial y NumeroContrato.
+ </summary>
+	<param name="pListEGcc_contratonotarial">Lista de objetos EGcc_contratonotarial (Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 10/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.ContratoNotarialActualizarNombreArchivo(System.String,System.String)">
+	<summary>
+ Actualiza el nombre del archivo adjunto en la tabla GCC_ContratoNotarial.
+ a una adenda.
+ </summary>
+	<param name="pEGCC_ContratoNotarial">Objeto EGCC_ContratoNotarial (Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.InsertarAdenda(System.String)">
+	<summary>
+ Ingresa nuevo objeto EGcc_contratonotarial
+ </summary>
+	<param name="pEGcc_contratonotarial">Objeto EGcc_contratonotarial(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.ModificarAdenda(System.String)">
+	<summary>
+ Modifica EGCC_ContratoNotarial, cuando el registro contiene los datos correspondientes
+ a una adenda.
+ </summary>
+	<param name="pEGCC_ContratoNotarial">Objeto EGCC_ContratoNotarial (Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.EliminarAdenda(System.String)">
+	<summary>
+ Elimina una lista de objetos EGCC_ContratoNotarial, identificándolo por su
+ CodigoNotarial y NumeroContrato.
+ </summary>
+	<param name="pListEGcc_contratonotarial">Lista de objetos EGcc_contratonotarial (Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 10/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.InsertarBien(System.String,System.String,System.String)">
+	<summary>
+ Inserta un nuevo bien en las tablas ESolicitudCreditoEstructura y ESolicitudCreditoEstructuraCarac
+ </summary>
+	<param name="pESolicitudCreditoEstructura">Entidad ESolicitudCreditoEstructura serializada</param>
+	<param name="pESolicitudCreditoEstructuraCarac">Entidad ESolicitudCreditoEstructuraCarac serializada</param>
+	<returns>String con el número de Temporal</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.ModificarBien(System.String,System.String,System.String)">
+	<summary>
+ Actualiza los datos de un bien existente = , en las tablas SolicitudCreditoEstructura y SolicitudCreditoEstructuraCarac.
+ Soporta los tipos de producto Inmueble = , Inmueble y otros.
+ </summary>
+	<param name="pESolicitudCreditoEstructura">Entidad ESolicitudCreditoEstructura serializada</param>
+	<param name="pESolicitudCreditoEstructuraCarac">Entidad ESolicitudCreditoEstructuraCarac serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.EliminarBien(System.String,System.String)">
+	<summary>
+ Elimina un bien cuyas claves coinciden con las enviadas por parámetro, en las tablas SolicitudCreditoEstructura y SolicitudCreditoEstructuraCarac.
+ </summary>
+	<param name="pESolicitudCreditoEstructuraLst">Entidad ESolicitudCreditoEstructuraLst serializada</param>
+	<returns>True si se elimino correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.ModificarTextoPredefinido(System.String,System.String)">
+	<summary>
+ Actualiza los datos del texto predefinido con el nuevo texto ingresado.
+ </summary>
+	<param name="pEGCC_ContratoDocumento">Objeto ContratoDocumento serializado</param>
+	<returns>True si se grabó correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.fblnModificarContratoOtroConcepto(System.String)">
+	<summary>
+ Actualiza los datos de objeto EGCC_ContratoOtroConcepto.
+ </summary>
+	<param name="pEGCC_ContratoOtroConcepto">Entidad EGCC_ContratoOtroConcepto serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.ContratoOtroConceptoAdjuntoUpd(System.String,System.String)">
+	<summary>
+ Actualiza los datos de objeto EGCC_ContratoOtroConcepto.
+ </summary>
+	<param name="pEGCC_ContratoOtroConcepto">Entidad EGCC_ContratoOtroConcepto serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoTx.RepresentanteContratoIns(System.String,System.String,System.String)">
+	<summary>
+ Ingresa un nuevo representante en la tabla representantes y para los representantes del contrato.
+ </summary>
+	<param name="pEGcc_representante">Entidad pEGcc_representante serializada</param>
+	<param name="pEGcc_contratorepresentante">Entidad EGcc_contratorepresentante serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LContratoTx">
+	<summary>
+ Implementación de la clase LContratoTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.RetornarAnexoContrato(System.String)">
+	<summary>
+ Devuelve el contrato especificado identificado por el número del crédito para la generación de los anexos.
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.RetornarTarifarioContrato(System.String)">
+	<summary>
+ Retorna los datos de la tarifas a aplicar en el contrato
+ </summary>
+	<param name="pCodigoContrato"></param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.RetornarContratoDatosCliente(System.String)">
+	<summary>
+ Devuelve los datos del cliente cuyos datos correponden con el código de contrato enviado.
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.RetornarContrato(System.String)">
+	<summary>
+ Devuelve el contrato especificacado identificado por el número del crédito.
+ Incluye los datos de la tabla SolicitudCredito y GCC_ContratoOtroConcepto.
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListadoContratos(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de los contratos coincidentse con los criterios de búsqueda
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta para la grilla.</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 09/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListadoContratos2(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de los contratos coincidentse con los criterios de búsqueda
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta para la grilla.</returns>
+	<remarks>
+ Creado Por         : JJM IBK
+ Fecha de Creación  : 25/04/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListadoContratosDesembolso(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de los contratos para desembolso coincidentse con los criterios de búsqueda
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta para la grilla.</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 03/08/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListadoContratoNotarial(System.String,System.String)">
+	<summary>
+ Listado de ContratoNotarial
+ </summary>
+	<param name="pNumeroContrato"></param>
+	<param name="pCodigoOrigenAdenda">[Notarial/Adenda]</param>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListadoContratoNotarialPaginado(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de ContratoNotarial
+ </summary>
+	<param name="pNumeroContrato"></param>
+	<param name="pCodigoOrigenAdenda">[Notarial/Adenda]</param>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListadoBien(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de bienes, por proveedor
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.RetornarTextoPredefefinido(System.Int32)">
+	<summary>
+ Listado de ContratoNotarial
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListadoContratoProveedor(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado de bienes, por proveedor
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListarDistinctContratoProveedores(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado de bienes, por proveedor (sin incluir repetidos).
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.RetTarifarioPredefContrato(System.String,System.String)">
+	<summary>
+ Retorna la tarifa predefinida para el contrato que corresponde al producto financiero indicado.
+ </summary>
+	<param name="CodProductoFinancieroActivo">Código del producto financiero</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 09/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListarDelCliente(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de Representantes del cliente para todos los contratos, excluyendo los del actual contrato.
+ </summary>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.SelCondicionesDocumentoCli(System.String)">
+	<summary>
+ Validar la Duplicidad de Condiciones 
+ </summary>
+	<param name="pEGcc_contratodocumento">Código del objeto ContratoDocumento</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListadoContratoCotizacionRep(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado General de Contrato y Cotizacion para la generación de reportes.
+ </summary>
+	<param name="pPageSize">Tamaño de la pagina</param>
+	<param name="pCurrentPage">Pagina Actual</param>
+	<param name="pSortColumn">Columna a Ordenar</param>
+	<param name="pSortOrder">Tipo de Ordenamiento</param>
+	<param name="pECotizacion">Entidad Serializado de la cotizacion para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - EBL
+ Fecha de Creacion : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListadoReporteSunatContratos(System.DateTime,System.DateTime,System.DateTime,System.DateTime)">
+	<summary>
+ Listado de Sunat - Contrato.
+ </summary>
+	<param name="pdFechaCelebracionIni">Fecha Celebración de Contrato Inicial</param>
+	<param name="pdFechaCelebracionFin">Fecha Celebración de Contrato Final</param>
+	<param name="pdFechaActivacionIni">Fecha de Activación Inicial</param>
+	<param name="pdFechaActivacionFin">Fecha de Activación Final</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 22/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.ListadoReporteDetalleBien(System.DateTime,System.DateTime)">
+	<summary>
+ Listado de Detalle del Bien Reporte
+ </summary>
+	<param name="pdFechaActivacionIni">Fecha de Activación Inicial</param>
+	<param name="pdFechaActivacionFin">Fecha de Activación Final</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 24/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.fobjListadoSaldosCreditoReporte(System.String)">
+	<summary>
+ Lista todos los bienes por contrato
+ </summary>
+	<param name="pFechaInicio">Fecha de inicio de la consulta</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - VMA
+ Fecha de Creación  : 29/01/2013 09:21:54 a.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.fobjListadoSaldosCreditoReporteDolares(System.String)">
+	<summary>
+ Lista todos los bienes por contrato
+ </summary>
+	<param name="pFechaInicio">Fecha de inicio de la consulta</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 05/03/2013 
+ </remarks>
+</member><member name="M:GCC.Logic.LContratoNTx.fobjListadoContratosActivadosReporte(System.String,System.String,System.String,System.String)">
+	<summary>
+ Lista todos los Créditos Activos
+ </summary>
+	<param name="pTipo">Tipo de Periodo</param>
+	<param name="pFecha">Fecha de Periodo</param>
+	<param name="pCodigoClasificacionBien">Codigo Clasificación del Bien</param>
+	<param name="pCodigoTipoBien">Codigo del Tipo de Bien</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - VMA
+ Fecha de Creación  : 29/01/2013 04:33:54 p.m. 
+ </remarks>
+</member><member name="T:GCC.Logic.LContratoNTx">
+	<summary>
+ Implementación de la clase LContratoNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LSiniestroTx.InsertarSiniestro(System.String)">
+	<summary>
+ Inserta el Siniestro
+ </summary>
+	<param name="pESiniestro">Entidad Serializado formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LSiniestroTx.ModificarSiniestro(System.String)">
+	<summary>
+ Modificar el Siniestro
+ </summary>
+	<param name="pESiniestro">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LSiniestroTx.EliminarSiniestro(System.String)">
+	<summary>
+ Eliminar el Siniestro
+ </summary>
+	<param name="pESiniestro">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LSiniestroTx">
+	<summary>
+ Implementación de la clase LCotizacionTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LSiniestroNTx.ListadoSiniestroContrato(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LSiniestroNTx.GetSiniestroContrato(System.String)">
+	<summary>
+ Obtiene el Siniestro
+ </summary>
+	<param name="pESiniestro">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LSiniestroNTx.ListadoSiniestro(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LSiniestroNTx.GetSiniestro(System.String)">
+	<summary>
+ Obtiene el Siniestro
+ </summary>
+	<param name="pESiniestro">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LSiniestroNTx.ListadoReporteSiniestro(System.String)">
+	<summary>
+ Listado de Siniestro para exportar
+ </summary>
+	<param name="pESiniestro">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 21/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LSiniestroNTx.GetSiniestroConsulta(System.String)">
+	<summary>
+ Obtiene el Siniestro
+ </summary>
+	<param name="pESiniestro">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 18/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LSiniestroNTx">
+	<summary>
+ Implementación de la clase LSiniestroNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="T:GCC.Logic.IBloqueoTx">
+	<summary>
+ Interfaz de métodos para la clase IBloqueoTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.IBloqueoNTx">
+	<summary>
+ Interfaz de métodos para la clase IBloqueoNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="M:GCC.Logic.ITemporalTx.InsertarTemporal(System.String)">
+	<summary>
+ Ingresa nueva Temporal
+ </summary>
+	<param name="pETemporal">Listado de Objeto Temporal(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ITemporalTx.ModificarTemporal(System.String)">
+	<summary>
+ Actualiza Temporal
+ </summary>
+	<param name="pETemporal">Listado de Objeto Temporal(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ITemporalTx.EliminarTemporal(System.String)">
+	<summary>
+ Elimina Temporal
+ </summary>
+	<param name="pETemporal">Listado de Objeto Temporal(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="T:GCC.Logic.ITemporalTx">
+	<summary>
+ Interfaz de métodos para la clase ITemporalTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="M:GCC.Logic.ITemporalNTx.LeerTemporal(System.String)">
+	<summary>
+ Permite obtener un registro de Temporal
+ </summary>
+	<param name="pETemporal">Listado de Objeto Temporal(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ITemporalNTx.ListadoTemporal(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Permite obtener el listado de Temporal
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="T:GCC.Logic.ITemporalNTx">
+	<summary>
+ Interfaz de métodos para la clase ITemporalNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="M:GCC.Logic.LEjecutivoTx.InsertarEjecutivo(System.String)">
+	<summary>
+ Inserta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 19/03/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LEjecutivoTx.ModificarEjecutivo(System.String)">
+	<summary>
+ Modificar
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 19/03/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LEjecutivoTx.EliminarEjecutivo(System.String)">
+	<summary>
+ Eliminar
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 19/03/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LEjecutivoTx">
+	<summary>
+ Implementación de la clase LEjecutivoTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 19/03/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LEjecutivoNTx.ListadoEjecutivo(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 19/03/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LEjecutivoNTx.ObtenerEjecutivo(System.String,System.String)">
+	<summary>
+ Obtiene el Ejecutivo de una cotizacion y Contrato especifico
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 19/03/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LEjecutivoNTx">
+	<summary>
+ Implementación de la clase LAlertasNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 29/01/2013
+ </remarks>
+</member><member name="P:GCC.Logic.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:GCC.Logic.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:GCC.Logic.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:GCC.Logic.LDesembolsoTx.InsertarContratoEstructDoc(System.String)">
+	<summary>
+ Inserta el cotizacioNDocumento para una cotizacion y contrato especifico
+ </summary>
+	<param name="pEContratoEstructDoc">Entidad Serializado de CotizacionDocumento formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 04/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoTx.ModificarContratoEstructDoc(System.String)">
+	<summary>
+ Modifica el cotizacioNDocumento para una cotizacion y contrato especifico
+ </summary>
+	<param name="pEContratoEstructDoc">Entidad Serializado de CotizacionDocumento formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 04/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoTx.EliminarContratoEstructDoc(System.String)">
+	<summary>
+ Modifica el cotizacioNDocumento para una cotizacion y contrato especifico
+ </summary>
+	<param name="pEContratoEstructDoc">Entidad Serializado de CotizacionDocumento formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 06/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoTx.InsertarContratoEstructDocDet(System.String)">
+	<summary>
+ Insertar Documento Bien
+ </summary>
+	<param name="pEContratoEstructDocDet">Entidad Cotizacion serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoTx.EliminarContratoEstructDocDet(System.String)">
+	<summary>
+ Eliminar Documento Bien
+ </summary>
+	<param name="pEContratoEstructDocDet">Entidad Cotizacion serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoTx.RegistrarWIO(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Generar WIO - En desembolso (Formalizacion)
+ </summary>
+	<param name="pstrClienteWIO">Entidad Serializado del Cliente WIO</param>
+	<param name="pstrInstruccionWIO">Entidad serializada de la Instruccion WIO</param>
+	<param name="pstrCaracteristicasWIO">Entidad serializada de la caracteristicas WIO</param>
+	<param name="pstrSeguimientoWIO">Entidad del segimiento WIO</param>
+	<param name="pXmlEContratoEstructDoc">Datatable serializado de COntrato Estructu doc</param>
+	<param name="pstrNroContrato">Numero de COntrato</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - KCC
+ Fecha de Creación  : 19/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoTx.RegistrarLineaWIO(System.String,System.String,System.String)">
+	<summary>
+ Registra LINEA Y TASA WIO - En desembolso (Formalizacion)
+ </summary>
+	<param name="pstrLineaOPWIO">Entidad Serializada de la Linea de credito WIO</param>
+	<param name="pstrTasaComisionWIO">Datatable serializado en Xml WIO</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - KCC
+ Fecha de Creación  : 27/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoTx.ModificaEstadoDocumentoWS(System.String,System.String)">
+	<summary>
+ ModificaEstadoDocumentoWS
+ </summary>
+	<param name="strEGcc_desembolso"></param>
+	<param name="pTipoAprobacion"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LDesembolsoTx.ActualizarIGVDesembolso(System.String)">
+	<summary>
+ ActualizarIGVDesembolso
+ </summary>
+	<param name="strNumContrato"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LDesembolsoTx.AgregarRelacion(System.String,System.String,System.String,System.Int32)">
+	<summary>
+ Actualiza las relaciones entre bienes y documentos
+ </summary>
+	<param name="pstrArrayDocs">Arreglo de tipodoc;nrodoc;codprov;fecha(ddmmyyyy)|....|.... </param>
+	<param name="nbrArraySize">Tamaño del arreglo, el areglo se divide por ;</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 04/06/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LDesembolsoTx">
+	<summary>
+ Implementación de la clase LDesembolsoTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ListadoContratoEstructDocDet(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado de Desembolso Documento Bien
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ValidaContratoEstructDoc(System.String)">
+	<summary>
+ Valida
+ </summary>
+	<param name="pEContratoEstructDoc">Entidad Contrato Estructura Documento serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ListarContratoEstructDoc(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos los estructura documentos de un contrato
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - KCC
+ Fecha de Creación  : 05/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ListarContratoEstructDocConsulta(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos los estructura documentos de un contrato
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 07/03/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ListarContratoEstructDocAsociar(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos los estructura documentos de un contrato
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - KCC
+ Fecha de Creación  : 05/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ObtenerContratoEstructDoc(System.String)">
+	<summary>
+ Obtiene el dato especifico de los estructura documentos de un contrato
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - KCC
+ Fecha de Creación  : 05/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ObtenerBienLeasingWIO(System.String)">
+	<summary>
+ Obtiene la Estructura para insertar en WIO los bienes
+ </summary>
+	<param name="pXmlEContratoEstructDoc"></param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 20/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ObtenerCtaLeasingWioSel(System.String)">
+	<summary>
+ Obtener las Cuentas de un contrato para WIO
+ </summary>
+	<param name="pstrNroContrato">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - KCC
+ Fecha de Creación  : 20/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ObtenerAgenteRetencion(System.String)">
+	<summary>
+ Obtiene si el Proveedor es Agente de retencion
+ </summary>
+	<param name="pstrNroDocumento"></param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 27/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ListaBienesContrato(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista bienes del contrato
+ </summary>
+	<param name="pNroContrato"></param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : IBK - AAE
+ Fecha de Creacion : 24/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ListaDocumentosContrato(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista Documentos del contrato
+ </summary>
+	<param name="pNroContrato"></param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : IBK - AAE
+ Fecha de Creacion : 24/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDesembolsoNTx.ListaRelacionesContrato(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista Relaciones del contrato
+ </summary>
+	<param name="pNroContrato"></param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : IBK - AAE
+ Fecha de Creacion : 24/09/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LDesembolsoNTx">
+	<summary>
+ Implementación de la clase LDesembolsoNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorTx.InsertarProveedor(System.String)">
+	<summary>
+ Ingresa nuevo Proveedor
+ </summary>
+	<param name="pEProveedor">Listado de Objeto EProveedor(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 04/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorTx.ModificarProveedor(System.String)">
+	<summary>
+ Modifica Proveedor
+ </summary>
+	<param name="pEProveedor">Listado de Objeto EProveedor(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 04/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorTx.InsertarContratoProveedor(System.String)">
+	<summary>
+ Ingresa nueva Contrato Proveedor
+ </summary>
+	<param name="pEContratoProveedor">Listado de Objeto EContratoProveedor(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 17/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorTx.ModificarContratoProveedor(System.String)">
+	<summary>
+ Modifica Contrato Proveedor
+ </summary>
+	<param name="pEContratoProveedor">Listado de Objeto EContratoProveedor(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 17/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorTx.fblnEliminarContratoProveedor(System.String)">
+	<summary>
+ Elimina Contrato Proveedor
+ </summary>
+	<param name="pEContratoProveedor">Listado de Objeto EContratoProveedor(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 17/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorTx.ModificaSolicitudDocumentoProveedor(System.String)">
+	<summary>
+ Modifica Solicitud Credito
+ </summary>
+	<param name="pESolicitudCredito">Objeto ESolicitudCredito(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 17/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LDocProveedorTx">
+	<summary>
+ Implementación de la clase LDocProveedorTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorNTx.ObtenerProveedor(System.String)">
+	<summary>
+ Obtiene datos del Proveedor
+ </summary>
+	<param name="pstrCodProveedor">Codigo Proveedor</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 05/06/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorNTx.ListadoProveedor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de los proveedores coincidentse con los criterios de búsqueda
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta para la grilla.</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 14/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorNTx.ListadoProveedorCuenta(System.String)">
+	<summary>
+ Listado las cuentas del proveedor
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta para la grilla.</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 14/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorNTx.ListadoContacto(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado de los Contactos coincidentse con los criterios de búsqueda
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta para la grilla.</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 17/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorNTx.ListadoContratoProveedor(System.String)">
+	<summary>
+ Listado de Contrato Proveedor
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 17/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocProveedorNTx.ValidarContratoProveedor(System.String)">
+	<summary>
+ Valida que el registro ingresado no se duplique
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 22/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LDocProveedorNTx">
+	<summary>
+ Implementación de la clase LDocProveedorNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LTipoCambioTx">
+	<summary>
+ Implementación de la clase DTipoCambioTx
+ </summary>
+	<remarks>
+ Creado Por         : JJM - IBK
+ Fecha de Creación  : 22/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LTipoCambioNTx">
+	<summary>
+ Implementación de la clase DTipoCambioNTx
+ </summary>
+	<remarks>
+ Creado Por         : JJM - IBK
+ Fecha de Creación  : 22/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.ContratoCuentaUpd(System.String)">
+	<summary>
+ Modificar Contrato Cuenta
+ </summary>
+	<param name="pESolicitudCredito">Entidad serializada</param>
+	<returns>Resultado Integer</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.ContratoDocumentoIns(System.String)">
+	<summary>
+ Insertar Documentos/Condiciones para el Contrato
+ </summary>
+	<param name="pEGcc_contratodocumento">Entidad Documento serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.ContratoDocumentoAdjuntoUpd(System.String)">
+	<summary>
+ Actualizar Adjunto de Documentos/Condiciones
+ </summary>
+	<param name="pEGcc_contratodocumento">Entidad Documento serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.ContratoDocumentoObsUpd(System.String)">
+	<summary>
+ Actualizar Observacion de Documentos/Condiciones
+ </summary>
+	<param name="pEGcc_contratodocumento">Entidad Documento serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.ContratoDocumentoEnviaCartaUpd(System.String)">
+	<summary>
+ Actualizar Estado de Envio Carta de Documentos/Condiciones
+ </summary>
+	<param name="pEGcc_contratodocumento">Entidad Documento serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.RepresentanteIns(System.String)">
+	<summary>
+ Insertar Representantes
+ </summary>
+	<param name="pEGcc_Representante">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.RepresentanteUpd(System.String)">
+	<summary>
+ Modificar Representantes
+ </summary>
+	<param name="pEGcc_Representante">Entidad serializada</param>
+	<returns>Resultado Integer</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.RepresentanteContratoIns(System.String)">
+	<summary>
+ Insertar Contrato Representantes
+ </summary>
+	<param name="pEGcc_contratorepresentante">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.RepresentanteContratoItemDel(System.String)">
+	<summary>
+ Delete Contrato Representantes
+ </summary>
+	<param name="pEGcc_contratorepresentante">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.RepresentanteContratoListIns(System.String,System.String)">
+	<summary>
+ Insertar una lista de Contrato Representantes
+ </summary>
+	<param name="pEGcc_contratorepresentanteList">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.RepresentanteContratoListDel(System.String,System.String)">
+	<summary>
+ RepresentanteContratoListDel
+ </summary>
+	<param name="pEGcc_contratorepresentanteList"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.GestionComercialEnviarUpd(System.String)">
+	<summary>
+ GestionComercialEnviarUpd
+ </summary>
+	<param name="pEGcc_Contrato"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.ICheckListTx.ActualizaFlagAprobacionLegal(System.Int32,System.String,System.Int32)">
+	<summary>
+ ActualizaFlagAprobacionLegal
+ </summary>
+	<param name="pFlagAprobacionLegal"></param>
+	<param name="pNumeroContrato"></param>
+	<param name="pCodigoContratoDocumento"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:GCC.Logic.ICheckListTx">
+	<summary>
+ Interfaz de métodos para la clase ICheckListTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="M:GCC.Logic.ICheckListNTx.ContratoCuentaSel(System.String)">
+	<summary>
+ Listado de Representantes
+ </summary>
+	<param name="pEGcc_ContratoCuenta">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListNTx.ContratoDocumentoSel(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Consulta de Documentos de Contrato
+ </summary>
+	<param name="pEGcc_contratodocumento">Entidad Documento serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListNTx.RepresentantesSel(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de Representantes
+ </summary>
+	<param name="pEGcc_representante">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListNTx.RepresentantesContratoSel(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de Representantes por Contrato
+ </summary>
+	<param name="pEGcc_contratoRepresentante">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICheckListNTx.ListadoCheckListComercial(System.String)">
+	<summary>
+	</summary>
+	<param name="pESolicitudCredito"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.ICheckListNTx.RepresentantesCliente(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="pPageSize"></param>
+	<param name="pCurrentPage"></param>
+	<param name="pSortColumn"></param>
+	<param name="pSortOrder"></param>
+	<param name="pCodUnico"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.ICheckListNTx.RepresentantesItem(System.String)">
+	<summary>
+	</summary>
+	<param name="pNroDocumento"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.ICheckListNTx.ContratoDocumentoGet(System.String)">
+	<summary>
+ Listado de documentos y condiciones por contrato
+ </summary>
+	<param name="p_numerocontrato">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 14/08/2012
+ </remarks>
+</member><member name="T:GCC.Logic.ICheckListNTx">
+	<summary>
+ Interfaz de métodos para la clase ICheckListNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.IDocBienTx">
+	<summary>
+ Interfaz de métodos para la clase IDocBienTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.IDocBienNTx">
+	<summary>
+ Interfaz de métodos para la clase IDocProveedorNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.IDocProveedorTx">
+	<summary>
+ Interfaz de métodos para la clase IDocProveedorTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.IDocProveedorNTx">
+	<summary>
+ Interfaz de métodos para la clase IDocProveedorNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.IPagosTx">
+	<summary>
+ Interfaz de métodos para la clase IPagosTx
+ </summary>
+	<remarks>IBK - RPR | 07/01/2012</remarks>
+</member><member name="T:GCC.Logic.IPagosNTx">
+	<summary>
+ Interfaz de métodos para la clase IPagosNTx
+ </summary>
+	<remarks>IBK - RPR | 25/12/2012</remarks>
+</member><member name="M:GCC.Logic.LBloqueoTx.InsertarBloqueo(System.String)">
+	<summary>
+ Inserta bloqueo del sistema
+ </summary>
+	<param name="pEBloqueo">Entidad Bloqueo</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 18/07/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LBloqueoTx.ModificarBloqueo(System.String)">
+	<summary>
+ Modifica Bloqueo
+ </summary>
+	<param name="pEBloqueo">Listado de Objeto EBloqueo(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 04/06/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LBloqueoTx">
+	<summary>
+ Implementación de la clase LBloqueoTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LBloqueoNTx.ObtenerBloqueo(System.String)">
+	<summary>
+ Obtiene datos del Bloqueo
+ </summary>
+	<param name="pEBloqueo">Codigo Bloqueo</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 05/06/2012 
+ </remarks>
+</member><member name="T:GCC.Logic.LBloqueoNTx">
+	<summary>
+ Implementación de la clase LBloqueoNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LPipelineTX">
+	<summary>
+ Implementación de la clase LPipelineTX
+ </summary>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 27/08/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LPipelineNTX">
+	<summary>
+ Implementación de la clase LDocProveedorNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 27/08/2012
+ </remarks>
+</member><member name="T:GCC.Logic.IAlertasTx">
+	<summary>
+ Interfaz de métodos para la clase IBloqueoTx
+ </summary>
+	<remarks>TSF-SCA | 29/01/2013</remarks>
+</member><member name="T:GCC.Logic.IAlertasNTx">
+	<summary>
+ Interfaz de métodos para la clase IBloqueoNTx
+ </summary>
+	<remarks>TSF-SCA | 29/01/2013</remarks>
+</member><member name="T:GCC.Logic.IDemandaTx">
+	<summary>
+ Interfaz de métodos para la clase IDemandaTx
+ </summary>
+	<remarks>TSF-JRC | 12/11/2012</remarks>
+</member><member name="T:GCC.Logic.IDemandaNTx">
+	<summary>
+ Interfaz de métodos para la clase IDemandaNTx
+ </summary>
+	<remarks>TSF-JRC | 12/11/2012</remarks>
+</member><member name="M:GCC.Logic.IContratoTx.ActualizaDocumentoSeparacion(System.String)">
+	<summary>
+ Actualiza el nombre del documento de separación del conyugue en la tabla Contrato (SolicitudCredito)
+ </summary>
+	<param name="pESolicitudCredito">Entidad ESolicitudCredito serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoTx.ActualizaArchivoContratoAdjunto(System.String)">
+	<summary>
+ Actualiza el nombre del documento de contrato en la tabla Contrato (SolicitudCredito)
+ </summary>
+	<param name="pSolicitudCredito">Entidad ESolicitudCredito serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoTx.ContratoNotarialActualizarNombreArchivo(System.String,System.String)">
+	<summary>
+ Actualiza el nombre del archivo adjunto en la tabla GCC_ContratoNotarial.
+ a una adenda.
+ </summary>
+	<param name="pEGCC_ContratoNotarial">Objeto EGCC_ContratoNotarial (Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoTx.RepresentanteContratoIns(System.String,System.String,System.String)">
+	<summary>
+ Ingresa un nuevo representante en la tabla representantes y para los representantes del contrato.
+ </summary>
+	<param name="pEGcc_representante">Entidad pEGcc_representante serializada</param>
+	<param name="pEGcc_contratorepresentante">Entidad EGcc_contratorepresentante serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="T:GCC.Logic.IContratoTx">
+	<summary>
+ Interfaz de métodos para la clase IContratoTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="M:GCC.Logic.IContratoNTx.RetornarAnexoContrato(System.String)">
+	<summary>
+ Devuelve el contrato especificado identificado por el número del crédito para la generación de los anexos.
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoNTx.RetornarTarifarioContrato(System.String)">
+	<summary>
+ Retorna los datos de la tarifas a aplicar en el contrato
+ </summary>
+	<param name="pCodigoContrato"></param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoNTx.ListarDelCliente(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de Representantes del cliente para todos los contratos
+ </summary>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoNTx.SelCondicionesDocumentoCli(System.String)">
+	<summary>
+ Valida la duplicidad de las Condiciones del Documento
+ </summary>
+	<remarks>
+ Creado Por         : 
+ Fecha de Creación  : 
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoNTx.ListadoContratoCotizacionRep(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado General de Contrato y Cotizacion para la generación de reportes.
+ </summary>
+	<param name="pPageSize">Tamaño de la pagina</param>
+	<param name="pCurrentPage">Pagina Actual</param>
+	<param name="pSortColumn">Columna a Ordenar</param>
+	<param name="pSortOrder">Tipo de Ordenamiento</param>
+	<param name="pECotizacion">Entidad Serializado de la cotizacion para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - EBL
+ Fecha de Creacion : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoNTx.ListadoReporteSunatContratos(System.DateTime,System.DateTime,System.DateTime,System.DateTime)">
+	<summary>
+ Listado de Sunat - Contrato.
+ </summary>
+	<param name="pdFechaCelebracionIni">Fecha Celebración de Contrato Inicial</param>
+	<param name="pdFechaCelebracionFin">Fecha Celebración de Contrato Final</param>
+	<param name="pdFechaActivacionIni">Fecha de Activación Inicial</param>
+	<param name="pdFechaActivacionFin">Fecha de Activación Final</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 22/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoNTx.ListadoReporteDetalleBien(System.DateTime,System.DateTime)">
+	<summary>
+ Listado de Detalle del Bien Reporte
+ </summary>
+	<param name="pdFechaActivacionIni">Fecha de Activación Inicial</param>
+	<param name="pdFechaActivacionFin">Fecha de Activación Final</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 24/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoNTx.fobjListadoSaldosCreditoReporte(System.String)">
+	<summary>
+ Lista todos los Saldos de Crédito
+ </summary>
+	<param name="pFechaInicio">Fecha de inicio de la consulta</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - VMA
+ Fecha de Creación  : 29/01/2013 09:20:54 a.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoNTx.fobjListadoSaldosCreditoReporteDolares(System.String)">
+	<summary>
+ Lista todos los Saldos de Crédito
+ </summary>
+	<param name="pFechaInicio">Fecha de inicio de la consulta</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 05/03/2013   
+ </remarks>
+</member><member name="M:GCC.Logic.IContratoNTx.fobjListadoContratosActivadosReporte(System.String,System.String,System.String,System.String)">
+	<summary>
+ Lista todos los Créditos Activos
+ </summary>
+	<param name="pTipo">Tipo de Periodo</param>
+	<param name="pFecha">Fecha de Periodo</param>
+	<param name="pCodigoClasificacionBien">Codigo Clasificación del Bien</param>
+	<param name="pCodigoTipoBien">Codigo del Tipo de Bien</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - VMA
+ Fecha de Creación  : 29/01/2013 04:33:54 p.m. 
+ </remarks>
+</member><member name="T:GCC.Logic.IContratoNTx">
+	<summary>
+ Interfaz de métodos para la clase IContratoNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.IDocClienteTx">
+	<summary>
+ Interfaz de métodos para la clase IDocClienteTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.IDocClienteNTx">
+	<summary>
+ Interfaz de métodos para la clase IDocClienteNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.LImpuestoVehicularTX">
+	<summary>
+ Implementación de la clase IImpuestoVehicularTX
+ </summary>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoVehicularNTX.ObtenerDatosMultaConsulta(System.String)">
+	<summary>
+ Obtiene un registro de la multa vehicular
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 21/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LImpuestoVehicularNTX">
+	<summary>
+ Implementación de la clase LDocProveedorNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.InsertarCotizacion(System.String,System.String)">
+	<summary>
+ Ingresa nueva Cotizacion
+ </summary>
+	<param name="pECotizacion">Listado de Objeto Cotizacion(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 14/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.ModificarCotizacion(System.String,System.String)">
+	<summary>
+ Modifica Cotizacion
+ </summary>
+	<param name="pECotizacion">Listado de Objeto Cotizacion(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 14/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.ModificarCotizacionEstado(System.String)">
+	<summary>
+ Modifica el estado de la Cotizacion
+ </summary>
+	<param name="pECotizacion">Entidad Cotizacion serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.ModificarCotizacionCarta(System.String)">
+	<summary>
+ Modifica el estado de carta de la Cotizacion
+ </summary>
+	<param name="pECotizacion">Entidad Cotizacion serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.CotizacionAprobar(System.String)">
+	<summary>
+ Modifica el estado de la Cotizacion
+ </summary>
+	<param name="pECotizacion">Entidad Cotizacion serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.CotizacionRechazar(System.String)">
+	<summary>
+ Rechazar la Cotizacion
+ </summary>
+	<param name="pECotizacionSeguimiento">Entidad Cotizacion serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.ModificarEstadoCotizacionWS(System.String,System.String,System.String)">
+	<summary>
+ Web Services ModificarEstadoCotizacionWS
+ </summary>
+	<param name="pstrNumeroCotizacion"></param>
+	<param name="pstrCodigoEstado"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.ModificarCotizacionWS(System.String)">
+	<summary>
+ ModificarCotizacionWS
+ </summary>
+	<param name="pECotizacion"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.InsertarSubPrestatario(System.String)">
+	<summary>
+ Insert SubPrestatario
+ </summary>
+	<param name="pESubPrestatario">Listado de Objeto Cotizacion(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.ModificarSubPrestatario(System.String)">
+	<summary>
+ Modifica SubPrestatario
+ </summary>
+	<param name="pESubPrestatario">Listado de Objeto Cotizacion(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.InsertarCotizacionDocumento(System.String)">
+	<summary>
+ Ingresar CotizacionDocumento
+ </summary>
+	<param name="pECotizacionDocumento">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.ModificarCotizacionDocumento(System.String)">
+	<summary>
+ Modificar CotizacionDocumento
+ </summary>
+	<param name="pECotizacionDocumento">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.EliminarCotizacionDocumento(System.String)">
+	<summary>
+ Eliminar CotizacionDocumento
+ </summary>
+	<param name="pECotizacionDocumento">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.InsertarCotizacionCronograma(System.String)">
+	<summary>
+ Ingresar CotizacionCronograma
+ </summary>
+	<param name="pECotizacionCronograma">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.ModificarCotizacionCronograma(System.String)">
+	<summary>
+ Modificar CotizacionCronograma
+ </summary>
+	<param name="pECotizacionCronograma">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionTx.EliminarCotizacionCronograma(System.String)">
+	<summary>
+ Eliminar CotizacionCronograma
+ </summary>
+	<param name="pECotizacionCronograma">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LCotizacionTx">
+	<summary>
+ Implementación de la clase LCotizacionTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.ListadoCotizacion(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado de Cotizacion
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.GetCotizacion(System.String)">
+	<summary>
+ Get de Cotizacion
+ </summary>
+	<returns>Devuelve un registro de Cotizacion</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.ConsultaCotizacion(System.String,System.String)">
+	<summary>
+ Lista Los datos de la cotizcion por un nuemro o codigo unico
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - KCC
+ Fecha de Creación  : 24/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.ObtenerSubPrestatario(System.String,System.String)">
+	<summary>
+ Obtiene el SubPrestatario de una cotizacion y Contrato especifico
+ </summary>
+	<param name="pstrCodSuprestatario">Codigo Suprestatario</param>
+	<param name="pstrCodUnico">Codigo Unico</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 21/05/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.ListadoCotizacionDocumento(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado de Cotizacion
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.ObtenerCotizacionDocumento(System.String)">
+	<summary>
+ Get de CotizacionDocumento
+ </summary>
+	<returns>Devuelve un registro de Cotizacion</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.ListadoCotizacionVersion(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado General de Cotizacion Version
+ </summary>
+	<param name="pPageSize">Tamaño de la pagina</param>
+	<param name="pCurrentPage">Pagina Actual</param>
+	<param name="pSortColumn">Columna a Ordenar</param>
+	<param name="pSortOrder">Tipo de Ordenamiento</param>
+	<param name="pECotizacion">Entidad Serializado de la cotizacion para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 23/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.ObtenerCotizacionVersion(System.String)">
+	<summary>
+ Obtener Version especifica de una Cotizacion
+ </summary>
+	<param name="pECotizacion">Entidad Serializado de la cotizacion para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 24/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.ListadoSeguimientoCotizacion(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado del Seguimeinto de una Cotizacion especifica
+ </summary>
+	<param name="pPageSize">Tamaño de la pagina</param>
+	<param name="pCurrentPage">Pagina Actual</param>
+	<param name="pSortColumn">Columna a Ordenar</param>
+	<param name="pSortOrder">Tipo de Ordenamiento</param>
+	<param name="pECotizacion">Entidad Serializado de la cotizacion para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 23/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.ObtenerCotizacionCronograma(System.String)">
+	<summary>
+ Obtener Cronograma de la version y cotizacion especifica
+ </summary>
+	<param name="pECotizacion">Entidad Serializado de la cotizacion para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 24/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.ObtenerCronogramaActual(System.String)">
+	<summary>
+ Obtener Cronograma Actual cotizacion especifica
+ </summary>
+	<param name="pstrNumeroCotizacion">Numero de la cotizacion para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 25/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCotizacionNTx.CotizacionCronogramaGet(System.String)">
+	<summary>
+ Obtener Cronograma de la version y cotizacion especifica
+ </summary>
+	<param name="pECotizacion">Entidad Serializado de la cotizacion para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 24/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LCotizacionNTx">
+	<summary>
+ Implementación de la clase LCotizacionNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.ICesionarioTx">
+	<summary>
+ Interfaz de métodos para la clase ICesionarioTx
+ </summary>
+	<remarks>TSF-JRC | 08/01/2013</remarks>
+</member><member name="T:GCC.Logic.ICesionarioNTx">
+	<summary>
+ Interfaz de métodos para la clase ICesionarioNTx
+ </summary>
+	<remarks>TSF-JRC | 08/01/2013</remarks>
+</member><member name="M:GCC.Logic.ITasadorNTx.ObtenerContratoTasacion(System.String)">
+	<summary>
+ Obtiene Datos de Contrato para Tasacion
+ </summary>
+	<param name="pNumeroContrato">Numero de Contrato para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 28/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.ITasadorNTx.ListadoContratoTasador(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="pPageSize"></param>
+	<param name="pCurrentPage"></param>
+	<param name="pSortColumn"></param>
+	<param name="pSortOrder"></param>
+	<param name="pCodSolicitudcredito"></param>
+	<param name="pCuCliente"></param>
+	<param name="pRazonsolcial"></param>
+	<param name="pTipoDocumento"></param>
+	<param name="pNumerodocumento"></param>
+	<param name="pEstadoTasacion"></param>
+	<param name="pClasificacionBien"></param>
+	<param name="pBanca"></param>
+	<param name="pEjecutivoBanca"></param>
+	<param name="pPeriodo"></param>
+	<param name="pFechadesde"></param>
+	<param name="pFechaHasta"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.ITasadorNTx.ListaContratoBienTasacion(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Obtiene el listado de la vista GCC_ContratoTasacion
+ </summary>
+	<param name="pCodSolicitudcredito">Código de Contrato</param>
+	<returns>Retorna un registro</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 17/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.ITasadorNTx.ListaBienTasacion(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Obtiene el listado de la vista UV_GCC_TASACIONBIENCONTRATO
+ </summary>
+	<param name="pCodSolicitudcredito">Código de Contrato</param>
+	<returns>Retorna un registro</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 18/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.ITasadorNTx.ListaHistoricoContratoBienTasacion(System.Int32,System.Int32,System.String,System.String,System.String,System.Int16)">
+	<summary>
+ Obtiene el listado de la vista UV_GCC_HISTORICOTASACIONBIENCONTRATO
+ </summary>
+	<param name="pCodSolicitudcredito">Código de Contrato</param>
+	<param name="pCodContratoTasacion">Código de Contrato Tasación</param>
+	<returns>Retorna un registro</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 08/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="T:GCC.Logic.ITasadorNTx">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.ContratoCuentaUpd(System.String)">
+	<summary>
+ Modificar Contrato Cuenta
+ </summary>
+	<param name="pESolicitudCredito">Entidad serializada</param>
+	<returns>Resultado Integer</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.ContratoDocumentoIns(System.String)">
+	<summary>
+ Insertar Documentos/Condiciones para el Contrato
+ </summary>
+	<param name="pEGcc_contratodocumento">Entidad Documento serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.ContratoDocumentoAdjuntoUpd(System.String)">
+	<summary>
+ Actualizar Adjunto de Documentos/Condiciones
+ </summary>
+	<param name="pEGcc_contratodocumento">Entidad Documento serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.ActualizaFlagAprobacionLegal(System.Int32,System.String,System.Int32)">
+	<summary>
+ Actualizar Adjunto de Documentos/Condiciones
+ </summary>
+	<param name="pFlagAprobacionLegal">Flag</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.ContratoDocumentoObsUpd(System.String)">
+	<summary>
+ Actualizar Observacion de Documentos/Condiciones
+ </summary>
+	<param name="pEGcc_contratodocumento">Entidad Documento serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.ContratoDocumentoEnviaCartaUpd(System.String)">
+	<summary>
+ Actualizar Estado de Envio Carta de Documentos/Condiciones
+ </summary>
+	<param name="pEGcc_contratodocumento">Entidad Documento serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.GestionComercialEnviarUpd(System.String)">
+	<summary>
+ GestionComercialEnviarUpd
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.RepresentanteIns(System.String)">
+	<summary>
+ Insertar Representantes
+ </summary>
+	<param name="pEGcc_Representante">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.RepresentanteUpd(System.String)">
+	<summary>
+ Modificar Representantes
+ </summary>
+	<param name="pEGcc_Representante">Entidad serializada</param>
+	<returns>Resultado Integer</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.EliminarRepresentante(System.String)">
+	<summary>
+ Elimina un bien cuyas claves coinciden con las enviadas por parámetro, en las tablas SolicitudCreditoEstructura y SolicitudCreditoEstructuraCarac.
+ </summary>
+	<param name="pListEGcc_representante">Entidad ESolicitudCreditoEstructuraLst serializada</param>
+	<returns>True si se elimino correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.RepresentanteContratoIns(System.String)">
+	<summary>
+ Insertar Contrato Representantes
+ </summary>
+	<param name="pEGcc_contratorepresentante">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.RepresentanteContratoListIns(System.String,System.String)">
+	<summary>
+ Insertar una lista de Contrato Representantes
+ </summary>
+	<param name="pEGcc_contratorepresentanteList">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.RepresentanteContratoItemDel(System.String)">
+	<summary>
+ Elimina un Representantes de un contrato
+ </summary>
+	<param name="pEGcc_contratorepresentante">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.RepresentanteContratoDel(System.String)">
+	<summary>
+ Elimina Todos los Representante  de un contrato
+ </summary>
+	<param name="pEGcc_contratorepresentante"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LCheckListTx.RepresentanteContratoListDel(System.String,System.String)">
+	<summary>
+ Insertar una lista de Contrato Representantes
+ </summary>
+	<param name="pEGcc_contratorepresentanteList">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LCheckListTx">
+	<summary>
+ Implementación de la clase LCheckListTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListNTx.ContratoCuentaSel(System.String)">
+	<summary>
+ Listado de Representantes
+ </summary>
+	<param name="pEGcc_ContratoCuenta">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListNTx.ContratoDocumentoSel(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Consulta de Documentos de Contrato
+ </summary>
+	<param name="pEGcc_contratodocumento">Entidad Documento serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListNTx.RepresentantesSel(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de Representantes
+ </summary>
+	<param name="pEGcc_representante">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListNTx.RepresentantesItem(System.String)">
+	<summary>
+	</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LCheckListNTx.RepresentantesContratoSel(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+	<summary>
+ Listado de Representantes por Contrato
+ </summary>
+	<param name="pEGcc_contratoRepresentante">Entidad serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListNTx.ListadoCheckListComercial(System.String)">
+	<summary>
+	</summary>
+	<param name="pESolicitudCredito"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LCheckListNTx.RepresentantesCliente(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado de Representantes del cliente para todos los contratos
+ </summary>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCheckListNTx.ContratoDocumentoGet(System.String)">
+	<summary>
+ Lista de Documentos y condiciones por numero de contrato
+ </summary>
+	<param name="p_numerocontrato">Entidad Documento serializada</param>
+	<returns>Resultado booleano</returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 14/08/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LCheckListNTx">
+	<summary>
+ Implementación de la clase LCheckListNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.IUbigeoNTx">
+	<summary>
+ Interfaz de métodos para la clase ITemporalNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="M:GCC.Logic.LDocBienTx.fblnModificarBien(System.String)">
+	<summary>
+ Actualiza los datos de un bien existente = , en las tablas SolicitudCreditoEstructura y SolicitudCreditoEstructuraCarac.    
+ </summary>
+	<param name="pESolicitudCreditoEstructura">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 18/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienTx.fblnModificarBienDesembolso(System.String)">
+	<summary>
+ Actualiza los datos de un bien existente = , en las tablas SolicitudCreditoEstructura y SolicitudCreditoEstructuraCarac.    
+ </summary>
+	<param name="pESolicitudCreditoEstructura">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 18/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienTx.fblnModificarVehiculo(System.String)">
+	<summary>
+ Actualiza los datos de un bien existente = , en las tablas SolicitudCreditoEstructura y SolicitudCreditoEstructuraCarac.    
+ </summary>
+	<param name="pESolicitudCreditoEstructura">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 15/10/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienTx.fblnModificarMaquinaria(System.String)">
+	<summary>
+ Actualiza los datos de un bien existente = , en las tablas SolicitudCreditoEstructura y SolicitudCreditoEstructuraCarac.    
+ </summary>
+	<param name="pESolicitudCreditoEstructura">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : AEP
+ Fecha de Creación  : 19/07/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienTx.fblnModificarDetalleMaquinaria(System.String)">
+	<summary>
+ Actualiza los datos de un bien existente = , en las tablas SolicitudCreditoEstructura y SolicitudCreditoEstructuraCarac.    
+ </summary>
+	<param name="pESolicitudCreditoEstructura">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : AEP
+ Fecha de Creación  : 16/10/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienTx.fblnModificarOtros(System.String)">
+	<summary>
+ Actualiza los datos de un bien existente = , en las tablas SolicitudCreditoEstructura y SolicitudCreditoEstructuraCarac.    
+ </summary>
+	<param name="pESolicitudCreditoEstructura">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : AEP
+ Fecha de Creación  : 17/10/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienTx.ModificarBienContratoDocumento(System.String)">
+	<summary>
+ Modificar BienContratoDocumento
+ </summary>
+	<param name="pECotizacionDocumento">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 17/10/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LDocBienTx">
+	<summary>
+ Implementación de la clase LDocProveedorTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 14/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienNTx.ListadoBien(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Devuelve el conjunto de bienes hasta un máximo especificado (PageSize), agrupados en páginas
+ (CurrentPage). Permite especificar el orden (SortOrder).
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 14/06/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienNTx.ListadoContratoBien(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Devuelve la lista de contratos (PageSize), agrupados en páginas
+ (CurrentPage). Permite especificar el orden (SortOrder).
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 21/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienNTx.ObtenerBien(System.String,System.Int32)">
+	<summary>
+ Obtiene los datos del bien
+ </summary>
+	<param name="pstrNumeroContrato">Código del contrato</param>
+	<param name="pCodBien">Código del bien</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 15/06/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienNTx.ListadoBienProveedor(System.String,System.Int32)">
+	<summary>
+ Obtiene lista de proveedores asociado al bien
+ </summary>
+	<param name="pstrNumeroContrato">Código del contrato</param>
+	<param name="pCodBien">Código del bien</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - WCR
+ Fecha de Creacion : 15/06/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienNTx.ObtenerDatosInmuebles(System.String,System.Int32)">
+	<summary>
+ ObtenerDatosInmuebles
+ </summary>
+	<param name="pstrNumeroContrato">Código del contrato</param>
+	<param name="pCodBien">Código del bien</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - AEP
+ Fecha de Creacion : 28/09/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienNTx.ObtenerDatosMaquinarias(System.String,System.Int32)">
+	<summary>
+ ObtenerDatosMaquinarias
+ </summary>
+	<param name="pstrNumeroContrato">Código del contrato</param>
+	<param name="pCodBien">Código del bien</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - AEP
+ Fecha de Creacion : 02/10/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienNTx.ObtenerDatosVehiculo(System.String,System.Int32)">
+	<summary>
+ ObtenerDatosVehiculo
+ </summary>
+	<param name="pstrNumeroContrato">Código del contrato</param>
+	<param name="pCodBien">Código del bien</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - AEP
+ Fecha de Creacion : 02/10/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienNTx.ObtenerDatosSistemas(System.String,System.Int32)">
+	<summary>
+ ObtenerDatosSistemas
+ </summary>
+	<param name="pstrNumeroContrato">Código del contrato</param>
+	<param name="pCodBien">Código del bien</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - AEP
+ Fecha de Creacion : 03/10/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LDocBienNTx.ObtenerBienContratoDocumento(System.String)">
+	<summary>
+ Get de BienContratoDocuemento
+ </summary>
+	<returns>Devuelve un registro de Cotizacion</returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LDocBienNTx">
+	<summary>
+ Implementación de la clase LDocProveedorNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 14/06/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LAlertasTx">
+	<summary>
+ Implementación de la clase LBloqueoTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LAlertasNTx">
+	<summary>
+ Implementación de la clase LAlertasNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - SCA
+ Fecha de Creación  : 29/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaTx.InsertarDemanda(System.String,System.String)">
+	<summary>
+ Inserta el Demanda
+ </summary>
+	<param name="pEDemanda">Entidad Serializado formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaTx.ModificarDemanda(System.String,System.String)">
+	<summary>
+ Modificar el Demanda
+ </summary>
+	<param name="pEDemanda">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaTx.EliminarDemanda(System.String)">
+	<summary>
+ Eliminar el Demanda
+ </summary>
+	<param name="pEDemanda">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaTx.InsertarDemandaImplicado(System.String)">
+	<summary>
+ Inserta el Implicado
+ </summary>
+	<param name="pEImplicado">Entidad Serializado formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaTx.ModificarDemandaImplicado(System.String)">
+	<summary>
+ Modificar el Implicado
+ </summary>
+	<param name="pEImplicado">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaTx.EliminarDemandaImplicado(System.String)">
+	<summary>
+ Eliminar el Implicado
+ </summary>
+	<param name="pEImplicado">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LDemandaTx">
+	<summary>
+ Implementación de la clase LCotizacionTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaNTx.ListadoDemandaContrato(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaNTx.GetDemandaContrato(System.String)">
+	<summary>
+ Obtiene el Demanda
+ </summary>
+	<param name="pEDemanda">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaNTx.ListadoDemanda(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaNTx.GetDemanda(System.String)">
+	<summary>
+ Obtiene el Demanda
+ </summary>
+	<param name="pEDemanda">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaNTx.ListadoDemandaImplicado(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LDemandaNTx.GetDemandaImplicado(System.String)">
+	<summary>
+ Obtiene el Demanda
+ </summary>
+	<param name="pEImplicado">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012 
+ </remarks>
+</member><member name="T:GCC.Logic.LDemandaNTx">
+	<summary>
+ Implementación de la clase LDemandaNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="T:GCC.Logic.IPipelineTX">
+	<summary>
+ Interfaz de métodos para la clase IPipelineTX
+ </summary>
+	<remarks>TSF-AEP | 27/08/2012</remarks>
+</member><member name="T:GCC.Logic.IPipelineNTX">
+	<summary>
+ Interfaz de métodos para la clase IPipelineTX
+ </summary>
+	<remarks>TSF-AEP | 27/08/2012</remarks>
+</member><member name="M:GCC.Logic.LPagosTx.IngresarPagoCuotas(System.String)">
+	<summary>
+ Ingresa un Pago de Cuotas (CreditoRecuperacion, CreditoRecuperacionDetalle, CreditoRecuperacionComision)
+ </summary>
+	<param name="pECreditoRecuperacion">Entidad serializada</param>
+	<returns>Dataset con valores de retorno</returns>
+	<remarks>
+ Creado Por         : IBK - RPR
+ Fecha de Creación  : 07/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LPagosTx.ActualizarEstadoPagoCuotas(System.String)">
+	<summary>
+ Actualizar estado de Pago de Cuotas
+ </summary>
+	<param name="pECreditoRecuperacion">Entidad serializada</param>
+	<returns>Booleano</returns>
+	<remarks>
+ Creado Por         : IBK - RPR
+ Fecha de Creación  : 07/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LPagosTx">
+	<summary>
+ Implementación de la clase LPagosTx
+ </summary>
+	<remarks>
+ Creado Por         : IBK - RPR
+ Fecha de Creación  : 19/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LPagosNTx.ListadoPagoCuotas(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista los Pagos de Cuotas
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : IBK - RPR
+ Fecha de Creación  : 26/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LPagosNTx.ObtenerPagoCuotas(System.String)">
+	<summary>
+ Obtiene un Pago de Cuotas
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : IBK - RPR
+ Fecha de Creación  : 26/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LPagosNTx.ObtenerPagoCuotasTotales(System.String)">
+	<summary>
+ Obtiene un Pago de Cuotas
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : IBK - RPR
+ Fecha de Creación  : 26/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LPagosNTx.ObtenerDetalleCuotas(System.String)">
+	<summary>
+ Obtener el detalle de cuotas pagadas en un CreditoRecuperacion
+ </summary>
+	<param name="pECreditoRecuperacion">Entidad Serializado para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : IBK - RPR
+ Fecha de Creacion : 27/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LPagosNTx.ObtenerProximasCuotas(System.String,System.Int32)">
+	<summary>
+ Obtener las siguientes n cuotas a pagar en un credito
+ </summary>
+	<param name="pECreditoRecuperacion">Entidad Serializado para la busqueda</param>
+	<param name="pNroCuotas">Numero de Cuotas a obtener</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : IBK - RPR
+ Fecha de Creacion : 31/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LPagosNTx.ObtenerDetalleComisiones(System.String)">
+	<summary>
+ Obtener el detalle de comisiones pagadas en un CreditoRecuperacion
+ </summary>
+	<param name="pECreditoRecuperacion">Entidad Serializado para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : IBK - RPR
+ Fecha de Creacion : 27/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LPagosNTx.ObtenerProximasComisiones(System.String)">
+	<summary>
+ Calcular las comisiones a cobrar por las proximas n cuotas seleccionadas
+ </summary>
+	<param name="pECreditoRecuperacion">Entidad Serializado para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : IBK - RPR
+ Fecha de Creacion : 03/01/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LPagosNTx.ObtenerTramaAutorizacionPagosVentanilla(System.String,System.String)">
+	<summary>
+ Obtiene trama a enviar a Transactor para autorizar el pago de cuotas o conceptos en ventanilla con Nro de Autorizacion
+ </summary>
+	<param name="pECreditoRecuperacion">Entidad Serializado para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : IBK - RPR
+ Fecha de Creacion : 09/01/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LPagosNTx.ListadoPagoConcepto(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="pPageSize"></param>
+	<param name="pCurrentPage"></param>
+	<param name="pSortColumn"></param>
+	<param name="pSortOrder"></param>
+	<param name="pEPagoConcepto"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:GCC.Logic.LPagosNTx">
+	<summary>
+ Implementación de la clase LPagosNTx
+ </summary>
+	<remarks>
+ Creado Por         : IBK - RPR
+ Fecha de Creación  : 26/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LTasadorTx.InsertarTasador(System.String)">
+	<summary>
+	</summary>
+	<param name="pEGCC_ContratoTasador"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LTasadorTx.ActualizaTasador(System.String)">
+	<summary>
+	</summary>
+	<param name="pEGCC_ContratoTasador"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:GCC.Logic.LTasadorTx">
+	<summary>
+ Implementación de la clase LTasadorTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - IJM
+ Fecha de Creación  : 13/10/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LTasadorNTx.ObtenerContratoTasacion(System.String)">
+	<summary>
+ Obtiene Datos de Contrato para Tasacion
+ </summary>
+	<param name="pNumeroContrato">Numero de Contrato para la busqueda</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 28/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LTasadorNTx.ListadoContratoTasador(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ ListadoContratoTasador
+ </summary>
+	<param name="pPageSize"></param>
+	<param name="pCurrentPage"></param>
+	<param name="pSortColumn"></param>
+	<param name="pSortOrder"></param>
+	<param name="pCodSolicitudcredito"></param>
+	<param name="pCuCliente"></param>
+	<param name="pRazonsolcial"></param>
+	<param name="pTipoDocumento"></param>
+	<param name="pNumerodocumento"></param>
+	<param name="pEstadoTasacion"></param>
+	<param name="pClasificacionBien"></param>
+	<param name="pBanca"></param>
+	<param name="pEjecutivoBanca"></param>
+	<param name="pPeriodo"></param>
+	<param name="pFechadesde"></param>
+	<param name="pFechaHasta"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LTasadorNTx.ListaContratoBienTasacion(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Obtiene el listado de la vista GCC_ContratoTasacion
+ </summary>
+	<param name="pCodSolicitudcredito">Código de Contrato</param>
+	<returns>Retorna un registro</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 17/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LTasadorNTx.ListaBienTasacion(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Obtiene el listado de la vista UV_GCC_TASACIONBIENCONTRATO
+ </summary>
+	<param name="pCodSolicitudcredito">Código de Contrato</param>
+	<returns>Retorna un registro</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 18/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LTasadorNTx.ListaHistoricoContratoBienTasacion(System.Int32,System.Int32,System.String,System.String,System.String,System.Int16)">
+	<summary>
+ Obtiene el listado de la vista UV_GCC_HISTORICOTASACIONBIENCONTRATO
+ </summary>
+	<param name="pCodSolicitudcredito">Código de Contrato</param>
+	<param name="pCodContratoTasacion">Código de Contrato Tasación</param>
+	<returns>Retorna un registro</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 17/01/2013 06:41:54 p.m. 
+ </remarks>
+</member><member name="M:GCC.Logic.LTasadorNTx.calculatotales(System.String)">
+	<summary>
+ calculatotales
+ </summary>
+	<param name="pCodSolicitudcredito"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:GCC.Logic.LTasadorNTx">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LUtilTx.fblnGestionFlujo(System.String,System.String,System.String)">
+	<summary>
+ Gestión de Flujo GCC
+ </summary>
+	<param name="pstrCodigoContrato">Código del Contrato</param>
+	<returns>True si se elimino correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 05/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LUtilTx.InsertarContactoSuprestatario(System.String,System.String,System.String,System.String)">
+	<summary>
+ Gestión de Flujo GCC
+ </summary>
+	<returns>True si se elimino correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 21/03/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LUtilTx.ModificarContactoSuprestatario(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Gestión de Flujo GCC
+ </summary>
+	<returns>True si se elimino correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 21/03/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LUtilTx.InsertarContactoPreferente(System.Int32,System.String,System.String,System.String,System.String)">
+	<summary>
+ Gestión de Flujo GCC
+ </summary>
+	<returns>True si se elimino correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 22/03/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LUtilTx.ActualizarSubprestatario(System.String,System.String)">
+	<summary>
+ Gestión de Flujo GCC
+ </summary>
+	<returns>True si se elimino correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - AEP
+ Fecha de Creación  : 22/03/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LUtilTx">
+	<summary>
+ Implementación de la clase LUtilTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 08/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LUtilNTx.ObtenerValorGenerico(System.String,System.String)">
+	<summary>
+ Obtener un la descripcion de un valor especifico en tabla valor generico
+ </summary>
+	<param name="pstrDominio">Id de la tabla a consultar</param>
+	<param name="pstrParametro">valor de la tabla a identificar la descripcion</param>
+	<returns>Datatable serializado</returns>
+	<remarks>
+ Creado Por        : TSF - KCC
+ Fecha de Creacion : 04/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LUtilNTx.ListarEstadosBusquedaContrato">
+	<summary>
+ Listado de los contratos coincidentse con los criterios de búsqueda
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta para la grilla.</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 09/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LUtilNTx.ConsultaConceptosTarifas(System.Decimal,System.String,System.String,System.String)">
+	<summary>
+ ConsultaConceptosTarifas
+ </summary>
+	<param name="pdblimporte"></param>
+	<param name="pstrCodtarifa"></param>
+	<param name="pstrCodmoneda"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LUtilNTx.ListarRegistroCompra(System.String,System.String)">
+	<summary>
+ ListarRegistroCompra
+ </summary>
+	<param name="strFechaIni"></param>
+	<param name="strFechaFin"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:GCC.Logic.LUtilNTx">
+	<summary>
+ Implementación de la clase LTemporalNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="T:GCC.Logic.ICesionContratoTx">
+	<summary>
+ Interfaz de métodos para la clase ICesionContratoTx
+ </summary>
+	<remarks>TSF-JRC | 11/01/2012</remarks>
+</member><member name="M:GCC.Logic.ICesionContratoNTx.ListadoCesionContratoReporte(System.String,System.String)">
+	<summary>
+ Lista todas las cesiones por contrato
+ </summary>
+	<param name="pFechaInicio">Fecha de inicio de la consulta</param>
+	<param name="pFechaTermino">Fecha de término de la consulta</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - VMA
+ Fecha de Creación  : 17/01/2013 10:31:54 a.m. 
+ </remarks>
+</member><member name="T:GCC.Logic.ICesionContratoNTx">
+	<summary>
+ Interfaz de métodos para la clase ICesionContratoNTx
+ </summary>
+	<remarks>TSF-JRC | 11/01/2012</remarks>
+</member><member name="T:GCC.Logic.IDesembolsoTx">
+	<summary>
+ Interfaz de métodos para la clase IDesembolsoTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.IDesembolsoNTx">
+	<summary>
+ Interfaz de métodos para la clase IDesembolsoNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="T:GCC.Logic.ITipoCambioTx">
+	<summary>
+ Interfaz de métodos para la clase ITipoCambioTx
+ </summary>
+	<remarks>
+ Creado Por         :  JJM - IBK
+ Fecha de Creación  :  22/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.ITipoCambioNTx">
+	<summary>
+ Interfaz de métodos para la clase ITipoCambioNTx
+ </summary>
+	<remarks>
+ Creado Por         : JJM - IBK
+ Fecha de Creación  : 22/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoTx.InsertarInsDesembolso(System.String,System.String)">
+	<summary>
+ Inserta un nuevo registro en la tabla InstruccionDesembolso
+ </summary>
+	<param name="pEInsDesembolso">Entidad serializada</param>
+	<returns>String con el número de ID</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoTx.GestionInsDesembolso(System.String)">
+	<summary>
+ Gestion de cambios de una InstruccionDesembolso
+ </summary>
+	<param name="pEInsDesembolso">Entidad serializada</param>
+	<returns>String con el número de ID</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoTx.InsertarInsDesembolsoAgrupacion(System.String)">
+	<summary>
+ Gestion de cambios de una InstruccionDesembolso
+ </summary>
+	<param name="pEInsDesembolsoAgrupacion">Entidad serializada</param>
+	<returns>String con el número de ID</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoTx.InsertarInsDesembolsoMedioPago(System.String)">
+	<summary>
+ Gestion de cambios de una InstruccionDesembolso
+ </summary>
+	<param name="pEInsDesembolsoPago">Entidad serializada</param>
+	<returns>String con el número de ID</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoTx.EliminarInsDesembolsoAgrupacion(System.String)">
+	<summary>
+ EliminarInsDesembolsoAgrupacion
+ </summary>
+	<param name="pEDesembolsoAgrupacion"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoTx.EliminarInsDesembolsoMedioPago(System.String)">
+	<summary>
+ Gestion de cambios de una InstruccionDesembolso
+ </summary>
+	<param name="pEInsDesembolsoPago">Entidad serializada</param>
+	<returns>String con el número de ID</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoTx.ActualizarInsDesembolsoEstado(System.String)">
+	<summary>
+ Actualizar Estado ID
+ </summary>
+	<param name="pEInsDesembolso">Entidad serializada</param>
+	<returns>String con el número de ID</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoTx.EjecutarInsDesembolsoEstado(System.String)">
+	<summary>
+ Ejecucion Instruccion
+ </summary>
+	<param name="pEInsDesembolso">Entidad serializada</param>
+	<returns>String con el número de ID</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoTx.InsertarInstruccionDesembolsoDoc(System.String)">
+	<summary>
+ Inserta el cotizacioNDocumento para una cotizacion y contrato especifico
+ </summary>
+	<param name="pEInstruccionDesembolsoDoc">Entidad Serializado de InstruccionDesembolsoDoc formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 15/10/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoTx.ModificarInstruccionDesembolsoDoc(System.String)">
+	<summary>
+ Modificar el cotizacioNDocumento de una cotizacion y contrato especifico
+ </summary>
+	<param name="pEInstruccionDesembolsoDoc">Entidad Serializada de InstruccionDesembolsoDoc formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 15/10/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoTx.EliminarInstruccionDesembolsoDoc(System.String)">
+	<summary>
+ Eliminar el cotizacioNDocumento de una cotizacion y contrato especifico
+ </summary>
+	<param name="pEInstruccionDesembolsoDoc">Entidad Serializada de InstruccionDesembolsoDoc formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 15/10/2012
+ </remarks>
+</member><member name="T:GCC.Logic.LInstruccionDesembolsoTx">
+	<summary>
+ Implementación de la clase LInstruccionDesembolsoTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoNTx.ListadoInsDesembolso(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista las Instruccion de Desembolso
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoNTx.ListadoInsDesembolsoAgrupacion(System.String)">
+	<summary>
+ Lista las Instruccion de Desembolso Agrupacion
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoNTx.ListadoInsDesembolsoDocAgrupacion(System.String)">
+	<summary>
+ Lista las Documentos por agrupacion
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoNTx.ListadoInsDesembolsoCargoAbono(System.String)">
+	<summary>
+ Lista las Instruccion de Desembolso CargoAbono
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoNTx.ListadoInsDesembolsoMedioPago(System.String)">
+	<summary>
+ Lista las Instruccion de Desembolso Medios Pago
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoNTx.ObtenerInsDesembolso(System.String)">
+	<summary>
+ Obtener Instruccion de Desembolso
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoNTx.ListadoInstruccionDesembolsoDoc(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/10/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoNTx.ObtenerInstruccionDesembolsoDoc(System.String)">
+	<summary>
+ Obtiene el InstruccionDesembolsoDoc de una cotizacion y Contrato especifico
+ </summary>
+	<param name="pEInstruccionDesembolsoDoc">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 21/10/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LInstruccionDesembolsoNTx.fobjListadoDesembolsoMensualReporte(System.String,System.String)">
+	<summary>
+ Lista todos los desembolsos mensuales
+ </summary>
+	<param name="pFechaInicio">Fecha de inicio de la consulta</param>
+	<param name="pFechaTermino">Fecha de término de la consulta</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - VMA
+ Fecha de Creación  : 22/01/2013 05:29:54 p.m. 
+ </remarks>
+</member><member name="T:GCC.Logic.LInstruccionDesembolsoNTx">
+	<summary>
+ Implementación de la clase LInstruccionDesembolsoNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroTx.fblnInsertarCobro(System.String)">
+	<summary>
+ Inserta un nuevo cobro en las tablas CreditoRecuperacion y CreditoRecuperacionComision
+ </summary>
+	<param name="pECreditoRecuperacionComision">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 30/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroTx.fblnModificarCobro(System.String)">
+	<summary>
+ Actualiza un nuevo cobro en las tablas CreditoRecuperacion y CreditoRecuperacionComision
+ </summary>
+	<param name="pECreditoRecuperacionComision">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 30/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroTx.fblnEliminarCobro(System.String)">
+	<summary>
+ Elimina un nuevo cobro en las tablas CreditoRecuperacion y CreditoRecuperacionComision
+ </summary>
+	<param name="pECreditoRecuperacionComision">Entidad ESolicitudCreditoEstructura serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 30/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroTx.fblnInsertarFraccionarCobro(System.String)">
+	<summary>
+ Inserta un registro en la tabla GCC_FraccionarCobro
+ </summary>
+	<param name="pstrEListFraccionarCobro">Lista generica de la entidad EGCC_Fraccionar serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 13/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroTx.fblnModificarFraccionarCobro(System.String)">
+	<summary>
+ Actualiza un nuevo cobro en las tablas GCC_FraccionarCobro
+ </summary>
+	<param name="pstrEListFraccionarCobro">Lista generica de la entidad EGCC_Fraccionar serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 13/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroTx.fblnEliminarFraccionarCobro(System.String)">
+	<summary>
+ Elimina un cobro en las tablas GCC_FraccionarCobro
+ </summary>
+	<param name="pstrEFraccionarCobro">Entidad EGCC_FraccionarCobro serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 17/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroTx.fblnEliminarInsertarFraccionarCobro(System.String)">
+	<summary>
+ Eliminar un conjunto de registros de la tabla GCC_FraccionarCobro y registra fraccionamiento de cobro en las tabla GCC_FraccionarCobro
+ </summary>
+	<param name="pstrEListFraccionarCobro">Lista generica de la entidad EGCC_Fraccionar serializada</param>
+	<returns>Boolean si se registro es True en caso contrario False</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 13/12/2012
+ </remarks>
+</member><member name="T:GCC.Logic.ICobroTx">
+	<summary>
+ Interfaz de métodos para la clase ICobroTx
+ </summary>
+	<remarks>TSF-WCR | 27/11/2012</remarks>
+</member><member name="M:GCC.Logic.ICobroNTx.ObtenerCobro(System.String)">
+	<summary>
+ Obtener dato del cobro   
+ </summary>
+	<param name="pECreditoRecuperacionComision">Código concepto</param>
+	<returns>Objeto Datatable(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 29/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroNTx.ListadoCobro(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Devuelve el conjunto de cobros asociados a contratos hasta un máximo especificado (PageSize), agrupados en páginas
+ (CurrentPage). Permite especificar el orden (SortOrder).
+ </summary>
+	<param name="pPageSize">Tamaño de página</param>
+	<param name="pCurrentPage">Página actual</param>
+	<param name="pSortColumn">Ordenar por columna</param>
+	<param name="pSortOrder">Dirección de ordenamiento</param>
+	<param name="pECreditoRecuperacionComision">Entidad serializada del objeto CreditoRecuperacionComision</param>
+	<returns>Listado de Cobro(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 27/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroNTx.ListadoCobroPaginar(System.String,System.String,System.String)">
+	<summary>
+ Devuelve el conjunto de cobros asociados a contratos anterior, actual y siguiente 
+ (CurrentPage). Permite especificar el orden (SortOrder).
+ </summary>
+	<param name="pSortColumn">Ordenar por columna</param>
+	<param name="pSortOrder">Dirección de ordenamiento</param>
+	<param name="pECreditoRecuperacionComision">Entidad serializada del objeto CreditoRecuperacionComision</param>
+	<returns>Listado de Cobro(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 03/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroNTx.ListadoConcepto(System.String)">
+	<summary>
+ Devuelve el conjunto de conceptos    
+ </summary>
+	<param name="pstrIDTabla">ID Tabla valor generica</param>
+	<returns>Listado de Concepto(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 27/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroNTx.ObtenerContratoCobro(System.String)">
+	<summary>
+ Devuelve los datos de un contrato    
+ </summary>
+	<param name="pstrNumeroContrato">Número de contrato</param>
+	<returns>Objeto Datatable(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 28/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroNTx.CalculoComision(System.String,System.Decimal,System.String)">
+	<summary>
+ Realiza el calculo de la comisión del cobro   
+ </summary>
+	<param name="pstrCodigoConcepto">Código concepto</param>
+	<param name="pdecImporte">Importe</param>
+	<param name="pstrCodMoneda">Código moneda</param>
+	<returns>Objeto Datatable(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 29/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroNTx.ValidarFeriado(System.String)">
+	<summary>
+ Realiza validación de la fecha ingresado no sea feriado 
+ </summary>
+	<param name="pstrFecha">Fecha</param>
+	<returns>Objeto Datatable(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 29/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroNTx.InstanciaRegistro(System.String)">
+	<summary>
+ Devuelve instancia para el registro
+ </summary>
+	<param name="pstrUsuario">Registro de usuario</param>
+	<returns>String</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 07/12/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICobroNTx.ListadoFraccionamiento(System.String)">
+	<summary>
+ Devuelve el conjunto de datos de fraccionamiento    
+ </summary>
+	<param name="pstrEFraccionarCobro">Entidad serializada del objeto GCC_FraccionarCobro</param>
+	<returns>Listado de Fraccionamiento(Serializado)</returns>
+	<remarks>
+ Creado Por         : TSF - WCR
+ Fecha de Creación  : 13/12/2012
+ </remarks>
+</member><member name="T:GCC.Logic.ICobroNTx">
+	<summary>
+ Interfaz de métodos para la clase ICobroNTx
+ </summary>
+	<remarks>TSF-WCR | 27/11/2012</remarks>
+</member><member name="T:GCC.Logic.IImpuestoMunicipalTx">
+	<summary>
+ Interfaz de métodos para la clase IImpuestoMunicipalTx
+ </summary>
+	<remarks>TSF-JRC | 12/11/2012</remarks>
+</member><member name="T:GCC.Logic.IImpuestoMunicipalNTx">
+	<summary>
+ Interfaz de métodos para la clase IImpuestoMunicipalNTx
+ </summary>
+	<remarks>TSF-JRC | 12/11/2012</remarks>
+</member><member name="M:GCC.Logic.LCesionContratoTx.ModificarCesionContrato(System.String)">
+	<summary>
+ Modificar el CesionContrato
+ </summary>
+	<param name="pECesionContrato">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 11/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionContratoTx.RealizarCesionContrato(System.String)">
+	<summary>
+ Realizar el CesionContrato
+ </summary>
+	<param name="pECesionContrato">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 18/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LCesionContratoTx">
+	<summary>
+ Implementación de la clase LCesionContratoTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionContratoNTx.ListadoCesionContrato(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 11/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionContratoNTx.GetCesionContrato(System.String)">
+	<summary>
+ Obtiene el CesionContrato
+ </summary>
+	<param name="pECesionContrato">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 11/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LCesionContratoNTx.ListadoCesionContratoReporte(System.String,System.String)">
+	<summary>
+ Lista todas las cesiones por contrato
+ </summary>
+	<param name="pFechaInicio">Fecha de inicio de la consulta</param>
+	<param name="pFechaTermino">Fecha de término de la consulta</param>
+	<returns>Retorna un conjunto de registros</returns>
+	<remarks>
+ Creado Por         : TSF - VMA
+ Fecha de Creación  : 17/01/2013 10:32:54 a.m. 
+ </remarks>
+</member><member name="T:GCC.Logic.LCesionContratoNTx">
+	<summary>
+ Implementación de la clase LCesionContratoNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 11/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LHostTx.TransaccionGINA(System.String,System.String@)">
+	<summary>
+ Consumir funciones de NPCli.dll para llamadas a Host
+ </summary>
+	<remarks>
+ Creado Por         : IBK - RPR
+ Fecha de Creación  : 07/01/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LHostTx">
+	<summary>
+ Implementación de la clase LHostTx
+ </summary>
+	<remarks>
+ Creado Por         : IBK - RPR
+ Fecha de Creación  : 09/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoMunicipalTx.InsertarImpuestoMunicipal(System.String)">
+	<summary>
+ Inserta el ImpuestoMunicipal
+ </summary>
+	<param name="pEImpuestoMunicipal">Entidad Serializado formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+ 'Inicio IBK - AAE - Retorno un string
+
+</member><member name="M:GCC.Logic.LImpuestoMunicipalTx.ModificarImpuestoMunicipal(System.String)">
+	<summary>
+ Modificar el ImpuestoMunicipal
+ </summary>
+	<param name="pEImpuestoMunicipal">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+ ''' 'Inicio IBK - AAE - Retorno un string
+
+</member><member name="M:GCC.Logic.LImpuestoMunicipalTx.EliminarImpuestoMunicipal(System.String)">
+	<summary>
+ Eliminar el ImpuestoMunicipal
+ </summary>
+	<param name="pEImpuestoMunicipal">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoMunicipalTx.AsignarLoteImpuestoMunicipal(System.String)">
+	<summary>
+ Asignar Lote en ImpuestoMunicipal
+ </summary>
+	<param name="pEImpuestoMunicipal">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoMunicipalTx.AsignarChequeImpuestoMunicipal(System.String)">
+	<summary>
+ Asignar Cheque en ImpuestoMunicipal
+ </summary>
+	<param name="pEImpuestoMunicipal">Entidad Serializada formato string</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 29/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoMunicipalTx.EliminarLoteImpuestoMunicipal(System.String)">
+	<summary>
+ Eliminar el Lote ImpuestoMunicipal
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por        : JJM IBK 
+ Fecha de Creacion : 13/02/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LImpuestoMunicipalTx">
+	<summary>
+ Implementación de la clase LCotizacionTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoMunicipalNTx.ListadoImpuestoMunicipal(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoMunicipalNTx.GetImpuestoMunicipal(System.String)">
+	<summary>
+ Obtiene el ImpuestoMunicipal
+ </summary>
+	<param name="pEImpuestoMunicipal">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoMunicipalNTx.ListadoImpuestoMunicipalBienes(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoMunicipalNTx.GetImpuestoMunicipalBienes(System.String)">
+	<summary>
+ Obtiene el ImpuestoMunicipal Bienes
+ </summary>
+	<param name="pEImpuestoMunicipal">Entidad</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 12/11/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoMunicipalNTx.ListadoImpuestoMunicipalxLote(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : IBK - JJM
+ Fecha de Creación  : 12/11/2012
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoMunicipalNTx.ListadoReporteImpuestoMunicipal(System.String)">
+	<summary>
+ Lista todos las operaciones de una consulta
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - SCA
+ Fecha de Creación  : 28/01/2013
+ </remarks>
+</member><member name="M:GCC.Logic.LImpuestoMunicipalNTx.DescuentoLoteImpuestoMunicipal(System.String,System.String,System.Decimal)">
+	<summary>
+ Descuento ImpuestoMunicipal
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por        : JJM IBK 
+ Fecha de Creacion : 19/02/2013
+ </remarks>
+</member><member name="T:GCC.Logic.LImpuestoMunicipalNTx">
+	<summary>
+ Implementación de la clase LImpuestoMunicipalNTx
+ </summary>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 25/09/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.InsertarCotizacion(System.String,System.String)">
+	<summary>
+ Ingresa nueva Cotizacion
+ </summary>
+	<param name="pECotizacion">Listado de Objeto Cotizacion(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 14/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.ModificarCotizacion(System.String,System.String)">
+	<summary>
+ Modifica Cotizacion
+ </summary>
+	<param name="pECotizacion">Listado de Objeto Cotizacion(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 14/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.ModificarCotizacionEstado(System.String)">
+	<summary>
+ Modifica el estado de la Cotizacion
+ </summary>
+	<param name="pECotizacion">Entidad Cotizacion serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.ModificarCotizacionCarta(System.String)">
+	<summary>
+ Modifica el estado de carta de la Cotizacion
+ </summary>
+	<param name="pECotizacion">Entidad Cotizacion serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.CotizacionAprobar(System.String)">
+	<summary>
+ Modifica el estado de la Cotizacion
+ </summary>
+	<param name="pECotizacion">Entidad Cotizacion serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.CotizacionRechazar(System.String)">
+	<summary>
+ Rechazar la Cotizacion
+ </summary>
+	<param name="pECotizacionSeguimiento">Entidad Cotizacion serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.ModificarEstadoCotizacionWS(System.String,System.String,System.String)">
+	<summary>
+ ModificarEstadoCotizacionWS
+ </summary>
+	<param name="pstrNumeroCotizacion"></param>
+	<param name="pstrCodigoEstado"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.InsertarSubPrestatario(System.String)">
+	<summary>
+ Insert SubPrestatario
+ </summary>
+	<param name="pESubPrestatario">Listado de Objeto Cotizacion(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.ModificarSubPrestatario(System.String)">
+	<summary>
+ Modifica SubPrestatario
+ </summary>
+	<param name="pESubPrestatario">Listado de Objeto Cotizacion(Serializado)</param>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.InsertarCotizacionDocumento(System.String)">
+	<summary>
+ Ingresar CotizacionDocumento
+ </summary>
+	<param name="pECotizacionDocumento">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.ModificarCotizacionDocumento(System.String)">
+	<summary>
+ Modificar CotizacionDocumento
+ </summary>
+	<param name="pECotizacionDocumento">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.EliminarCotizacionDocumento(System.String)">
+	<summary>
+ Eliminar CotizacionDocumento
+ </summary>
+	<param name="pECotizacionDocumento">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.InsertarCotizacionCronograma(System.String)">
+	<summary>
+ Ingresar CotizacionCronograma
+ </summary>
+	<param name="pECotizacionCronograma">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.ModificarCotizacionCronograma(System.String)">
+	<summary>
+ Modificar CotizacionCronograma
+ </summary>
+	<param name="pECotizacionCronograma">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionTx.EliminarCotizacionCronograma(System.String)">
+	<summary>
+ Eliminar CotizacionCronograma
+ </summary>
+	<param name="pECotizacionCronograma">Entidad serializada</param>
+	<returns>True si se grabo correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 21/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.ICotizacionTx">
+	<summary>
+ Interfaz de métodos para la clase ICotizacionTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="M:GCC.Logic.ICotizacionNTx.ListadoCotizacion(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado de Cotizacion
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionNTx.GetCotizacion(System.String)">
+	<summary>
+ Obtiene una cotizacion
+ </summary>
+	<returns></returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionNTx.ObtenerSubPrestatario(System.String,System.String)">
+	<summary>
+ Obtiene el SubPrestatario de una cotizacion y Contrato especifico
+ </summary>
+	<param name="pstrCodSuprestatario">Codigo Suprestatario</param>
+	<param name="pstrCodUnico">Codigo Unico</param>
+	<returns></returns>
+	<remarks>
+ Creado Por        : TSF - JRC
+ Fecha de Creacion : 21/05/2012 
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionNTx.ListadoCotizacionDocumento(System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ Listado de Cotizacion
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta.</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/04/2012
+ </remarks>
+</member><member name="M:GCC.Logic.ICotizacionNTx.ObtenerCotizacionDocumento(System.String)">
+	<summary>
+ Get de CotizacionDocumento
+ </summary>
+	<returns>Devuelve un registro de Cotizacion</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 16/05/2012
+ </remarks>
+</member><member name="T:GCC.Logic.ICotizacionNTx">
+	<summary>
+ Interfaz de métodos para la clase ICotizacionNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="M:GCC.Logic.IUtilTx.fblnGestionFlujo(System.String,System.String,System.String)">
+	<summary>
+ Gestión de Flujo GCC
+ </summary>
+	<param name="pstrCodigoContrato">Código del Contrato</param>
+	<returns>True si se elimino correctamente. En su defecto devuelve False</returns>
+	<remarks>
+ Creado Por         : TSF - JRC
+ Fecha de Creación  : 05/09/2012
+ </remarks>
+</member><member name="T:GCC.Logic.IUtilTx">
+	<summary>
+ Interfaz de métodos para la clase IUtilTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member><member name="M:GCC.Logic.IUtilNTx.ListarEstadosBusquedaContrato">
+	<summary>
+ Listado de los contratos coincidentse con los criterios de búsqueda
+ </summary>
+	<returns>Devuelve un DataTable serializado, con el contenido de la consulta para la grilla.</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 09/05/2012
+ </remarks>
+</member><member name="M:GCC.Logic.IUtilNTx.ConsultaConceptosTarifas(System.Decimal,System.String,System.String,System.String)">
+	<summary>
+ ConsultaConceptosTarifas
+ </summary>
+	<param name="pdblimporte"></param>
+	<param name="pstrCodtarifa"></param>
+	<param name="pstrCodmoneda"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.IUtilNTx.ListarRegistroCompra(System.String,System.String)">
+	<summary>
+ ListarRegistroCompra
+ </summary>
+	<param name="strFechaIni"></param>
+	<param name="strFechaFin"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.IUtilNTx.ListarPipeline">
+	<summary>
+ ListarRegistroCompra
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Logic.IUtilNTx.ListarRetenciones(System.String,System.String)">
+	<summary>
+ ListarRetenciones
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:GCC.Logic.IUtilNTx">
+	<summary>
+ Interfaz de métodos para la clase IUtilNTx
+ </summary>
+	<remarks>TSF-JRC | 16/04/2012</remarks>
+</member>
+</members>
+</doc>

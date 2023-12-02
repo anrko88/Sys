@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/wioWsDesembolso/wiodesembolso" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/wioWsDesembolso/wiodesembolso" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/wioWsDesembolso/wiodesembolso">
+      <s:element name="ListaxDesembolsar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="argProducto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="argdsDesembolsar">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaxDesembolsarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ListaxDesembolsarResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="argdsDesembolsar">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaOperacionesxPaso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="argProducto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsPaso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argdsDesembolsar">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaOperacionesxPasoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ListaOperacionesxPasoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="argdsDesembolsar">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaxEntregar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="argProducto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="argdsEntregar">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaxEntregarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ListaxEntregarResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="argdsEntregar">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Desembolsar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argsNumDesembolso" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="argiProducto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="argiNumInstruccion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="argiNumIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsCodUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsNombreUsuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="argdFechaHoraLlegada" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DesembolsarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DesembolsarResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Entregar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="argiProducto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="argiNumInstruccion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="argiNumIncidente" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsCodUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsNombreUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EntregarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EntregarResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarEstado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="argNumIncidente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarEstadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarEstadoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstadoxNumeroInstruccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argsNumeroInstruccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsEstado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstadoxNumeroInstruccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EstadoxNumeroInstruccionResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsEstado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argsError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListaxDesembolsarSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaxDesembolsar" />
+  </wsdl:message>
+  <wsdl:message name="ListaxDesembolsarSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaxDesembolsarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaOperacionesxPasoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaOperacionesxPaso" />
+  </wsdl:message>
+  <wsdl:message name="ListaOperacionesxPasoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaOperacionesxPasoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaxEntregarSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaxEntregar" />
+  </wsdl:message>
+  <wsdl:message name="ListaxEntregarSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaxEntregarResponse" />
+  </wsdl:message>
+  <wsdl:message name="DesembolsarSoapIn">
+    <wsdl:part name="parameters" element="tns:Desembolsar" />
+  </wsdl:message>
+  <wsdl:message name="DesembolsarSoapOut">
+    <wsdl:part name="parameters" element="tns:DesembolsarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntregarSoapIn">
+    <wsdl:part name="parameters" element="tns:Entregar" />
+  </wsdl:message>
+  <wsdl:message name="EntregarSoapOut">
+    <wsdl:part name="parameters" element="tns:EntregarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarEstadoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarEstado" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarEstadoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EstadoxNumeroInstruccionSoapIn">
+    <wsdl:part name="parameters" element="tns:EstadoxNumeroInstruccion" />
+  </wsdl:message>
+  <wsdl:message name="EstadoxNumeroInstruccionSoapOut">
+    <wsdl:part name="parameters" element="tns:EstadoxNumeroInstruccionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wiodesembolsoSoap">
+    <wsdl:operation name="ListaxDesembolsar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista las Solicitudes que se encuentran pendientes por Desembolsar Beta</wsdl:documentation>
+      <wsdl:input message="tns:ListaxDesembolsarSoapIn" />
+      <wsdl:output message="tns:ListaxDesembolsarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaOperacionesxPaso">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista las Solicitudes en un determinado paso</wsdl:documentation>
+      <wsdl:input message="tns:ListaOperacionesxPasoSoapIn" />
+      <wsdl:output message="tns:ListaOperacionesxPasoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaxEntregar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista las Solicitudes que se encuentran pendientes por Entregar</wsdl:documentation>
+      <wsdl:input message="tns:ListaxEntregarSoapIn" />
+      <wsdl:output message="tns:ListaxEntregarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Desembolsar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza en WIO el Número de desembolso y completa la Estación</wsdl:documentation>
+      <wsdl:input message="tns:DesembolsarSoapIn" />
+      <wsdl:output message="tns:DesembolsarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Entregar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Completa la Estación de Entrega</wsdl:documentation>
+      <wsdl:input message="tns:EntregarSoapIn" />
+      <wsdl:output message="tns:EntregarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEstado">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza el estado de la instruccion operativa a finalizada</wsdl:documentation>
+      <wsdl:input message="tns:ActualizarEstadoSoapIn" />
+      <wsdl:output message="tns:ActualizarEstadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoxNumeroInstruccion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista las Solicitudes en un determinado paso</wsdl:documentation>
+      <wsdl:input message="tns:EstadoxNumeroInstruccionSoapIn" />
+      <wsdl:output message="tns:EstadoxNumeroInstruccionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wiodesembolsoSoap" type="tns:wiodesembolsoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListaxDesembolsar">
+      <soap:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/ListaxDesembolsar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaOperacionesxPaso">
+      <soap:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/ListaOperacionesxPaso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaxEntregar">
+      <soap:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/ListaxEntregar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Desembolsar">
+      <soap:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/Desembolsar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entregar">
+      <soap:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/Entregar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEstado">
+      <soap:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/ActualizarEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoxNumeroInstruccion">
+      <soap:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/EstadoxNumeroInstruccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wiodesembolsoSoap12" type="tns:wiodesembolsoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListaxDesembolsar">
+      <soap12:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/ListaxDesembolsar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaOperacionesxPaso">
+      <soap12:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/ListaOperacionesxPaso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaxEntregar">
+      <soap12:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/ListaxEntregar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Desembolsar">
+      <soap12:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/Desembolsar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entregar">
+      <soap12:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/Entregar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEstado">
+      <soap12:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/ActualizarEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoxNumeroInstruccion">
+      <soap12:operation soapAction="http://tempuri.org/wioWsDesembolso/wiodesembolso/EstadoxNumeroInstruccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wiodesembolso">
+    <wsdl:port name="wiodesembolsoSoap" binding="tns:wiodesembolsoSoap">
+      <soap:address location="http://s129va/wdcws/wiodesembolso.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wiodesembolsoSoap12" binding="tns:wiodesembolsoSoap12">
+      <soap12:address location="http://s129va/wdcws/wiodesembolso.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

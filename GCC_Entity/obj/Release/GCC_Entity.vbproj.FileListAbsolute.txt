@@ -1,0 +1,9 @@
+C:\SGL\Fase6.0\GCC_Entity\bin\Release\GCC_Entity.dll
+C:\SGL\Fase6.0\GCC_Entity\bin\Release\GCC_Entity.pdb
+C:\SGL\Fase6.0\GCC_Entity\bin\Release\GCC_Entity.xml
+C:\SGL\Fase6.0\GCC_Entity\obj\Release\ResolveAssemblyReference.cache
+C:\SGL\Fase6.0\GCC_Entity\obj\Release\GCC.Entity.Resources.resources
+C:\SGL\Fase6.0\GCC_Entity\obj\Release\GCC_Entity.vbproj.GenerateResource.Cache
+C:\SGL\Fase6.0\GCC_Entity\obj\Release\GCC_Entity.dll
+C:\SGL\Fase6.0\GCC_Entity\obj\Release\GCC_Entity.xml
+C:\SGL\Fase6.0\GCC_Entity\obj\Release\GCC_Entity.pdb

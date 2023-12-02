@@ -1,0 +1,115 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GCC_Common
+</name>
+</assembly>
+<members>
+<member name="M:GCC.Common.CFunciones.DeserializeArrayList``1(System.String)">
+ Para Deserializar un objeto arraylist directamente
+
+</member><member name="M:GCC.Common.CFunciones.SerializeArrayList``1(System.Collections.ArrayList)">
+ Para Serializar un objeto ArrayList directamente
+
+</member><member name="M:GCC.Common.CFunciones.SerializeObject``1(``0)">
+ Serealizar un objecto a una cadena XML
+
+</member><member name="M:GCC.Common.CFunciones.DeserializeObject``1(System.String)">
+ Recosntruir un objecto desde una Cadena XML
+
+</member><member name="M:GCC.Common.CFunciones.Modulo11(System.String)">
+	<summary>
+ Modulo11 para validar RUC
+ </summary>
+	<param name="cRUC"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:GCC.Common.CHelperDateTime.FormatDateTimeAsYYYYMMDD(System.Nullable{System.DateTime})">
+	<summary>
+ Devuelve una cadena en formato YYYYMMDD, si es una fecha válida.
+ Caso contrario devuelve nothing. 
+ Si es el valor inicial de tipo fecha (01/01/1990), tambien devuelve nothing.
+ </summary>
+	<param name="pidtValue">Dato fecha o Nothing</param>
+	<returns>String con un dato fecha en formato YYYYMMDD, nothing si no es fecha</returns>
+	<remarks>
+ Creado Por         : TSF - EBL
+ Fecha de Creación  : 07/05/2012
+ </remarks>
+</member><member name="P:GCC.Common.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:GCC.Common.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:GCC.Common.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:GCC.Common.CHelperRefleccion.GetField(System.Object,System.String)">
+ 
+ Object to retreve Field from
+ name of the field to retrieve
+ 
+
+</member><member name="M:GCC.Common.CHelperRefleccion.GetPropertyEx(System.Object,System.String)">
+ 
+ Returns a property or field value using a base object and sub members including . syntax.
+ For example, you can access: this.oCustomer.oData.Company with (this,"oCustomer.oData.Company")
+ 
+ Parent object to 'start' parsing from.
+ The property to retrieve. Example: 'oBus.oData.Company'
+ 
+
+</member><member name="M:GCC.Common.CHelperRefleccion.SetProperty(System.Object,System.String,System.Object)">
+ 
+ Sets the property on an object.
+ 
+ Object to set property on
+ Name of the property to set
+ value to set it to
+
+</member><member name="M:GCC.Common.CHelperRefleccion.SetField(System.Object,System.String,System.Object)">
+ 
+ Sets the field on an object.
+ 
+ Object to set property on
+ Name of the field to set
+ value to set it to
+
+</member><member name="M:GCC.Common.CHelperRefleccion.SetPropertyEx(System.Object,System.String,System.Object)">
+ 
+ Sets the value of a field or property via Reflection. This method alws 
+ for using '.' syntax to specify objects multiple levels down.
+ 
+ wwUtils.SetPropertyEx(this,"Invoice.LineItemsCount",10)
+ 
+ which would be equivalent of:
+ 
+ this.Invoice.LineItemsCount = 10;
+ 
+ 
+ Object to set the property on.
+ 
+ 
+ Property to set. Can be an object hierarchy with . syntax.
+ 
+ 
+ Value to set the property to
+ 
+
+</member><member name="M:GCC.Common.CHelperRefleccion.CallMethod(System.Object,System.String,System.Object[])">
+ 
+ Wrapper method to call a 'dynamic' (non-typelib) method
+ on a COM object
+ 
+ 1st - Method name, 2nd - 1st parameter, 3rd - 2nd parm etc.
+ 
+
+</member>
+</members>
+</doc>

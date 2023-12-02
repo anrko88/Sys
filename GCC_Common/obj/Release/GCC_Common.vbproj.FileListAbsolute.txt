@@ -1,0 +1,9 @@
+C:\SGL\Fase6.0\GCC_Common\bin\Release\GCC_Common.dll
+C:\SGL\Fase6.0\GCC_Common\bin\Release\GCC_Common.pdb
+C:\SGL\Fase6.0\GCC_Common\bin\Release\GCC_Common.xml
+C:\SGL\Fase6.0\GCC_Common\obj\Release\ResolveAssemblyReference.cache
+C:\SGL\Fase6.0\GCC_Common\obj\Release\GCC.Common.Resources.resources
+C:\SGL\Fase6.0\GCC_Common\obj\Release\GCC_Common.vbproj.GenerateResource.Cache
+C:\SGL\Fase6.0\GCC_Common\obj\Release\GCC_Common.dll
+C:\SGL\Fase6.0\GCC_Common\obj\Release\GCC_Common.xml
+C:\SGL\Fase6.0\GCC_Common\obj\Release\GCC_Common.pdb
